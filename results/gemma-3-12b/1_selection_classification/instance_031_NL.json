@@ -1,0 +1,45 @@
+{
+  "prompt_id": "instance_031_NL",
+  "model": "gemma-3-12b",
+  "family": "1_selection_classification",
+  "condition": "NL",
+  "parse_success": true,
+  "parsed_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Hamster",
+    "Guinea pig",
+    "Mouse",
+    "Rabbit",
+    "Rat",
+    "Hedgehog"
+  ],
+  "gold_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Guinea pig",
+    "Hamster",
+    "Hedgehog",
+    "Mouse",
+    "Rat"
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Extra items: 1"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "extra",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

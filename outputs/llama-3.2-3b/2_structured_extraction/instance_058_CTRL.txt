@@ -1,0 +1,44 @@
+```json
+[
+  {
+    "risk_name": "memory leaks in the ingestion service",
+    "affected_component": "ingestion pipeline",
+    "severity": "high"
+  },
+  {
+    "risk_name": "intermittent network latency between compute nodes",
+    "affected_component": "orchestration layer",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "stale configuration values in the configuration management system",
+    "affected_component": "configuration service",
+    "severity": "low"
+  },
+  {
+    "risk_name": "rising cloud infrastructure costs",
+    "affected_component": "none",
+    "severity": "none"
+  },
+  {
+    "risk_name": "non-compliance with regional data protection regulations",
+    "affected_component": "none",
+    "severity": "none"
+  },
+  {
+    "risk_name": "limited on-call staffing levels",
+    "affected_component": "none",
+    "severity": "none"
+  },
+  {
+    "risk_name": "future scaling challenges due to rapid adoption",
+    "affected_component": "none",
+    "severity": "speculative"
+  },
+  {
+    "risk_name": "improper token expiration handling in the authentication subsystem",
+    "affected_component": "authentication service",
+    "severity": "high"
+  }
+]
+```

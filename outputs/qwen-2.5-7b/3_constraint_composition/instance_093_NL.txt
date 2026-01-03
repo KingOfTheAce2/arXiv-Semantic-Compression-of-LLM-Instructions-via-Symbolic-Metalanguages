@@ -1,0 +1,27 @@
+```json
+{
+  "selected_ids": [
+    "Auth Hardening",
+    "Encryption Upgrade",
+    "Firewall Rules Update",
+    "Index Rebalancing",
+    "Load Balancer Tuning",
+    "Memory Pooling",
+    "Query Optimizer",
+    "Rate Limiting",
+    "Session Timeout Enforcement",
+    "Secure Boot Enforcement",
+    "Secure Logging",
+    "Secrets Management",
+    "Thread Pool Optimization",
+    "TLS Certificate Automation",
+    "Threat Modeling",
+    "Thread Safety Audit",
+    "Throttling",
+    "Vulnerability Scanner Update",
+    "API Gateway Optimization",
+    "Authentication Rate Limits"
+  ],
+  "count": 20
+}
+```

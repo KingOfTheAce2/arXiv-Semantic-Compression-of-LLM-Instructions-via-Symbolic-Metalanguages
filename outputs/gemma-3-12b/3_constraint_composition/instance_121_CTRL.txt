@@ -1,0 +1,33 @@
+][
+```json
+{
+  "selected_ids": [
+    "Auth Hardening",
+    "Encryption Upgrade",
+    "Rate Limiting",
+    "Query Optimizer",
+    "Cache Layer Rewrite",
+    "API Latency Reduction",
+    "Firewall Rules Update",
+    "TLS Certificate Automation",
+    "Password Policy Update",
+    "Session Timeout Enforcement",
+    "Cold Start Reduction",
+    "Secrets Management",
+    "Thread Pool Optimization",
+    "CDN Configuration",
+    "Certificate Revocation Handling",
+    "Request Batching",
+    "Access Control Review",
+    "Secure Boot Enforcement",
+    "Encryption Key Rotation",
+    "Response Caching",
+    "Authentication Rate Limits",
+    "Disk IO Optimization",
+    "Network Stack Profiling",
+    "Secure Defaults Review",
+    "Latency Budget Enforcement"
+  ],
+  "count": 25
+}
+```

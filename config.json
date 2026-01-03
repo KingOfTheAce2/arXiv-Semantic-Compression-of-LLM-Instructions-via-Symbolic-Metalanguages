@@ -6,7 +6,10 @@
   "tokenizer_model": "simple",
   "models": [
     "llama-3.2-3b",
-    "gemma-3-12b"
+    "gemma-3-12b",
+    "qwen-2.5-7b",
+    "olmo-3-7b",
+    "kimi-k2"
   ],
   "backend": "openrouter",
   "temperature": 0,
@@ -16,5 +19,5 @@
   "max_tokens": 2048,
   "max_context_tokens": 8192,
   "request_delay": 0,
-  "skip_existing": true
+  "skip_existing": false
 }

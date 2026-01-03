@@ -1,0 +1,17 @@
+```json
+{
+  "selected_ids": [
+    "Auth Hardening",
+    "Cache Layer Rewrite",
+    "Encryption Upgrade",
+    "Firewall Rules Update",
+    "Load Balancer Tuning",
+    "Password Policy Update",
+    "Rate Limiting",
+    "Response Caching",
+    "Session Timeout Enforcement",
+    "TLS Certificate Automation"
+  ],
+  "count": 10
+}
+```

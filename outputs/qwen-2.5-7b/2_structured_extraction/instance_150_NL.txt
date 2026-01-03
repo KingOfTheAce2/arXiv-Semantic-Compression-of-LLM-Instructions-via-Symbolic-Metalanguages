@@ -1,0 +1,22 @@
+[
+    {
+        "risk_name": "Memory leaks in the ingestion service",
+        "affected_component": "ingestion pipeline",
+        "severity": "high"
+    },
+    {
+        "risk_name": "Intermittent network latency between compute nodes",
+        "affected_component": "orchestration layer",
+        "severity": "medium"
+    },
+    {
+        "risk_name": "Stale configuration values in the configuration service",
+        "affected_component": "configuration service",
+        "severity": "low"
+    },
+    {
+        "risk_name": "Improper token expiration handling in the authentication subsystem",
+        "affected_component": "authentication service",
+        "severity": "high"
+    }
+]

@@ -1,0 +1,31 @@
+```json
+{
+  "selected_ids": [
+    "Auth Hardening",
+    "Encryption Upgrade",
+    "Firewall Rules Update",
+    "Password Policy Update",
+    "Session Timeout Enforcement",
+    "TLS Certificate Automation",
+    "Certificate Revocation Handling",
+    "Privilege Escalation Audit",
+    "Secure Boot Enforcement",
+    "Encryption Key Rotation",
+    "Secure Logging",
+    "API Latency Reduction",
+    "Cache Layer Rewrite",
+    "Load Balancer Tuning",
+    "Index Rebalancing",
+    "API Gateway Optimization",
+    "Rate Limiting",
+    "Request Batching",
+    "Response Caching",
+    "Queue Backpressure Handling",
+    "Garbage Collection Tuning",
+    "Disk IO Optimization",
+    "Network Stack Profiling",
+    "Latency Budget Enforcement"
+  ],
+  "count": 24
+}
+```

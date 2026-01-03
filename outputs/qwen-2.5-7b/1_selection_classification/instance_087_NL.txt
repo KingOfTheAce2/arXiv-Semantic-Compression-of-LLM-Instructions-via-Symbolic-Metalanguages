@@ -1,0 +1,1 @@
+["Cat", "Chinchilla", "Dog", "Ferret", "Hamster", "Guinea pig", "Rabbit", "Skunk", "Squirrel", "Turtle", "Fennec Fox", "Mink", "Mink", "Raccoon"]

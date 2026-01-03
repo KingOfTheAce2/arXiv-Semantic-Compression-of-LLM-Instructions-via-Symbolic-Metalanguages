@@ -1,0 +1,174 @@
+```json
+[
+  {
+    "name": "alice",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "bob",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "carol",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "dave",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "eve",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "frank",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "grace",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "heidi",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "ivan",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "judith",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "karl",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "laura",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "mallory",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "neil",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "olivia",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "peggy",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "quentin",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "rachel",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "steve",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "tina",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "ulysses",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "valerie",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "walter",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "xena",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "yannick",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "zoe",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "adrian",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "bella",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "chris",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "denise",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "edward",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "felicity",
+    "label": "none",
+    "access_level": "standard"
+  },
+  {
+    "name": "gavin",
+    "label": "none",
+    "access_level": "limited"
+  },
+  {
+    "name": "holly",
+    "label": "none",
+    "access_level": "standard"
+  }
+]
+```

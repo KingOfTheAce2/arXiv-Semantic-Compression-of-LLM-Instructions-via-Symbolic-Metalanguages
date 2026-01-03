@@ -1,0 +1,42 @@
+[
+  {
+    "risk_name": "memory_leaks",
+    "affected_component": "ingestion_service",
+    "severity": "high"
+  },
+  {
+    "risk_name": "network_latency",
+    "affected_component": "orchestration_layer",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "stale_config_values",
+    "affected_component": "configuration_service",
+    "severity": "low"
+  },
+  {
+    "risk_name": "cloud_infrastructure_costs",
+    "affected_component": "none",
+    "severity": "none"
+  },
+  {
+    "risk_name": "data_retention_policies",
+    "affected_component": "none",
+    "severity": "none"
+  },
+  {
+    "risk_name": "limited_on_call_staffing",
+    "affected_component": "none",
+    "severity": "none"
+  },
+  {
+    "risk_name": "scaling_challenges",
+    "affected_component": "none",
+    "severity": "speculative"
+  },
+  {
+    "risk_name": "improper_token_expiration",
+    "affected_component": "authentication_service",
+    "severity": "high"
+  }
+]

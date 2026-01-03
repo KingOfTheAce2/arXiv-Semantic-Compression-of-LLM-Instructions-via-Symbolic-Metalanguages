@@ -1,0 +1,86 @@
+{
+  "prompt_id": "instance_095_CTRL",
+  "model": "qwen-2.5-7b",
+  "family": "2_structured_extraction",
+  "condition": "CTRL",
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "risk_name": "Memory leaks in ingestion service",
+      "affected_component": "ingestion pipeline",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Intermittent network latency between compute nodes",
+      "affected_component": "orchestration layer",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Stale configuration values in configuration service",
+      "affected_component": "configuration service",
+      "severity": "low"
+    },
+    {
+      "risk_name": "Rising cloud infrastructure costs",
+      "affected_component": "long-term cost planning",
+      "severity": "financial"
+    },
+    {
+      "risk_name": "Failure to comply with data protection regulations",
+      "affected_component": "data retention policies",
+      "severity": "legal"
+    },
+    {
+      "risk_name": "Limited on-call staffing levels",
+      "affected_component": "operational resilience",
+      "severity": "organizational"
+    },
+    {
+      "risk_name": "Future scaling challenges",
+      "affected_component": "system scalability",
+      "severity": "speculative"
+    },
+    {
+      "risk_name": "Improper token expiration handling in authentication subsystem",
+      "affected_component": "authentication service",
+      "severity": "high"
+    }
+  ],
+  "gold_output": [
+    {
+      "risk_name": "Memory leaks in the ingestion service",
+      "affected_component": "ingestion pipeline",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Intermittent network latency between compute nodes",
+      "affected_component": "orchestration layer",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Stale configuration values after redeployment",
+      "affected_component": "configuration service",
+      "severity": "low"
+    },
+    {
+      "risk_name": "Improper token expiration handling",
+      "affected_component": "authentication service",
+      "severity": "high"
+    }
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "extra",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

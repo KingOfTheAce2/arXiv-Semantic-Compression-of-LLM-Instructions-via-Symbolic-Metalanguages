@@ -55,10 +55,13 @@ All experiments use models via OpenRouter API:
 
 | Model | OpenRouter ID | Size | Purpose |
 |-------|---------------|------|---------|
-| Llama 3.2 3B Instruct | `meta-llama/llama-3.2-3b-instruct:free` | 3B | Small dense baseline |
-| Gemma 3 12B | `google/gemma-3-12b-it:free` | 12B | Mid-size instruction follower |
+| Llama 3.2 3B Instruct | `meta-llama/llama-3.2-3b-instruct` | 3B | Small dense baseline |
+| Gemma 3 12B | `google/gemma-3-12b-it` | 12B | Mid-size instruction follower |
+| Qwen 2.5 7B Instruct | `qwen/qwen-2.5-7b-instruct` | 7B | Multi-lingual instruction model |
+| OLMo 3 7B Instruct | `allenai/olmo-3-7b-instruct` | 7B | Fully open-weight baseline (AI2) |
+| Kimi K2 | `moonshotai/kimi-k2` | 1T (32B active) | MoE wildcard with agentic tuning |
 
-**Note:** Requires OpenRouter API credits. Free-tier models are also supported but have daily rate limits.
+**Note:** Requires OpenRouter API key. Models are accessed via paid API (not free tier).
 
 ### Execution parameters
 
@@ -178,7 +181,7 @@ python run_pipeline.py --stage 4,5,6    # Execution + evaluation
 
 # Configuration
 python run_pipeline.py --instances 50   # 50 instances per family
-python run_pipeline.py --models llama-3.2-3b,qwen3-8b
+python run_pipeline.py --models llama-3.2-3b,qwen-2.5-7b
 python run_pipeline.py --backend openrouter
 python run_pipeline.py --config custom.json
 

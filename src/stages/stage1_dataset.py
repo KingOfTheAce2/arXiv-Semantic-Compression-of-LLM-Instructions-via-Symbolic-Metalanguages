@@ -49,27 +49,28 @@ class TaskFamily:
 
 
 # Define the four task families from the paper
+# NOTE: Names include numeric prefix for consistent ordering across pipeline stages
 TASK_FAMILIES = {
-    "selection_classification": TaskFamily(
-        name="selection_classification",
+    "1_selection_classification": TaskFamily(
+        name="1_selection_classification",
         operators=["∈", "∉", "¬", "∩", "∪"],
         output_format="list",
         description="Select or classify items based on set membership and logical criteria"
     ),
-    "structured_extraction": TaskFamily(
-        name="structured_extraction",
+    "2_structured_extraction": TaskFamily(
+        name="2_structured_extraction",
         operators=["∈", "→", "↦", "|"],
         output_format="json",
         description="Extract structured information with field mappings"
     ),
-    "constraint_composition": TaskFamily(
-        name="constraint_composition",
+    "3_constraint_composition": TaskFamily(
+        name="3_constraint_composition",
         operators=["∩", "∪", "¬", "⊆", "∀", "∃"],
         output_format="json",
         description="Apply multiple composed constraints to filter/transform data"
     ),
-    "conditional_transformation": TaskFamily(
-        name="conditional_transformation",
+    "4_conditional_transformation": TaskFamily(
+        name="4_conditional_transformation",
         operators=["⇒", "∘", "|", "→"],
         output_format="json",
         description="Apply conditional rules and chained transformations"
@@ -133,7 +134,7 @@ class SelectionClassificationGenerator(TaskGenerator):
     }
 
     def __init__(self, seed: int = 42):
-        super().__init__(TASK_FAMILIES["selection_classification"], seed)
+        super().__init__(TASK_FAMILIES["1_selection_classification"], seed)
 
     def _generate_entity_descriptions(self, domain: str, entities: list) -> str:
         """Generate verbose text describing entities."""
@@ -292,7 +293,7 @@ Payment Terms: {payment_terms}""",
     ]
 
     def __init__(self, seed: int = 42):
-        super().__init__(TASK_FAMILIES["structured_extraction"], seed)
+        super().__init__(TASK_FAMILIES["2_structured_extraction"], seed)
 
     def generate_instance(self, instance_num: int) -> TaskInstance:
         """Generate a structured extraction task instance."""
@@ -392,7 +393,7 @@ class ConstraintCompositionGenerator(TaskGenerator):
     """Generator for constraint composition tasks."""
 
     def __init__(self, seed: int = 42):
-        super().__init__(TASK_FAMILIES["constraint_composition"], seed)
+        super().__init__(TASK_FAMILIES["3_constraint_composition"], seed)
 
     def generate_instance(self, instance_num: int) -> TaskInstance:
         """Generate a constraint composition task instance."""
@@ -526,7 +527,7 @@ class ConditionalTransformationGenerator(TaskGenerator):
     """Generator for conditional transformation tasks."""
 
     def __init__(self, seed: int = 42):
-        super().__init__(TASK_FAMILIES["conditional_transformation"], seed)
+        super().__init__(TASK_FAMILIES["4_conditional_transformation"], seed)
 
     def generate_instance(self, instance_num: int) -> TaskInstance:
         """Generate a conditional transformation task instance."""
@@ -659,10 +660,10 @@ class DatasetGenerator:
     """Main class for generating all task datasets."""
 
     GENERATORS = {
-        "selection_classification": SelectionClassificationGenerator,
-        "structured_extraction": StructuredExtractionGenerator,
-        "constraint_composition": ConstraintCompositionGenerator,
-        "conditional_transformation": ConditionalTransformationGenerator,
+        "1_selection_classification": SelectionClassificationGenerator,
+        "2_structured_extraction": StructuredExtractionGenerator,
+        "3_constraint_composition": ConstraintCompositionGenerator,
+        "4_conditional_transformation": ConditionalTransformationGenerator,
     }
 
     def __init__(self, output_dir: Path | str, seed: int = 42):

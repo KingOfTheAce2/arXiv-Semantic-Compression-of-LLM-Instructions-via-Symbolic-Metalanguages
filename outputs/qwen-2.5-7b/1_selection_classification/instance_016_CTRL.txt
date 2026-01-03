@@ -1,0 +1,1 @@
+["Dog", "Cat", "Hamster", "Guinea pig", "Rabbit", "Ferret", "Mouse", "Rat", "Chinchilla", "Hedgehog", "Parrot", "Canary", "Lion", "Tiger", "Wolf", "Fox", "Kangaroo", "Koala", "Panda", "Dolphin", "Whale", "Bat", "Otter", "Skunk", "Gorilla", "Elephant", "Giraffe", "Peacock", "Swan", "Eagle", "Hawk", "Owl", "Penguin"]

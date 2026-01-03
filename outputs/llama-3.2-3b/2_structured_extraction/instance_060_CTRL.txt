@@ -1,0 +1,44 @@
+```json
+[
+  {
+    "risk_name": "memory_leaks",
+    "affected_component": "ingestion_service",
+    "severity": "high"
+  },
+  {
+    "risk_name": "network_latency",
+    "affected_component": "orchestration_layer",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "stale_configuration",
+    "affected_component": "configuration_service",
+    "severity": "low"
+  },
+  {
+    "risk_name": "cloud_infrastructure_costs",
+    "affected_component": "none",
+    "severity": "high"
+  },
+  {
+    "risk_name": "data_retention",
+    "affected_component": "none",
+    "severity": "high"
+  },
+  {
+    "risk_name": "on_call_staffing",
+    "affected_component": "none",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "scaling",
+    "affected_component": "none",
+    "severity": "speculative"
+  },
+  {
+    "risk_name": "token_expiration",
+    "affected_component": "authentication_service",
+    "severity": "high"
+  }
+]
+```

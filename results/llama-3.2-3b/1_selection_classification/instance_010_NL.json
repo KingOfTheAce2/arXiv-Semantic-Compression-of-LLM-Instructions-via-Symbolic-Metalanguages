@@ -1,0 +1,41 @@
+{
+  "prompt_id": "instance_010_NL",
+  "model": "llama-3.2-3b",
+  "family": "1_selection_classification",
+  "condition": "NL",
+  "parse_success": true,
+  "parsed_output": [
+    "Cat",
+    "Dog",
+    "Ferret",
+    "Hamster",
+    "Chinchilla",
+    "Hedgehog"
+  ],
+  "gold_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Guinea pig",
+    "Hamster",
+    "Hedgehog",
+    "Mouse",
+    "Rat"
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": true,
+      "details": "Inclusion constraint satisfied"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "incomplete",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

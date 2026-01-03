@@ -47,30 +47,30 @@ class InstructionGenerator:
     def generate_nl(self, family: str, constraints: dict, metadata: dict) -> str:
         """Generate verbose natural language instruction."""
         generators = {
-            "selection_classification": self._nl_selection,
-            "structured_extraction": self._nl_extraction,
-            "constraint_composition": self._nl_composition,
-            "conditional_transformation": self._nl_transformation,
+            "1_selection_classification": self._nl_selection,
+            "2_structured_extraction": self._nl_extraction,
+            "3_constraint_composition": self._nl_composition,
+            "4_conditional_transformation": self._nl_transformation,
         }
         return generators.get(family, self._nl_generic)(constraints, metadata)
 
     def generate_mg(self, family: str, constraints: dict, metadata: dict) -> str:
         """Generate compact MetaGlyph symbolic instruction."""
         generators = {
-            "selection_classification": self._mg_selection,
-            "structured_extraction": self._mg_extraction,
-            "constraint_composition": self._mg_composition,
-            "conditional_transformation": self._mg_transformation,
+            "1_selection_classification": self._mg_selection,
+            "2_structured_extraction": self._mg_extraction,
+            "3_constraint_composition": self._mg_composition,
+            "4_conditional_transformation": self._mg_transformation,
         }
         return generators.get(family, self._mg_generic)(constraints, metadata)
 
     def generate_ctrl(self, family: str, constraints: dict, metadata: dict) -> str:
         """Generate symbol-shaped control with broken semantics."""
         generators = {
-            "selection_classification": self._ctrl_selection,
-            "structured_extraction": self._ctrl_extraction,
-            "constraint_composition": self._ctrl_composition,
-            "conditional_transformation": self._ctrl_transformation,
+            "1_selection_classification": self._ctrl_selection,
+            "2_structured_extraction": self._ctrl_extraction,
+            "3_constraint_composition": self._ctrl_composition,
+            "4_conditional_transformation": self._ctrl_transformation,
         }
         return generators.get(family, self._ctrl_generic)(constraints, metadata)
 
@@ -369,10 +369,10 @@ class PromptConstructor:
     """Main class for constructing prompts from task instances."""
 
     OUTPUT_FORMATS = {
-        "selection_classification": "Return your answer as a JSON array of strings, e.g., [\"item1\", \"item2\"].",
-        "structured_extraction": "Return your answer as a JSON object with the specified field names as keys.",
-        "constraint_composition": "Return your answer as a JSON object with 'selected_ids' (array) and 'count' (integer).",
-        "conditional_transformation": "Return your answer as a JSON array of transformed record objects.",
+        "1_selection_classification": "Return your answer as a JSON array of strings, e.g., [\"item1\", \"item2\"].",
+        "2_structured_extraction": "Return your answer as a JSON object with the specified field names as keys.",
+        "3_constraint_composition": "Return your answer as a JSON object with 'selected_ids' (array) and 'count' (integer).",
+        "4_conditional_transformation": "Return your answer as a JSON array of transformed record objects.",
     }
 
     def __init__(self, tasks_dir: Path | str, output_dir: Path | str):

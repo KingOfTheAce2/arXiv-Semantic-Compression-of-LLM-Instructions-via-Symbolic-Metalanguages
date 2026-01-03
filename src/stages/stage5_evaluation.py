@@ -435,13 +435,13 @@ class TaskScorer:
         Returns:
             (accuracy, f1_score, exact_match)
         """
-        if family == "selection_classification":
+        if family == "1_selection_classification":
             return self._score_list(output, gold)
-        elif family == "structured_extraction":
+        elif family == "2_structured_extraction":
             return self._score_dict(output, gold)
-        elif family == "constraint_composition":
+        elif family == "3_constraint_composition":
             return self._score_composition(output, gold)
-        elif family == "conditional_transformation":
+        elif family == "4_conditional_transformation":
             return self._score_transformation(output, gold)
         else:
             return self._score_generic(output, gold)
@@ -584,11 +584,6 @@ class Evaluator:
 
     # Map task families to expected output formats
     OUTPUT_FORMATS = {
-        "selection_classification": "list",
-        "structured_extraction": "json",
-        "constraint_composition": "json",
-        "conditional_transformation": "json",
-        # Also support numbered prefixes
         "1_selection_classification": "list",
         "2_structured_extraction": "json",
         "3_constraint_composition": "json",

@@ -1,0 +1,36 @@
+```json
+{
+  "selected_ids": [
+    "Auth Hardening",
+    "Encryption Upgrade",
+    "Firewall Rules Update",
+    "Password Policy Update",
+    "Session Timeout Enforcement",
+    "TLS Certificate Automation",
+    "Build System Cleanup",
+    "Cache Layer Rewrite",
+    "Data Compression",
+    "Index Rebalancing",
+    "Legacy Auth Removal",
+    "Legacy Crypto Support",
+    "Monitoring Dashboard",
+    "Rate Limiting",
+    "Response Caching",
+    "Secure Boot Enforcement",
+    "Secure Logging",
+    "Thread Pool Optimization",
+    "Vulnerability Scanner Update",
+    "API Gateway Optimization",
+    "API Latency Reduction",
+    "Cache Layer Rewrite",
+    "Compression Benchmarking",
+    "Index Rebalancing",
+    "Memory Pooling",
+    "Request Batching",
+    "Response Caching",
+    "Thread Safety Audit",
+    "Latency Budget Enforcement"
+  ],
+  "count": 24
+}
+```

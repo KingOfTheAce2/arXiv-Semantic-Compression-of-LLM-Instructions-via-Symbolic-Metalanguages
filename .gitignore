@@ -3,13 +3,13 @@
 .env.local
 
 # Pipeline artifacts (generated data)
+# NOTE: outputs/ is NOT ignored - kept for reviewer reproducibility
+# NOTE: results/ is NOT ignored - kept for reviewer reproducibility
+# NOTE: summary/ is NOT ignored - kept for reviewer reproducibility
 tasks/
 prompts/
 tokens/
-outputs/
 runs/
-results/
-summary/
 
 # Python
 __pycache__/

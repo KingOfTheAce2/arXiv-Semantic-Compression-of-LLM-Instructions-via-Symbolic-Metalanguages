@@ -1,0 +1,13 @@
+Family,Condition,N,Accuracy (Mean),Accuracy (Std),F1 (Mean),Exact Match Rate,Parse Rate,Pass Rate,Semantic Equiv Rate
+1_selection_classification,CTRL,50,0.000,0.000,0.000,0.000,0.300,0.000,0.000
+1_selection_classification,MG,50,0.000,0.000,0.000,0.000,0.340,0.000,0.000
+1_selection_classification,NL,50,0.000,0.000,0.000,0.000,0.320,0.000,0.000
+2_structured_extraction,CTRL,50,0.000,0.000,0.000,0.000,0.940,0.000,0.000
+2_structured_extraction,MG,50,0.000,0.000,0.000,0.000,0.920,0.000,0.020
+2_structured_extraction,NL,50,0.000,0.000,0.000,0.000,0.920,0.000,0.020
+3_constraint_composition,CTRL,50,0.000,0.000,0.000,0.000,0.280,0.000,0.000
+3_constraint_composition,MG,50,0.000,0.000,0.000,0.000,0.300,0.000,0.000
+3_constraint_composition,NL,50,0.000,0.000,0.000,0.000,1.000,0.000,0.000
+4_conditional_transformation,CTRL,50,0.000,0.000,0.000,0.000,1.000,0.000,0.000
+4_conditional_transformation,MG,50,0.000,0.000,0.000,0.000,1.000,0.000,0.340
+4_conditional_transformation,NL,50,0.000,0.000,0.000,0.000,1.000,0.000,0.340

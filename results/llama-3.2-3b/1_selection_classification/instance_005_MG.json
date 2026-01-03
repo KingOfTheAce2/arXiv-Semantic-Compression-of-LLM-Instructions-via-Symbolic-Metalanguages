@@ -1,0 +1,56 @@
+{
+  "prompt_id": "instance_005_MG",
+  "model": "llama-3.2-3b",
+  "family": "1_selection_classification",
+  "condition": "MG",
+  "parse_success": true,
+  "parsed_output": [
+    "Dog",
+    "Cat",
+    "Hamster",
+    "Guinea pig",
+    "Ferret",
+    "Mouse",
+    "Rat",
+    "Chinchilla",
+    "Hedgehog",
+    "Betta fish",
+    "Goldfish",
+    "Turtle",
+    "Snake",
+    "Lizard",
+    "Parrot",
+    "Canary",
+    "Frog",
+    "Salamander",
+    "Newt",
+    "Tarantula",
+    "Scorpion"
+  ],
+  "gold_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Guinea pig",
+    "Hamster",
+    "Hedgehog",
+    "Mouse",
+    "Rat"
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Extra items: 12"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "extra",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

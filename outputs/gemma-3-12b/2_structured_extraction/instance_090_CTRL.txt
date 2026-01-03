@@ -1,0 +1,40 @@
+
+```json
+[
+  {
+    "risk_name": "memory leaks",
+    "affected_component": "ingestion pipeline",
+    "severity": "high"
+  },
+  {
+    "risk_name": "network latency",
+    "affected_component": "orchestration layer",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "stale configuration",
+    "affected_component": "configuration service",
+    "severity": "low"
+  },
+  {
+    "risk_name": "rising cloud infrastructure costs",
+    "affected_component": "long-term cost planning and resource allocation",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "data retention policy non-compliance",
+    "affected_component": "legal",
+    "severity": "high"
+  },
+  {
+    "risk_name": "limited on-call staffing",
+    "affected_component": "operational resilience",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "improper token expiration handling",
+    "affected_component": "authentication service",
+    "severity": "high"
+  }
+]
+```

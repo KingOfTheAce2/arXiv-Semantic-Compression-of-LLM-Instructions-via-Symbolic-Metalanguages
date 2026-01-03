@@ -1,0 +1,49 @@
+{
+  "prompt_id": "instance_149_NL",
+  "model": "qwen-2.5-7b",
+  "family": "1_selection_classification",
+  "condition": "NL",
+  "parse_success": true,
+  "parsed_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Hamster",
+    "Guinea pig",
+    "Rabbit",
+    "Skunk",
+    "Squirrel",
+    "Turtle",
+    "Fennec Fox",
+    "Mink",
+    "Mink",
+    "Raccoon"
+  ],
+  "gold_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Guinea pig",
+    "Hamster",
+    "Hedgehog",
+    "Mouse",
+    "Rat"
+  ],
+  "exact_match": false,
+  "accuracy": 0.375,
+  "f1_score": 0.5454545454545455,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Extra items: 7"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "extra",
+  "error_details": "Accuracy: 0.38",
+  "semantic_equivalence_pass": false
+}

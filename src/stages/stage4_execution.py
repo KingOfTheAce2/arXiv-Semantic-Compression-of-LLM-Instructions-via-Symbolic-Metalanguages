@@ -358,9 +358,9 @@ class OpenRouterBackend(ModelBackend):
     # Model ID mapping for convenience (paid versions - no :free suffix)
     MODEL_IDS = {
         "llama-3.2-3b": "meta-llama/llama-3.2-3b-instruct",
-        "qwen3-8b": "qwen/qwen3-8b",
+        "qwen-2.5-7b": "qwen/qwen-2.5-7b-instruct",
         "gemma-3-12b": "google/gemma-3-12b-it",
-        "olmo-2-32b": "allenai/olmo-2-0325-32b-instruct",
+        "olmo-3-7b": "allenai/olmo-3-7b-instruct",
         "kimi-k2": "moonshotai/kimi-k2",
     }
 

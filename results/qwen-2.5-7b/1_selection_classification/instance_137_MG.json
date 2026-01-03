@@ -1,0 +1,46 @@
+{
+  "prompt_id": "instance_137_MG",
+  "model": "qwen-2.5-7b",
+  "family": "1_selection_classification",
+  "condition": "MG",
+  "parse_success": true,
+  "parsed_output": [
+    "Dog",
+    "Cat",
+    "Hamster",
+    "Guinea pig",
+    "Ferret",
+    "Mouse",
+    "Rat",
+    "Chinchilla",
+    "Hedgehog",
+    "Parrot",
+    "Canary"
+  ],
+  "gold_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Guinea pig",
+    "Hamster",
+    "Hedgehog",
+    "Mouse",
+    "Rat"
+  ],
+  "exact_match": false,
+  "accuracy": 0.8181818181818182,
+  "f1_score": 0.9,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Extra items: 2"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "extra",
+  "error_details": "Accuracy: 0.82",
+  "semantic_equivalence_pass": false
+}
