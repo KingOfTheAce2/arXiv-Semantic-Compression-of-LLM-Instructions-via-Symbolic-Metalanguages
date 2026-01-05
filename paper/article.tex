@@ -54,7 +54,7 @@ We introduce MetaGlyph, a symbolic language for compressing prompts by encoding 
 
 We evaluate eight models across two dimensions relevant to practitioners: scale (3B--1T parameters) and accessibility (open-source for local deployment vs.\ proprietary APIs). MetaGlyph achieves 62--81\% token reduction across all task types. For API-based deployments, this translates directly to cost savings; for local deployments, it reduces latency and memory pressure.
 
-Results vary dramatically by model. Gemini 2.5 Flash achieves 75\% semantic equivalence between symbolic and prose instructions on selection tasks, with 49.9\% membership operator fidelity. Kimi K2 reaches 98.1\% fidelity for implication ($\Rightarrow$). However, Claude Haiku 4.5 and GPT-5.2 Chat produced no parseable outputs, highlighting format sensitivity in some proprietary models. Mid-sized open-source models (7B--12B) show near-zero operator fidelity, suggesting a U-shaped relationship where sufficient scale overcomes instruction-tuning biases.
+Results vary dramatically by model. Gemini 2.5 Flash achieves 75\% semantic equivalence between symbolic and prose instructions on selection tasks, with 49.9\% membership operator fidelity. Kimi K2 reaches 98.1\% fidelity for implication ($\Rightarrow$) and achieves perfect (100\%) accuracy on selection tasks with symbolic prompts. Among mid-sized models, Qwen 2.5 7B shows 62\% equivalence on extraction tasks. However, Claude Haiku 4.5 and GPT-5.2 Chat produced no parseable outputs, highlighting format sensitivity in some proprietary models. Mid-sized open-source models (7B--12B) show near-zero operator fidelity, suggesting a U-shaped relationship where sufficient scale overcomes instruction-tuning biases.
 \end{abstract}
 
 \medskip
@@ -229,7 +229,7 @@ We use whitespace-based tokenization for consistent counts. CTRL prompts match M
 
 \subsection{Tasks}
 
-We test four task families, each probing different operators (150 instances each):
+We test four task families, each probing different operators (50--200 instances per condition, varying by model):
 
 \textbf{Selection:} Select items matching inclusion/exclusion constraints ($\in$, $\neg$). Example: ``select mammals that are pets but not birds.''
 
@@ -312,7 +312,7 @@ We measure how often MG and NL produce identical outputs, regardless of whether 
 Model & Access & Selection & Extraction & Constraint & Transform. & NL $=$ CTRL \\
 \midrule
 Llama 3.2 3B & Open & 0\% & 2\% & 0\% & 34\% & \textbf{0\%} \\
-Qwen 2.5 7B & Open & 8\% & 44\% & 0.7\% & 0\% & \textbf{0\%} \\
+Qwen 2.5 7B & Open & 9\% & 62\% & 0.7\% & 0\% & \textbf{0\%} \\
 OLMo 3 7B & Open & 0\% & 0\% & 0.7\% & 0\% & \textbf{0\%} \\
 Gemma 3 12B & Open & 0\% & 20\% & 0\% & 0\% & \textbf{0\%} \\
 \midrule
@@ -325,7 +325,7 @@ GPT-5.2 Chat & Prop. & \multicolumn{4}{c}{--- (0\% parse success)\textsuperscrip
 \end{tabular}
 \end{table}
 
-The results reveal several patterns. The controls work as intended: NL$=$CTRL is 0\% across all working models, confirming that meaningless symbols produce different outputs than meaningful ones. Gemini 2.5 Flash achieves remarkable 75\% equivalence on selection tasks---the highest observed---meaning symbolic and prose instructions produce identical outputs three-quarters of the time. Among open-source models, Qwen achieves 44\% equivalence on extraction tasks. Constraint composition fails across all models: near-zero equivalence indicates models do not reliably interpret $\cap$ as ``apply both constraints.''
+The results reveal several patterns. The controls work as intended: NL$=$CTRL is 0\% across all working models, confirming that meaningless symbols produce different outputs than meaningful ones. Gemini 2.5 Flash achieves remarkable 75\% equivalence on selection tasks---the highest observed---meaning symbolic and prose instructions produce identical outputs three-quarters of the time. Among open-source models, Qwen achieves 62\% equivalence on extraction tasks. Notably, Kimi K2 achieves \textbf{100\% accuracy} on selection tasks with MetaGlyph prompts (vs.\ 90.8\% with natural language), suggesting symbolic instructions can \emph{outperform} prose for certain model-task combinations. Constraint composition fails across all models: near-zero equivalence indicates models do not reliably interpret $\cap$ as ``apply both constraints.''
 
 Two proprietary models (Claude Haiku 4.5, GPT-5.2 Chat) produced 0\% parseable JSON outputs across all conditions. This failure mode, discussed in Section~\ref{sec:analysis}, highlights format sensitivity in frontier models.
 
@@ -345,7 +345,7 @@ Which symbols work? Table~\ref{tab:fidelity} shows fidelity by operator across m
 \toprule
 Operator & Llama 3B & Qwen 7B & OLMo 7B & Gemma 12B & Kimi K2 & Gemini 2.5 \\
 \midrule
-$\in$ (membership) & 33.3\% & 18.9\% & 0.0\% & 0.0\% & 36.0\% & \textbf{49.9\%} \\
+$\in$ (membership) & 33.3\% & 20.4\% & 0.0\% & 0.0\% & 36.0\% & \textbf{49.9\%} \\
 $\to$ (transformation) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% \\
 $\cap$ (intersection) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 2.7\% \\
 $\Rightarrow$ (implication) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & \textbf{98.1\%} & 33.5\% \\
@@ -400,7 +400,7 @@ Several practical lessons emerge, differentiated by deployment scenario:
 
 \textbf{For Gemini deployments}: Symbolic compression is highly effective. Gemini 2.5 Flash achieves 75\% semantic equivalence and 49.9\% membership fidelity---the best results observed. With 62--81\% token reduction, this translates to significant cost savings for high-volume applications.
 
-\textbf{For Kimi K2 deployments}: Implication-heavy prompts work exceptionally well (98.1\% fidelity). Use $\Rightarrow$ for conditional logic and if-then rules.
+\textbf{For Kimi K2 deployments}: Implication-heavy prompts work exceptionally well (98.1\% fidelity). Use $\Rightarrow$ for conditional logic and if-then rules. Selection tasks achieve 100\% accuracy with symbolic prompts---better than natural language.
 
 \textbf{For local/offline deployments} (Llama, Qwen, OLMo, Gemma): Token costs are zero, but compression still reduces memory pressure and latency. These smaller models show lower operator fidelity, requiring hybrid approaches that combine symbols for structure with natural language for critical constraints.
 
@@ -410,7 +410,7 @@ Several practical lessons emerge, differentiated by deployment scenario:
 
 \subsection{What We Showed}
 
-Symbolic compression preserves meaning up to 75\% of the time for selection tasks (Gemini 2.5 Flash) and 44\% for extraction tasks (Qwen 2.5). The 0\% CTRL equivalence confirms models respond to symbolic \emph{meaning}, not just appearance. Operator reliability varies by model: Gemini 2.5 Flash achieves the highest membership fidelity (49.9\%), while Kimi K2 achieves near-perfect implication fidelity (98.1\%). However, two proprietary models (Claude, GPT) failed to produce parseable outputs entirely, demonstrating that symbolic prompts require format verification per model.
+Symbolic compression preserves meaning up to 75\% of the time for selection tasks (Gemini 2.5 Flash) and 62\% for extraction tasks (Qwen 2.5 7B). The 0\% CTRL equivalence confirms models respond to symbolic \emph{meaning}, not just appearance. Operator reliability varies by model: Gemini 2.5 Flash achieves the highest membership fidelity (49.9\%), while Kimi K2 achieves near-perfect implication fidelity (98.1\%). However, two proprietary models (Claude, GPT) failed to produce parseable outputs entirely, demonstrating that symbolic prompts require format verification per model.
 
 \subsection{What We Did Not Show}
 
@@ -433,7 +433,7 @@ We introduced MetaGlyph, a symbolic instruction language that compresses prompts
 
 The answer is nuanced and model-dependent. First, does compression preserve meaning? Yes, substantially for certain models. Gemini 2.5 Flash achieves 75\% semantic equivalence on selection tasks---symbolic and prose instructions produce identical outputs three-quarters of the time. The 0\% CTRL equivalence confirms this reflects genuine semantic understanding rather than superficial pattern matching.
 
-Second, which symbols work? It depends on the model. Membership ($\in$) works best overall, with Gemini 2.5 Flash achieving 49.9\% fidelity. Implication ($\Rightarrow$) shows the widest variance: 98.1\% fidelity on Kimi K2, 33.5\% on Gemini, and 0\% on mid-sized models. Conjunction ($\cap$) remains unreliable across all models tested.
+Second, which symbols work? It depends on the model. Membership ($\in$) works best overall, with Gemini 2.5 Flash achieving 49.9\% fidelity. Implication ($\Rightarrow$) shows the widest variance: 98.1\% fidelity on Kimi K2, 33.5\% on Gemini, and 0\% on mid-sized models. Conjunction ($\cap$) remains unreliable across all models tested. Remarkably, Kimi K2 achieves 100\% accuracy on selection tasks with symbolic prompts versus 90.8\% with prose, demonstrating that symbolic instructions can outperform natural language for specific model-task pairs.
 
 Third, can all models use symbolic compression? No. Claude Haiku 4.5 and GPT-5.2 Chat produced zero parseable outputs across all conditions, highlighting that format sensitivity varies significantly across proprietary APIs.
 
