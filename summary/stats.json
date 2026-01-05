@@ -1,210 +1,228 @@
 {
-  "olmo-3-7b_metrics": {
+  "gemini-2.5-flash_metrics": {
     "1_selection_classification": {
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
-        "count": 150,
-        "accuracy_mean": 0.1702127659574468,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.29090909090909095,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
+        "count": 200,
+        "accuracy_mean": 0.7091309523809524,
+        "accuracy_std": 0.358171031566063,
+        "f1_mean": 0.7379191729323309,
+        "f1_std": 0.3798993365101387,
+        "exact_match_rate": 0.015,
         "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.0,
+        "overall_pass_rate": 0.015,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
-        "count": 150,
-        "accuracy_mean": 0.4,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.5714285714285714,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
+        "count": 200,
+        "accuracy_mean": 0.7841309523809524,
+        "accuracy_std": 0.3986792423088127,
+        "f1_mean": 0.7773928571428571,
+        "f1_std": 0.40182591531797485,
+        "exact_match_rate": 0.765,
         "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
+        "overall_pass_rate": 0.765,
+        "semantic_equivalence_rate": 0.75
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
-        "count": 150,
-        "accuracy_mean": 0.9,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.9473684210526316,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
+        "count": 200,
+        "accuracy_mean": 0.7791309523809524,
+        "accuracy_std": 0.4022133763077794,
+        "f1_mean": 0.7773928571428571,
+        "f1_std": 0.40182591531797485,
+        "exact_match_rate": 0.76,
         "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
+        "overall_pass_rate": 0.76,
+        "semantic_equivalence_rate": 0.75
       }
     },
     "2_structured_extraction": {
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
-        "count": 150,
+        "count": 200,
         "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.94,
+        "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
-        "count": 150,
+        "count": 200,
         "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.96,
+        "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
+        "semantic_equivalence_rate": 0.125
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
-        "count": 150,
+        "count": 200,
         "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.9666666666666667,
+        "parse_success_rate": 0.995,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
+        "semantic_equivalence_rate": 0.125
       }
     },
     "3_constraint_composition": {
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
-        "count": 150,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
+        "count": 200,
+        "accuracy_mean": 0.005,
+        "accuracy_std": 0.07071067811865475,
         "f1_mean": 0.0,
         "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.72,
-        "overall_pass_rate": 0.0,
+        "exact_match_rate": 0.005,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.005,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
-        "count": 150,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
+        "count": 200,
+        "accuracy_mean": 0.005,
+        "accuracy_std": 0.07071067811865475,
         "f1_mean": 0.0,
         "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.7266666666666667,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.006666666666666667
+        "exact_match_rate": 0.005,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.005,
+        "semantic_equivalence_rate": 0.04
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
-        "count": 150,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
+        "count": 200,
+        "accuracy_mean": 0.005,
+        "accuracy_std": 0.07071067811865475,
         "f1_mean": 0.0,
         "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.64,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.006666666666666667
+        "exact_match_rate": 0.005,
+        "parse_success_rate": 0.995,
+        "overall_pass_rate": 0.005,
+        "semantic_equivalence_rate": 0.04
       }
     },
     "4_conditional_transformation": {
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
-        "count": 150,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
+        "count": 200,
+        "accuracy_mean": 0.22083333333333333,
+        "accuracy_std": 0.38345439061476666,
+        "f1_mean": 0.22083333333333333,
+        "f1_std": 0.38345439061476666,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
+        "parse_success_rate": 0.26,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
-        "count": 150,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
+        "count": 200,
+        "accuracy_mean": 0.2340833333333333,
+        "accuracy_std": 0.3908226141683636,
+        "f1_mean": 0.2340833333333333,
+        "f1_std": 0.3908226141683636,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
+        "parse_success_rate": 0.265,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
-        "count": 150,
-        "accuracy_mean": 0.3,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.3,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.0,
+        "count": 200,
+        "accuracy_mean": 0.265,
+        "accuracy_std": 0.44244069528493996,
+        "f1_mean": 0.265,
+        "f1_std": 0.44244069528493996,
+        "exact_match_rate": 0.265,
+        "parse_success_rate": 0.265,
+        "overall_pass_rate": 0.265,
         "semantic_equivalence_rate": 0.0
       }
     }
   },
-  "olmo-3-7b_fidelity": [
+  "gemini-2.5-flash_fidelity": [
     {
       "operator": "∈",
-      "check_count": 450,
-      "pass_count": 0,
-      "pass_rate": 0.0
+      "check_count": 669,
+      "pass_count": 334,
+      "pass_rate": 0.4992526158445441
     },
     {
-      "operator": "→",
-      "check_count": 430,
-      "pass_count": 0,
-      "pass_rate": 0.0
+      "operator": "∉",
+      "check_count": 39,
+      "pass_count": 39,
+      "pass_rate": 1.0
     },
     {
       "operator": "∩",
-      "check_count": 313,
+      "check_count": 590,
+      "pass_count": 16,
+      "pass_rate": 0.02711864406779661
+    },
+    {
+      "operator": "→",
+      "check_count": 599,
       "pass_count": 0,
       "pass_rate": 0.0
+    },
+    {
+      "operator": "¬",
+      "check_count": 51,
+      "pass_count": 51,
+      "pass_rate": 1.0
+    },
+    {
+      "operator": "∪",
+      "check_count": 51,
+      "pass_count": 4,
+      "pass_rate": 0.0784313725490196
     },
     {
       "operator": "⇒",
-      "check_count": 450,
-      "pass_count": 0,
-      "pass_rate": 0.0
+      "check_count": 158,
+      "pass_count": 53,
+      "pass_rate": 0.33544303797468356
     }
   ],
-  "olmo-3-7b_comparisons": [
+  "gemini-2.5-flash_comparisons": [
     {
       "family": "1_selection_classification",
-      "model": "olmo-3-7b",
-      "nl_accuracy": 0.9,
-      "mg_accuracy": 0.4,
-      "ctrl_accuracy": 0.1702127659574468,
-      "mg_vs_nl_diff": -0.5,
-      "mg_vs_ctrl_diff": 0.22978723404255322,
-      "statistical_significant": true
+      "model": "gemini-2.5-flash",
+      "nl_accuracy": 0.7791309523809524,
+      "mg_accuracy": 0.7841309523809524,
+      "ctrl_accuracy": 0.7091309523809524,
+      "mg_vs_nl_diff": 0.0050000000000000044,
+      "mg_vs_ctrl_diff": 0.07500000000000007,
+      "statistical_significant": false
     },
     {
       "family": "2_structured_extraction",
-      "model": "olmo-3-7b",
+      "model": "gemini-2.5-flash",
       "nl_accuracy": 0.0,
       "mg_accuracy": 0.0,
       "ctrl_accuracy": 0.0,
@@ -214,29 +232,29 @@
     },
     {
       "family": "3_constraint_composition",
-      "model": "olmo-3-7b",
-      "nl_accuracy": 0.0,
-      "mg_accuracy": 0.0,
-      "ctrl_accuracy": 0.0,
+      "model": "gemini-2.5-flash",
+      "nl_accuracy": 0.005,
+      "mg_accuracy": 0.005,
+      "ctrl_accuracy": 0.005,
       "mg_vs_nl_diff": 0.0,
       "mg_vs_ctrl_diff": 0.0,
       "statistical_significant": false
     },
     {
       "family": "4_conditional_transformation",
-      "model": "olmo-3-7b",
-      "nl_accuracy": 0.3,
-      "mg_accuracy": 0.0,
-      "ctrl_accuracy": 0.0,
-      "mg_vs_nl_diff": -0.3,
-      "mg_vs_ctrl_diff": 0.0,
+      "model": "gemini-2.5-flash",
+      "nl_accuracy": 0.265,
+      "mg_accuracy": 0.2340833333333333,
+      "ctrl_accuracy": 0.22083333333333333,
+      "mg_vs_nl_diff": -0.030916666666666703,
+      "mg_vs_ctrl_diff": 0.013249999999999984,
       "statistical_significant": true
     }
   ],
-  "olmo-3-7b_tokens": [
+  "gemini-2.5-flash_tokens": [
     {
       "family": "1_selection_classification",
-      "model": "olmo-3-7b",
+      "model": "gemini-2.5-flash",
       "nl_tokens": 215,
       "mg_tokens": 41,
       "ctrl_tokens": 41,
@@ -245,7 +263,7 @@
     },
     {
       "family": "2_structured_extraction",
-      "model": "olmo-3-7b",
+      "model": "gemini-2.5-flash",
       "nl_tokens": 176,
       "mg_tokens": 52,
       "ctrl_tokens": 52,
@@ -254,7 +272,7 @@
     },
     {
       "family": "3_constraint_composition",
-      "model": "olmo-3-7b",
+      "model": "gemini-2.5-flash",
       "nl_tokens": 134,
       "mg_tokens": 48,
       "ctrl_tokens": 48,
@@ -263,7 +281,7 @@
     },
     {
       "family": "4_conditional_transformation",
-      "model": "olmo-3-7b",
+      "model": "gemini-2.5-flash",
       "nl_tokens": 164,
       "mg_tokens": 62,
       "ctrl_tokens": 62,
@@ -271,85 +289,85 @@
       "mg_reduction_vs_ctrl": 0.0
     }
   ],
-  "kimi-k2_metrics": {
+  "claude-haiku-4.5_metrics": {
     "1_selection_classification": {
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
-        "count": 150,
-        "accuracy_mean": 0.8986153846153847,
-        "accuracy_std": 0.01695800591157585,
-        "f1_mean": 0.9465071770334929,
-        "f1_std": 0.01054804195456872,
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
+        "parse_success_rate": 0.0,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
-        "count": 150,
-        "accuracy_mean": 1.0,
+        "count": 200,
+        "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
-        "f1_mean": 1.0,
+        "f1_mean": 0.0,
         "f1_std": 0.0,
-        "exact_match_rate": 1.0,
-        "parse_success_rate": 1.0,
-        "overall_pass_rate": 1.0,
-        "semantic_equivalence_rate": 0.08
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
-        "count": 150,
-        "accuracy_mean": 0.9080000000000001,
-        "accuracy_std": 0.027220205680990657,
-        "f1_mean": 0.9515789473684212,
-        "f1_std": 0.014326424042626648,
-        "exact_match_rate": 0.08,
-        "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.08,
-        "semantic_equivalence_rate": 0.08
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
       }
     },
     "2_structured_extraction": {
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
-        "count": 150,
+        "count": 200,
         "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
+        "parse_success_rate": 0.0,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
-        "count": 150,
+        "count": 200,
         "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
+        "parse_success_rate": 0.0,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
-        "count": 150,
+        "count": 200,
         "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
+        "parse_success_rate": 0.0,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       }
@@ -358,39 +376,39 @@
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
-        "count": 150,
+        "count": 200,
         "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
+        "parse_success_rate": 0.0,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
-        "count": 150,
+        "count": 200,
         "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
+        "parse_success_rate": 0.0,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
-        "count": 150,
+        "count": 200,
         "accuracy_mean": 0.0,
         "accuracy_std": 0.0,
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
+        "parse_success_rate": 0.0,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       }
@@ -399,84 +417,59 @@
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
-        "count": 150,
-        "accuracy_mean": 0.3458888888888889,
-        "accuracy_std": 0.4765255210477123,
-        "f1_mean": 0.3458888888888889,
-        "f1_std": 0.4765255210477123,
-        "exact_match_rate": 0.34,
-        "parse_success_rate": 0.3466666666666667,
-        "overall_pass_rate": 0.34,
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
-        "count": 150,
-        "accuracy_mean": 0.34644444444444444,
-        "accuracy_std": 0.47720049059875325,
-        "f1_mean": 0.34644444444444444,
-        "f1_std": 0.47720049059875325,
-        "exact_match_rate": 0.3333333333333333,
-        "parse_success_rate": 0.3466666666666667,
-        "overall_pass_rate": 0.3333333333333333,
-        "semantic_equivalence_rate": 0.006666666666666667
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
-        "count": 150,
-        "accuracy_mean": 0.35333333333333333,
-        "accuracy_std": 0.47960647552410435,
-        "f1_mean": 0.35333333333333333,
-        "f1_std": 0.47960647552410435,
-        "exact_match_rate": 0.35333333333333333,
-        "parse_success_rate": 0.35333333333333333,
-        "overall_pass_rate": 0.35333333333333333,
-        "semantic_equivalence_rate": 0.006666666666666667
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
       }
     }
   },
-  "kimi-k2_fidelity": [
-    {
-      "operator": "∈",
-      "check_count": 450,
-      "pass_count": 162,
-      "pass_rate": 0.36
-    },
-    {
-      "operator": "→",
-      "check_count": 450,
-      "pass_count": 0,
-      "pass_rate": 0.0
-    },
-    {
-      "operator": "∩",
-      "check_count": 450,
-      "pass_count": 0,
-      "pass_rate": 0.0
-    },
-    {
-      "operator": "⇒",
-      "check_count": 157,
-      "pass_count": 154,
-      "pass_rate": 0.9808917197452229
-    }
-  ],
-  "kimi-k2_comparisons": [
+  "claude-haiku-4.5_fidelity": [],
+  "claude-haiku-4.5_comparisons": [
     {
       "family": "1_selection_classification",
-      "model": "kimi-k2",
-      "nl_accuracy": 0.9080000000000001,
-      "mg_accuracy": 1.0,
-      "ctrl_accuracy": 0.8986153846153847,
-      "mg_vs_nl_diff": 0.09199999999999986,
-      "mg_vs_ctrl_diff": 0.1013846153846153,
-      "statistical_significant": true
+      "model": "claude-haiku-4.5",
+      "nl_accuracy": 0.0,
+      "mg_accuracy": 0.0,
+      "ctrl_accuracy": 0.0,
+      "mg_vs_nl_diff": 0.0,
+      "mg_vs_ctrl_diff": 0.0,
+      "statistical_significant": false
     },
     {
       "family": "2_structured_extraction",
-      "model": "kimi-k2",
+      "model": "claude-haiku-4.5",
       "nl_accuracy": 0.0,
       "mg_accuracy": 0.0,
       "ctrl_accuracy": 0.0,
@@ -486,7 +479,7 @@
     },
     {
       "family": "3_constraint_composition",
-      "model": "kimi-k2",
+      "model": "claude-haiku-4.5",
       "nl_accuracy": 0.0,
       "mg_accuracy": 0.0,
       "ctrl_accuracy": 0.0,
@@ -496,19 +489,19 @@
     },
     {
       "family": "4_conditional_transformation",
-      "model": "kimi-k2",
-      "nl_accuracy": 0.35333333333333333,
-      "mg_accuracy": 0.34644444444444444,
-      "ctrl_accuracy": 0.3458888888888889,
-      "mg_vs_nl_diff": -0.006888888888888889,
-      "mg_vs_ctrl_diff": 0.0005555555555555314,
+      "model": "claude-haiku-4.5",
+      "nl_accuracy": 0.0,
+      "mg_accuracy": 0.0,
+      "ctrl_accuracy": 0.0,
+      "mg_vs_nl_diff": 0.0,
+      "mg_vs_ctrl_diff": 0.0,
       "statistical_significant": false
     }
   ],
-  "kimi-k2_tokens": [
+  "claude-haiku-4.5_tokens": [
     {
       "family": "1_selection_classification",
-      "model": "kimi-k2",
+      "model": "claude-haiku-4.5",
       "nl_tokens": 215,
       "mg_tokens": 41,
       "ctrl_tokens": 41,
@@ -517,7 +510,7 @@
     },
     {
       "family": "2_structured_extraction",
-      "model": "kimi-k2",
+      "model": "claude-haiku-4.5",
       "nl_tokens": 176,
       "mg_tokens": 52,
       "ctrl_tokens": 52,
@@ -526,7 +519,7 @@
     },
     {
       "family": "3_constraint_composition",
-      "model": "kimi-k2",
+      "model": "claude-haiku-4.5",
       "nl_tokens": 134,
       "mg_tokens": 48,
       "ctrl_tokens": 48,
@@ -535,7 +528,254 @@
     },
     {
       "family": "4_conditional_transformation",
-      "model": "kimi-k2",
+      "model": "claude-haiku-4.5",
+      "nl_tokens": 164,
+      "mg_tokens": 62,
+      "ctrl_tokens": 62,
+      "mg_reduction_vs_nl": 0.6219512195121951,
+      "mg_reduction_vs_ctrl": 0.0
+    }
+  ],
+  "gpt-5.2-chat_metrics": {
+    "1_selection_classification": {
+      "CTRL": {
+        "group_key": "condition",
+        "group_value": "CTRL",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "MG": {
+        "group_key": "condition",
+        "group_value": "MG",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "NL": {
+        "group_key": "condition",
+        "group_value": "NL",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      }
+    },
+    "2_structured_extraction": {
+      "CTRL": {
+        "group_key": "condition",
+        "group_value": "CTRL",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "MG": {
+        "group_key": "condition",
+        "group_value": "MG",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "NL": {
+        "group_key": "condition",
+        "group_value": "NL",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      }
+    },
+    "3_constraint_composition": {
+      "CTRL": {
+        "group_key": "condition",
+        "group_value": "CTRL",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "MG": {
+        "group_key": "condition",
+        "group_value": "MG",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "NL": {
+        "group_key": "condition",
+        "group_value": "NL",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      }
+    },
+    "4_conditional_transformation": {
+      "CTRL": {
+        "group_key": "condition",
+        "group_value": "CTRL",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "MG": {
+        "group_key": "condition",
+        "group_value": "MG",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "NL": {
+        "group_key": "condition",
+        "group_value": "NL",
+        "count": 200,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      }
+    }
+  },
+  "gpt-5.2-chat_fidelity": [],
+  "gpt-5.2-chat_comparisons": [
+    {
+      "family": "1_selection_classification",
+      "model": "gpt-5.2-chat",
+      "nl_accuracy": 0.0,
+      "mg_accuracy": 0.0,
+      "ctrl_accuracy": 0.0,
+      "mg_vs_nl_diff": 0.0,
+      "mg_vs_ctrl_diff": 0.0,
+      "statistical_significant": false
+    },
+    {
+      "family": "2_structured_extraction",
+      "model": "gpt-5.2-chat",
+      "nl_accuracy": 0.0,
+      "mg_accuracy": 0.0,
+      "ctrl_accuracy": 0.0,
+      "mg_vs_nl_diff": 0.0,
+      "mg_vs_ctrl_diff": 0.0,
+      "statistical_significant": false
+    },
+    {
+      "family": "3_constraint_composition",
+      "model": "gpt-5.2-chat",
+      "nl_accuracy": 0.0,
+      "mg_accuracy": 0.0,
+      "ctrl_accuracy": 0.0,
+      "mg_vs_nl_diff": 0.0,
+      "mg_vs_ctrl_diff": 0.0,
+      "statistical_significant": false
+    },
+    {
+      "family": "4_conditional_transformation",
+      "model": "gpt-5.2-chat",
+      "nl_accuracy": 0.0,
+      "mg_accuracy": 0.0,
+      "ctrl_accuracy": 0.0,
+      "mg_vs_nl_diff": 0.0,
+      "mg_vs_ctrl_diff": 0.0,
+      "statistical_significant": false
+    }
+  ],
+  "gpt-5.2-chat_tokens": [
+    {
+      "family": "1_selection_classification",
+      "model": "gpt-5.2-chat",
+      "nl_tokens": 215,
+      "mg_tokens": 41,
+      "ctrl_tokens": 41,
+      "mg_reduction_vs_nl": 0.8093023255813954,
+      "mg_reduction_vs_ctrl": 0.0
+    },
+    {
+      "family": "2_structured_extraction",
+      "model": "gpt-5.2-chat",
+      "nl_tokens": 176,
+      "mg_tokens": 52,
+      "ctrl_tokens": 52,
+      "mg_reduction_vs_nl": 0.7045454545454546,
+      "mg_reduction_vs_ctrl": 0.0
+    },
+    {
+      "family": "3_constraint_composition",
+      "model": "gpt-5.2-chat",
+      "nl_tokens": 134,
+      "mg_tokens": 48,
+      "ctrl_tokens": 48,
+      "mg_reduction_vs_nl": 0.6417910447761194,
+      "mg_reduction_vs_ctrl": 0.0
+    },
+    {
+      "family": "4_conditional_transformation",
+      "model": "gpt-5.2-chat",
       "nl_tokens": 164,
       "mg_tokens": 62,
       "ctrl_tokens": 62,

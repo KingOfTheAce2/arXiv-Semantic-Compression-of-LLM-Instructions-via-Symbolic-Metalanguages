@@ -357,11 +357,16 @@ class OpenRouterBackend(ModelBackend):
 
     # Model ID mapping for convenience (paid versions - no :free suffix)
     MODEL_IDS = {
+        # Smaller models (3-12B)
         "llama-3.2-3b": "meta-llama/llama-3.2-3b-instruct",
         "qwen-2.5-7b": "qwen/qwen-2.5-7b-instruct",
         "gemma-3-12b": "google/gemma-3-12b-it",
         "olmo-3-7b": "allenai/olmo-3-7b-instruct",
+        # Larger/frontier models
         "kimi-k2": "moonshotai/kimi-k2",
+        "gemini-2.5-flash": "google/gemini-2.5-flash",
+        "claude-haiku-4.5": "anthropic/claude-haiku-4.5",
+        "gpt-5.2-chat": "openai/gpt-5.2-chat",
     }
 
     def __init__(

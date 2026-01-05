@@ -1,0 +1,40 @@
+{
+  "prompt_id": "cmp_0016_CTRL",
+  "model": "gemini-2.5-flash",
+  "family": "3_constraint_composition",
+  "condition": "CTRL",
+  "parse_success": true,
+  "parsed_output": [],
+  "gold_output": {
+    "selected_ids": [
+      "item_000",
+      "item_005",
+      "item_007",
+      "item_009",
+      "item_011",
+      "item_016"
+    ],
+    "count": 6
+  },
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "∩",
+      "checked": true,
+      "passed": true,
+      "details": "Intersection scope correct"
+    },
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": true,
+      "details": "Inclusion constraint satisfied"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "format",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

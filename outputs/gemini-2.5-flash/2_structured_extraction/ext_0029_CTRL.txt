@@ -1,0 +1,14 @@
+```json
+[
+  {
+    "risk_name": "Payment Default",
+    "affected_component": "Financial",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Late Payment",
+    "affected_component": "Financial",
+    "severity": "Medium"
+  }
+]
+```

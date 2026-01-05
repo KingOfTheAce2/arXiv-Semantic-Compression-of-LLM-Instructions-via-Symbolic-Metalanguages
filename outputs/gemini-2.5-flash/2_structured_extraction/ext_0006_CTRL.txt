@@ -1,0 +1,29 @@
+```json
+[
+  {
+    "risk_name": "Invoice Processing Error",
+    "affected_component": "Invoice data extraction and processing",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "Incorrect Calculation",
+    "affected_component": "Subtotal, Tax, Total",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Missing Information",
+    "affected_component": "Invoice fields (e.g., payment terms, bill-to address)",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "Data Entry Error",
+    "affected_component": "Any extracted field (e.g., invoice number, dates, item prices)",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "Format Inconsistency",
+    "affected_component": "Date formats, currency formats",
+    "severity": "low"
+  }
+]
+```

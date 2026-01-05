@@ -1,0 +1,29 @@
+{
+  "prompt_id": "ext_0023_MG",
+  "model": "gemini-2.5-flash",
+  "family": "2_structured_extraction",
+  "condition": "MG",
+  "parse_success": true,
+  "parsed_output": [],
+  "gold_output": {
+    "sender_name": "Alice Smith",
+    "date": "2024-10-07",
+    "subject": "Project Update",
+    "sender": "alice.smith@globalsolutions.com"
+  },
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "format",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

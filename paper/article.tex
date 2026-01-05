@@ -52,7 +52,9 @@
 \begin{abstract}
 We introduce MetaGlyph, a symbolic language for compressing prompts by encoding instructions as mathematical symbols rather than prose. Unlike systems requiring explicit decoding rules, MetaGlyph uses symbols like $\in$ (membership) and $\Rightarrow$ (implication) that models already understand from their training data. We test whether these symbols work as ``instruction shortcuts'' that models can interpret without additional teaching.
 
-Across four task types and five models (3B--1T parameters), MetaGlyph achieves 62--81\% fewer tokens while preserving meaning, though reliability varies by symbol and scale. The key finding is scale-dependent operator fidelity: while mid-sized models (7B--12B) show near-zero fidelity for most operators, the frontier-scale Kimi K2 (1T parameters) achieves 98.1\% fidelity for implication ($\Rightarrow$) and 36\% for membership ($\in$). These results suggest a U-shaped relationship between model scale and symbolic comprehension, where sufficient scale can overcome instruction-tuning biases to access pretrained symbolic semantics.
+We evaluate eight models across two dimensions relevant to practitioners: scale (3B--1T parameters) and accessibility (open-source for local deployment vs.\ proprietary APIs). MetaGlyph achieves 62--81\% token reduction across all task types. For API-based deployments, this translates directly to cost savings; for local deployments, it reduces latency and memory pressure.
+
+Results vary dramatically by model. Gemini 2.5 Flash achieves 75\% semantic equivalence between symbolic and prose instructions on selection tasks, with 49.9\% membership operator fidelity. Kimi K2 reaches 98.1\% fidelity for implication ($\Rightarrow$). However, Claude Haiku 4.5 and GPT-5.2 Chat produced no parseable outputs, highlighting format sensitivity in some proprietary models. Mid-sized open-source models (7B--12B) show near-zero operator fidelity, suggesting a U-shaped relationship where sufficient scale overcomes instruction-tuning biases.
 \end{abstract}
 
 \medskip
@@ -239,24 +241,30 @@ We test four task families, each probing different operators (150 instances each
 
 \subsection{Models}
 
-We evaluate five instruction-tuned models spanning 3B to 1T parameters (Table~\ref{tab:models}). All use deterministic decoding (temperature 0).
+We evaluate eight instruction-tuned models along two dimensions relevant to practitioners: \emph{scale} (3B--1T parameters) and \emph{accessibility} (open-source vs.\ proprietary). This design addresses distinct deployment scenarios: researchers and privacy-conscious users who run models locally, and practitioners who access frontier capabilities via commercial APIs (Table~\ref{tab:models}). All experiments use deterministic decoding (temperature 0).
 
 \begin{table}[htbp]
 \centering
-\caption{Evaluated Models}
+\caption{Evaluated Models by Scale and Accessibility}
 \label{tab:models}
-\begin{tabular}{@{}lll@{}}
+\begin{tabular}{@{}lllll@{}}
 \toprule
-Model & Parameters & OpenRouter ID \\
+Model & Parameters & Access & Offline & OpenRouter ID \\
 \midrule
-Llama 3.2 3B Instruct & 3B & \texttt{meta-llama/llama-3.2-3b-instruct} \\
-Gemma 3 12B IT & 12B & \texttt{google/gemma-3-12b-it} \\
-Qwen 2.5 7B Instruct & 7B & \texttt{qwen/qwen-2.5-7b-instruct} \\
-OLMo 3 7B Instruct & 7B & \texttt{allenai/olmo-3-7b-instruct} \\
-Kimi K2 & 1T (32B active) & \texttt{moonshotai/kimi-k2} \\
+Llama 3.2 3B Instruct & 3B & Open & \checkmark & \texttt{meta-llama/llama-3.2-3b-instruct} \\
+Qwen 2.5 7B Instruct & 7B & Open & \checkmark & \texttt{qwen/qwen-2.5-7b-instruct} \\
+OLMo 3 7B Instruct & 7B & Open & \checkmark & \texttt{allenai/olmo-3-7b-instruct} \\
+Gemma 3 12B IT & 12B & Open & \checkmark & \texttt{google/gemma-3-12b-it} \\
+\midrule
+Kimi K2 & 1T (32B active) & Open & --- & \texttt{moonshotai/kimi-k2} \\
+Gemini 2.5 Flash & --- & Proprietary & --- & \texttt{google/gemini-2.5-flash} \\
+Claude Haiku 4.5 & --- & Proprietary & --- & \texttt{anthropic/claude-haiku-4.5} \\
+GPT-5.2 Chat & --- & Proprietary & --- & \texttt{openai/gpt-5.2-chat} \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+The open-source models (Llama, Qwen, OLMo, Gemma) can be downloaded and run locally without internet connectivity or API costs, making them suitable for privacy-sensitive applications, air-gapped environments, and cost-constrained deployments. The proprietary models (Gemini, Claude, GPT) represent the frontier capabilities that most commercial applications rely on, but require API access and incur per-token costs---precisely where prompt compression offers direct economic benefit.
 
 \subsection{Metrics}
 
@@ -299,20 +307,27 @@ We measure how often MG and NL produce identical outputs, regardless of whether 
 \centering
 \caption{Output Equivalence (NL $=$ MG) by Model and Task Family}
 \label{tab:equivalence}
-\begin{tabular}{@{}lccccc@{}}
+\begin{tabular}{@{}llccccc@{}}
 \toprule
-Model & Selection & Extraction & Constraint & Transformation & NL $=$ CTRL \\
+Model & Access & Selection & Extraction & Constraint & Transform. & NL $=$ CTRL \\
 \midrule
-Llama 3.2 3B & 0\% & 2\% & 0\% & 34\% & \textbf{0\%} \\
-Gemma 3 12B & 0\% & 20\% & 0\% & 0\% & \textbf{0\%} \\
-Qwen 2.5 7B & 8\% & 44\% & 0.7\% & 0\% & \textbf{0\%} \\
-OLMo 3 7B & 0\% & 0\% & 0.7\% & 0\% & \textbf{0\%} \\
-Kimi K2 & 8\% & 0\% & 0\% & 0.7\% & \textbf{0\%} \\
+Llama 3.2 3B & Open & 0\% & 2\% & 0\% & 34\% & \textbf{0\%} \\
+Qwen 2.5 7B & Open & 8\% & 44\% & 0.7\% & 0\% & \textbf{0\%} \\
+OLMo 3 7B & Open & 0\% & 0\% & 0.7\% & 0\% & \textbf{0\%} \\
+Gemma 3 12B & Open & 0\% & 20\% & 0\% & 0\% & \textbf{0\%} \\
+\midrule
+Kimi K2 & Open & 8\% & 0\% & 0\% & 0.7\% & \textbf{0\%} \\
+Gemini 2.5 Flash & Prop. & \textbf{75\%} & 12.5\% & 4\% & 0\% & \textbf{0\%} \\
+Claude Haiku 4.5 & Prop. & \multicolumn{4}{c}{--- (0\% parse success)\textsuperscript{*}} & --- \\
+GPT-5.2 Chat & Prop. & \multicolumn{4}{c}{--- (0\% parse success)\textsuperscript{*}} & --- \\
 \bottomrule
+\multicolumn{7}{l}{\textsuperscript{*}\footnotesize Claude and GPT produced non-JSON outputs; see Section~\ref{sec:analysis}.}
 \end{tabular}
 \end{table}
 
-The results reveal several patterns. The controls work as intended: NL$=$CTRL is 0\% across all models, confirming that meaningless symbols produce different outputs than meaningful ones. Extraction works best, with Qwen achieving 44\% equivalence on extraction tasks. This means nearly half the time, MG and NL produce identical outputs. Constraint composition fails: near-zero equivalence indicates models do not reliably interpret $\cap$ as ``apply both constraints.'' An important nuance is that equivalence does not imply correctness. MG can preserve NL semantics even when both produce wrong answers. When they are ``wrong together,'' this validates the compression as meaning-preserving even when the underlying task is difficult.
+The results reveal several patterns. The controls work as intended: NL$=$CTRL is 0\% across all working models, confirming that meaningless symbols produce different outputs than meaningful ones. Gemini 2.5 Flash achieves remarkable 75\% equivalence on selection tasks---the highest observed---meaning symbolic and prose instructions produce identical outputs three-quarters of the time. Among open-source models, Qwen achieves 44\% equivalence on extraction tasks. Constraint composition fails across all models: near-zero equivalence indicates models do not reliably interpret $\cap$ as ``apply both constraints.''
+
+Two proprietary models (Claude Haiku 4.5, GPT-5.2 Chat) produced 0\% parseable JSON outputs across all conditions. This failure mode, discussed in Section~\ref{sec:analysis}, highlights format sensitivity in frontier models.
 
 \subsection{Parse Success}
 
@@ -320,25 +335,28 @@ Larger models (Gemma 12B) achieve 100\% JSON parse success. Smaller models (Llam
 
 \subsection{Operator Fidelity}
 
-Which symbols work? Table~\ref{tab:fidelity} shows fidelity by operator.
+Which symbols work? Table~\ref{tab:fidelity} shows fidelity by operator across models with valid outputs.
 
 \begin{table}[htbp]
 \centering
-\caption{Operator Fidelity by Model}
+\caption{Operator Fidelity by Model (Open-Source and Proprietary)}
 \label{tab:fidelity}
-\begin{tabular}{@{}lccccc@{}}
+\begin{tabular}{@{}lcccccc@{}}
 \toprule
-Operator & Llama 3.2 3B & Gemma 3 12B & Qwen 2.5 7B & OLMo 3 7B & Kimi K2 \\
+Operator & Llama 3B & Qwen 7B & OLMo 7B & Gemma 12B & Kimi K2 & Gemini 2.5 \\
 \midrule
-$\in$ (membership) & 33.3\% & 0.0\% & 18.9\% & 0.0\% & \textbf{36.0\%} \\
-$\to$ (transformation) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% \\
-$\cap$ (intersection) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% \\
-$\Rightarrow$ (implication) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & \textbf{98.1\%} \\
+$\in$ (membership) & 33.3\% & 18.9\% & 0.0\% & 0.0\% & 36.0\% & \textbf{49.9\%} \\
+$\to$ (transformation) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% \\
+$\cap$ (intersection) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 2.7\% \\
+$\Rightarrow$ (implication) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & \textbf{98.1\%} & 33.5\% \\
 \bottomrule
+\multicolumn{7}{l}{\footnotesize Claude Haiku 4.5 and GPT-5.2 Chat excluded due to 0\% parse success.}
 \end{tabular}
 \end{table}
 
-The results reveal a scale-dependent pattern. Smaller models (Llama 3B) show moderate $\in$ fidelity (33.3\%), while the largest model tested---Kimi K2 (1T parameters, 32B active)---demonstrates dramatically higher operator fidelity: 36\% for membership ($\in$) and a remarkable 98.1\% for implication ($\Rightarrow$). This suggests that frontier-scale models may have internalized symbolic semantics more robustly than mid-sized models. Notably, mid-range models (Gemma 12B, OLMo 7B) show 0\% fidelity across all operators, suggesting a U-shaped relationship where instruction tuning in mid-sized models creates stronger natural-language biases that larger models can overcome.
+The results reveal patterns across both model families. Among open-source models, Llama 3B shows moderate $\in$ fidelity (33.3\%), while mid-range models (Gemma 12B, OLMo 7B) show 0\% fidelity---a U-shaped pattern suggesting instruction tuning creates natural-language biases.
+
+Among proprietary models with valid outputs, Gemini 2.5 Flash achieves the highest membership fidelity (\textbf{49.9\%}) and moderate implication fidelity (33.5\%). Kimi K2 shows remarkable implication fidelity (\textbf{98.1\%}) but only 36\% on membership. This suggests different models have internalized different operators more strongly, possibly reflecting training data composition.
 
 \subsection{Response Time}
 
@@ -355,7 +373,19 @@ The problem is that in math texts, $\cap$ connects \emph{sets}, whereas here it 
 
 \subsection{Model Scale Effects}
 
-Larger models parse better (Gemma 12B: 100\% JSON success vs.\ Llama 3B: 30\%). But the relationship between scale and operator fidelity is non-monotonic. Mid-sized models (7B--12B) show \emph{worse} operator fidelity than smaller models (Gemma: 0\% vs.\ Llama: 33\% on $\in$), suggesting instruction tuning creates stronger natural-language biases. However, frontier-scale models like Kimi K2 (1T parameters) recover and exceed small-model fidelity, achieving 36\% on $\in$ and 98.1\% on $\Rightarrow$. This U-shaped curve suggests that sufficient scale can overcome instruction-tuning biases and access pretrained symbolic semantics.
+Larger models parse better (Gemma 12B: 100\% JSON success vs.\ Llama 3B: 30\%). But the relationship between scale and operator fidelity is non-monotonic. Mid-sized open-source models (7B--12B) show \emph{worse} operator fidelity than smaller models (Gemma: 0\% vs.\ Llama: 33\% on $\in$), suggesting instruction tuning creates stronger natural-language biases. However, frontier-scale models recover and exceed small-model fidelity: Kimi K2 achieves 98.1\% on $\Rightarrow$, while Gemini 2.5 Flash achieves 49.9\% on $\in$. This U-shaped curve suggests that sufficient scale can overcome instruction-tuning biases and access pretrained symbolic semantics.
+
+\subsection{Proprietary Model Format Sensitivity}
+
+Two proprietary models---Claude Haiku 4.5 and GPT-5.2 Chat---produced 0\% parseable JSON outputs across all conditions (NL, MG, and CTRL). This complete failure occurred despite identical prompts working with other models. Possible explanations include:
+
+\begin{itemize}
+    \item \textbf{Aggressive safety filtering}: These models may interpret symbolic notation or certain task phrasings as potentially harmful and refuse to produce structured outputs.
+    \item \textbf{Format preference shifts}: Recent model updates may have changed default output formatting, preferring markdown or conversational responses over raw JSON.
+    \item \textbf{API configuration}: Default parameters may differ from other providers, requiring explicit JSON mode flags not used in our unified pipeline.
+\end{itemize}
+
+This finding has practical implications: symbolic compression research must account for model-specific output behaviors, and practitioners should verify format compliance before deploying compressed prompts.
 
 \subsection{Control Validation}
 
@@ -366,11 +396,21 @@ Early experiments showed high NL$=$CTRL equivalence, which turned out to be a bu
 
 \subsection{Practical Takeaways}
 
-Several practical lessons emerge from this experiment. Compression works: 62--81\% token reduction is achievable. Model choice matters significantly: frontier-scale models (Kimi K2) show dramatically higher operator fidelity than mid-sized models, with 98.1\% fidelity for implication ($\Rightarrow$). Operators must be chosen carefully: $\in$ (membership) and $\Rightarrow$ (implication) work well at scale, while $\cap$ (intersection) remains unreliable across all models. Hybrid prompts combining symbols for structure with natural language for critical constraints may work best for mid-sized models.
+Several practical lessons emerge, differentiated by deployment scenario:
+
+\textbf{For Gemini deployments}: Symbolic compression is highly effective. Gemini 2.5 Flash achieves 75\% semantic equivalence and 49.9\% membership fidelity---the best results observed. With 62--81\% token reduction, this translates to significant cost savings for high-volume applications.
+
+\textbf{For Kimi K2 deployments}: Implication-heavy prompts work exceptionally well (98.1\% fidelity). Use $\Rightarrow$ for conditional logic and if-then rules.
+
+\textbf{For local/offline deployments} (Llama, Qwen, OLMo, Gemma): Token costs are zero, but compression still reduces memory pressure and latency. These smaller models show lower operator fidelity, requiring hybrid approaches that combine symbols for structure with natural language for critical constraints.
+
+\textbf{For Claude and GPT}: Exercise caution. Our experiments produced 0\% parseable outputs, suggesting these models may require explicit JSON mode configuration or different prompt formatting. Verify format compliance before deployment.
+
+\textbf{Operator selection is critical}: $\in$ (membership) works best across models (up to 49.9\%), $\Rightarrow$ (implication) shows high variance (0--98\%), and $\cap$ (intersection) remains unreliable everywhere. Always test on your target model.
 
 \subsection{What We Showed}
 
-Symbolic compression preserves meaning up to 44\% of the time for extraction tasks. The 0\% CTRL equivalence confirms models respond to symbolic \emph{meaning}, not just appearance. Operator reliability varies by scale: mid-sized models struggle with all operators, while frontier-scale models (Kimi K2) achieve near-perfect fidelity (98.1\%) for implication ($\Rightarrow$) and strong fidelity (36\%) for membership ($\in$).
+Symbolic compression preserves meaning up to 75\% of the time for selection tasks (Gemini 2.5 Flash) and 44\% for extraction tasks (Qwen 2.5). The 0\% CTRL equivalence confirms models respond to symbolic \emph{meaning}, not just appearance. Operator reliability varies by model: Gemini 2.5 Flash achieves the highest membership fidelity (49.9\%), while Kimi K2 achieves near-perfect implication fidelity (98.1\%). However, two proprietary models (Claude, GPT) failed to produce parseable outputs entirely, demonstrating that symbolic prompts require format verification per model.
 
 \subsection{What We Did Not Show}
 
@@ -391,11 +431,15 @@ The broader goal is to understand which symbols carry robust pretrained semantic
 
 We introduced MetaGlyph, a symbolic instruction language that compresses prompts using mathematical notation. The core question was whether models understand these symbols from pretraining, without explicit teaching.
 
-The answer is nuanced and scale-dependent. First, does compression preserve meaning? Partially. Up to 44\% of the time, symbolic and prose instructions produce identical outputs, and the 0\% CTRL equivalence confirms this reflects genuine semantic understanding rather than superficial pattern matching. Second, which symbols work? It depends on model scale. Membership ($\in$) shows 33--36\% fidelity across model sizes. The surprise finding is implication ($\Rightarrow$): while mid-sized models (7B--12B) show zero fidelity, the frontier-scale Kimi K2 (1T parameters) achieves 98.1\% fidelity---near-perfect interpretation of if-then rules. Conjunction ($\cap$) remains unreliable across all models tested.
+The answer is nuanced and model-dependent. First, does compression preserve meaning? Yes, substantially for certain models. Gemini 2.5 Flash achieves 75\% semantic equivalence on selection tasks---symbolic and prose instructions produce identical outputs three-quarters of the time. The 0\% CTRL equivalence confirms this reflects genuine semantic understanding rather than superficial pattern matching.
 
-The practical implications are scale-dependent. For mid-sized models, symbolic compression achieving 62--81\% fewer tokens is achievable, but practitioners should use hybrid approaches combining symbols for structure with natural language for critical constraints. For frontier-scale models, symbolic instructions may work as reliably as natural language while using far fewer tokens.
+Second, which symbols work? It depends on the model. Membership ($\in$) works best overall, with Gemini 2.5 Flash achieving 49.9\% fidelity. Implication ($\Rightarrow$) shows the widest variance: 98.1\% fidelity on Kimi K2, 33.5\% on Gemini, and 0\% on mid-sized models. Conjunction ($\cap$) remains unreliable across all models tested.
 
-The relationship between model scale and symbolic comprehension appears U-shaped: small models show moderate fidelity, instruction-tuned mid-sized models show low fidelity due to natural-language biases, and frontier-scale models recover and exceed small-model performance. This suggests that sufficient scale can access pretrained symbolic semantics that instruction tuning temporarily obscures. As models continue scaling, symbolic instruction compression may become increasingly practical.
+Third, can all models use symbolic compression? No. Claude Haiku 4.5 and GPT-5.2 Chat produced zero parseable outputs across all conditions, highlighting that format sensitivity varies significantly across proprietary APIs.
+
+The practical implications: for Gemini-based deployments, symbolic compression is highly effective with 75\% meaning preservation and 50\% operator fidelity. For Kimi K2, implication-heavy prompts compress reliably. For mid-sized open-source models, hybrid approaches combining symbols with natural language work best. For Claude and GPT, additional format configuration may be required.
+
+The relationship between model scale and symbolic comprehension appears U-shaped among working models: small models show moderate fidelity, instruction-tuned mid-sized models show low fidelity, and frontier-scale models recover and exceed small-model performance. For practitioners: always verify format compliance and operator fidelity on your target model before deploying compressed prompts in production.
 
 \section*{Code and Data Availability}
 

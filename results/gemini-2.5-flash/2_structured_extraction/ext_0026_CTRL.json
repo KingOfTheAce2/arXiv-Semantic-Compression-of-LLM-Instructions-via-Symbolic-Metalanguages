@@ -1,0 +1,45 @@
+{
+  "prompt_id": "ext_0026_CTRL",
+  "model": "gemini-2.5-flash",
+  "family": "2_structured_extraction",
+  "condition": "CTRL",
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "risk_name": "Invoice processing error",
+      "affected_component": "Invoice data extraction",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Incorrect calculation of total",
+      "affected_component": "Financial calculations",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Missing or incomplete invoice details",
+      "affected_component": "Invoice completeness",
+      "severity": "medium"
+    }
+  ],
+  "gold_output": {
+    "date": "2024-06-25",
+    "payment_terms": "Net 30",
+    "customer_name": "David Brown",
+    "invoice_num": "2684"
+  },
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "format",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

@@ -1,0 +1,19 @@
+```json
+[
+  {
+    "risk_name": "Invoice processing error",
+    "affected_component": "Invoice data extraction",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "Incorrect calculation of total",
+    "affected_component": "Financial calculations",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Missing or incomplete invoice details",
+    "affected_component": "Invoice completeness",
+    "severity": "medium"
+  }
+]
+```

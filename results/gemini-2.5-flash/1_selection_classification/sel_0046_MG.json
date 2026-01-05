@@ -1,0 +1,28 @@
+{
+  "prompt_id": "sel_0046_MG",
+  "model": "gemini-2.5-flash",
+  "family": "1_selection_classification",
+  "condition": "MG",
+  "parse_success": true,
+  "parsed_output": [],
+  "gold_output": [
+    "bookshelf",
+    "chair",
+    "desk"
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": true,
+      "details": "Inclusion constraint satisfied"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "incomplete",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

@@ -1,0 +1,45 @@
+{
+  "prompt_id": "ext_0045_CTRL",
+  "model": "gemini-2.5-flash",
+  "family": "2_structured_extraction",
+  "condition": "CTRL",
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "risk_name": "Incorrect Subtotal Calculation",
+      "affected_component": "Subtotal field",
+      "severity": "High"
+    },
+    {
+      "risk_name": "Incorrect Tax Calculation",
+      "affected_component": "Tax field",
+      "severity": "High"
+    },
+    {
+      "risk_name": "Incorrect Total Calculation",
+      "affected_component": "Total field",
+      "severity": "High"
+    }
+  ],
+  "gold_output": {
+    "due_date": "2024-07-22",
+    "invoice_num": "1672",
+    "customer_name": "Carol Williams",
+    "date": "2024-06-18"
+  },
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "format",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

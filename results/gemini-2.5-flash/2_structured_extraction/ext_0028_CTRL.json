@@ -1,0 +1,70 @@
+{
+  "prompt_id": "ext_0028_CTRL",
+  "model": "gemini-2.5-flash",
+  "family": "2_structured_extraction",
+  "condition": "CTRL",
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "risk_name": "Invoice processing failure",
+      "affected_component": "Invoice system",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Incorrect item quantity",
+      "affected_component": "Product A, Service B",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Incorrect item price",
+      "affected_component": "Product A, Service B",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Calculation error in subtotal",
+      "affected_component": "Subtotal",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Incorrect tax calculation",
+      "affected_component": "Tax",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Calculation error in total",
+      "affected_component": "Total",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Missing invoice details",
+      "affected_component": "Invoice #, Date, Due Date, Bill To, Payment Terms",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Data entry error in customer information",
+      "affected_component": "David Brown, 436 Main St, City, ST 46517",
+      "severity": "medium"
+    }
+  ],
+  "gold_output": {
+    "due_date": "2024-11-07",
+    "payment_terms": "Net 30",
+    "customer_name": "David Brown",
+    "total": 6410.8
+  },
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "format",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

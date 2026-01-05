@@ -1,0 +1,65 @@
+```json
+[
+  {
+    "name": "alice",
+    "label": "internal",
+    "access_level": "full"
+  },
+  {
+    "name": "bob",
+    "label": "external",
+    "access_level": "standard"
+  },
+  {
+    "name": "carol",
+    "label": "internal",
+    "access_level": "limited"
+  },
+  {
+    "name": "dave",
+    "label": "external",
+    "access_level": "full"
+  },
+  {
+    "name": "eve",
+    "label": null,
+    "access_level": "full"
+  },
+  {
+    "name": "frank",
+    "label": "internal",
+    "access_level": "standard"
+  },
+  {
+    "name": "grace",
+    "label": "external",
+    "access_level": "limited"
+  },
+  {
+    "name": "heidi",
+    "label": "internal",
+    "access_level": "full"
+  },
+  {
+    "name": "ivan",
+    "label": null,
+    "access_level": "standard"
+  },
+  {
+    "name": "judy",
+    "label": "external",
+    "access_level": "standard"
+  },
+  {
+    "name": "karl",
+    "label": "internal",
+    "access_level": "standard"
+  },
+  {
+    "name": "laura",
+    "label": "internal",
+    "access_level": "full"
+  },
+  {
+    "name": "mallory",
+    "label":

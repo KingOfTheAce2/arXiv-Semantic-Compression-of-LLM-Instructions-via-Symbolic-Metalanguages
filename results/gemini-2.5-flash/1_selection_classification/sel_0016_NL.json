@@ -1,0 +1,35 @@
+{
+  "prompt_id": "sel_0016_NL",
+  "model": "gemini-2.5-flash",
+  "family": "1_selection_classification",
+  "condition": "NL",
+  "parse_success": true,
+  "parsed_output": [
+    "I am sorry, but the provided input does not contain any items that fit the criteria of being mammals commonly kept as pets. The input lists various inanimate objects such as \"Stapler\", \"Pen\", \"Smartphone\", \"Chair\", \"Headphones\", \"Bookshelf\", \"Notebook\", \"Microwave\", \"Refrigerator\", and \"Tablet\". These items are not living creatures and therefore cannot be classified as mammals or pets.",
+    "Therefore, based on the given input, I cannot provide a list of qualifying items."
+  ],
+  "gold_output": [
+    "bookshelf",
+    "chair",
+    "headphones",
+    "microwave",
+    "refrigerator",
+    "smartphone",
+    "tablet"
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0,
+  "operator_fidelity": [
+    {
+      "operator": "∉",
+      "checked": true,
+      "passed": true,
+      "details": "Exclusion constraint satisfied"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "incomplete",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

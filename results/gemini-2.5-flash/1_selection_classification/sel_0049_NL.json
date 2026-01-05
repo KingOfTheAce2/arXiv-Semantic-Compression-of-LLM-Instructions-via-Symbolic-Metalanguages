@@ -1,0 +1,34 @@
+{
+  "prompt_id": "sel_0049_NL",
+  "model": "gemini-2.5-flash",
+  "family": "1_selection_classification",
+  "condition": "NL",
+  "parse_success": true,
+  "parsed_output": [
+    "I am sorry, but the provided input does not contain any items that are mammals, let alone pets. The input lists various inanimate objects like \"Tablet\", \"Bookshelf\", \"Smartphone\", \"Laptop\", \"Pen\", \"Notebook\", \"Chair\", \"Desk\", \"Headphones\", and \"Refrigerator\", all of which are consumer products and not living organisms. Therefore, I cannot fulfill your request to identify mammals that are commonly kept as pets from this list."
+  ],
+  "gold_output": [
+    "chair",
+    "headphones",
+    "laptop",
+    "notebook",
+    "pen",
+    "smartphone",
+    "tablet"
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Extra items: 1"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "incomplete",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

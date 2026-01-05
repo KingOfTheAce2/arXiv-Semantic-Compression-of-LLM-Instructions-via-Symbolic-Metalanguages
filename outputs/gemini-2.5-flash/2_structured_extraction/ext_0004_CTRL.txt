@@ -1,0 +1,24 @@
+```json
+[
+  {
+    "risk_name": "Incorrect Subtotal Calculation",
+    "affected_component": "Subtotal",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Incorrect Tax Calculation",
+    "affected_component": "Tax",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Incorrect Total Calculation",
+    "affected_component": "Total",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Due Date Precedes Invoice Date",
+    "affected_component": "Due Date",
+    "severity": "medium"
+  }
+]
+```

@@ -1,0 +1,33 @@
+{
+  "prompt_id": "sel_0029_NL",
+  "model": "gemini-2.5-flash",
+  "family": "1_selection_classification",
+  "condition": "NL",
+  "parse_success": true,
+  "parsed_output": [
+    "Cat",
+    "Dog",
+    "Hamster"
+  ],
+  "gold_output": [
+    "cat",
+    "dog",
+    "elephant",
+    "hamster"
+  ],
+  "exact_match": false,
+  "accuracy": 0.75,
+  "f1_score": 0.8571428571428571,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Extra items: 3"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "incomplete",
+  "error_details": "Accuracy: 0.75",
+  "semantic_equivalence_pass": false
+}

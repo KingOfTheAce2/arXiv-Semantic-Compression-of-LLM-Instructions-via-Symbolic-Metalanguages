@@ -1,0 +1,9 @@
+```json
+[
+  {
+    "risk_name": "Project timeline discussion",
+    "affected_component": "project timeline",
+    "severity": "medium"
+  }
+]
+```

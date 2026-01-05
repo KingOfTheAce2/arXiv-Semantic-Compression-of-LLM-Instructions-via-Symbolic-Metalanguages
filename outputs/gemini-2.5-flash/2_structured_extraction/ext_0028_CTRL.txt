@@ -1,0 +1,44 @@
+```json
+[
+  {
+    "risk_name": "Invoice processing failure",
+    "affected_component": "Invoice system",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Incorrect item quantity",
+    "affected_component": "Product A, Service B",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "Incorrect item price",
+    "affected_component": "Product A, Service B",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "Calculation error in subtotal",
+    "affected_component": "Subtotal",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Incorrect tax calculation",
+    "affected_component": "Tax",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Calculation error in total",
+    "affected_component": "Total",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Missing invoice details",
+    "affected_component": "Invoice #, Date, Due Date, Bill To, Payment Terms",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Data entry error in customer information",
+    "affected_component": "David Brown, 436 Main St, City, ST 46517",
+    "severity": "medium"
+  }
+]
+```

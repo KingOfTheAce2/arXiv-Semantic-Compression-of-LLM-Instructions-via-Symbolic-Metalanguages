@@ -1,0 +1,9 @@
+```json
+[
+  {
+    "risk_name": "Incorrect Due Date",
+    "affected_component": "Payment Terms",
+    "severity": "High"
+  }
+]
+```

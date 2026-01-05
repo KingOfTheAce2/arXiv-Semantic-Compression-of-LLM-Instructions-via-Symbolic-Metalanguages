@@ -1,0 +1,24 @@
+{
+  "prompt_id": "sel_0027_CTRL",
+  "model": "gpt-5.2-chat",
+  "family": "1_selection_classification",
+  "condition": "CTRL",
+  "parse_success": false,
+  "parsed_output": null,
+  "gold_output": [
+    "crocodile",
+    "eagle",
+    "parrot",
+    "penguin",
+    "shark",
+    "snake"
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [],
+  "overall_pass": false,
+  "error_type": "parse",
+  "error_details": "Could not parse comma-separated values",
+  "semantic_equivalence_pass": false
+}

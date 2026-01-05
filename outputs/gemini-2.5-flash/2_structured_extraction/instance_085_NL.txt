@@ -1,0 +1,11 @@
+```json
+[
+  {
+    "risk_name": "Memory leaks",
+    "affected_component": "Ingestion pipeline",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Intermittent network latency",
+    "affected_component": "Orchestration layer",
+    "severity": "medium

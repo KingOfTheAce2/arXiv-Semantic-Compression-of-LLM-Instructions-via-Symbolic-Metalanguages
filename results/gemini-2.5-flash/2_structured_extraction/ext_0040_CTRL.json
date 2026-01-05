@@ -1,0 +1,75 @@
+{
+  "prompt_id": "ext_0040_CTRL",
+  "model": "gemini-2.5-flash",
+  "family": "2_structured_extraction",
+  "condition": "CTRL",
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "risk_name": "Invoice Processing Error",
+      "affected_component": "Invoice data extraction and calculation",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Incorrect Item Quantity",
+      "affected_component": "Items listed in the invoice",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Incorrect Item Price",
+      "affected_component": "Items listed in the invoice",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Subtotal Calculation Error",
+      "affected_component": "Subtotal field",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Tax Calculation Error",
+      "affected_component": "Tax field",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Total Calculation Error",
+      "affected_component": "Total field",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Missing Required Fields",
+      "affected_component": "Invoice fields (e.g., Invoice #, Date, Due Date, Bill To)",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Data Entry Error",
+      "affected_component": "Any field in the invoice",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Misinterpretation of Payment Terms",
+      "affected_component": "Payment Terms field",
+      "severity": "low"
+    }
+  ],
+  "gold_output": {
+    "invoice_num": "8657",
+    "payment_terms": "Due on Receipt",
+    "customer_name": "David Brown",
+    "total": 7194.68
+  },
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "format",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

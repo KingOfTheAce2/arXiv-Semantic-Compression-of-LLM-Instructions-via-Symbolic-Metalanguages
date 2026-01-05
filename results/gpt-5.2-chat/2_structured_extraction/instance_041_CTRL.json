@@ -1,0 +1,38 @@
+{
+  "prompt_id": "instance_041_CTRL",
+  "model": "gpt-5.2-chat",
+  "family": "2_structured_extraction",
+  "condition": "CTRL",
+  "parse_success": false,
+  "parsed_output": null,
+  "gold_output": [
+    {
+      "risk_name": "Memory leaks in the ingestion service",
+      "affected_component": "ingestion pipeline",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Intermittent network latency between compute nodes",
+      "affected_component": "orchestration layer",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Stale configuration values after redeployment",
+      "affected_component": "configuration service",
+      "severity": "low"
+    },
+    {
+      "risk_name": "Improper token expiration handling",
+      "affected_component": "authentication service",
+      "severity": "high"
+    }
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [],
+  "overall_pass": false,
+  "error_type": "parse",
+  "error_details": "Could not extract key-value pairs",
+  "semantic_equivalence_pass": false
+}

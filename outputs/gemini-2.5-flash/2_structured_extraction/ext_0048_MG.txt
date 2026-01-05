@@ -1,0 +1,14 @@
+```json
+[
+  {
+    "risk_name": "Date format inconsistency",
+    "affected_component": "Date fields (Date, Due Date)",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "Subtotal calculation error",
+    "affected_component": "Subtotal field",
+    "severity": "high"
+  }
+]
+```

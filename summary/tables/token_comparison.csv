@@ -1,9 +1,13 @@
 Model,Family,NL Tokens,MG Tokens,CTRL Tokens,MG vs NL Reduction,MG vs CTRL Reduction
-olmo-3-7b,1_selection_classification,215,41,41,80.9%,0.0%
-olmo-3-7b,2_structured_extraction,176,52,52,70.5%,0.0%
-olmo-3-7b,3_constraint_composition,134,48,48,64.2%,0.0%
-olmo-3-7b,4_conditional_transformation,164,62,62,62.2%,0.0%
-kimi-k2,1_selection_classification,215,41,41,80.9%,0.0%
-kimi-k2,2_structured_extraction,176,52,52,70.5%,0.0%
-kimi-k2,3_constraint_composition,134,48,48,64.2%,0.0%
-kimi-k2,4_conditional_transformation,164,62,62,62.2%,0.0%
+gemini-2.5-flash,1_selection_classification,215,41,41,80.9%,0.0%
+gemini-2.5-flash,2_structured_extraction,176,52,52,70.5%,0.0%
+gemini-2.5-flash,3_constraint_composition,134,48,48,64.2%,0.0%
+gemini-2.5-flash,4_conditional_transformation,164,62,62,62.2%,0.0%
+claude-haiku-4.5,1_selection_classification,215,41,41,80.9%,0.0%
+claude-haiku-4.5,2_structured_extraction,176,52,52,70.5%,0.0%
+claude-haiku-4.5,3_constraint_composition,134,48,48,64.2%,0.0%
+claude-haiku-4.5,4_conditional_transformation,164,62,62,62.2%,0.0%
+gpt-5.2-chat,1_selection_classification,215,41,41,80.9%,0.0%
+gpt-5.2-chat,2_structured_extraction,176,52,52,70.5%,0.0%
+gpt-5.2-chat,3_constraint_composition,134,48,48,64.2%,0.0%
+gpt-5.2-chat,4_conditional_transformation,164,62,62,62.2%,0.0%

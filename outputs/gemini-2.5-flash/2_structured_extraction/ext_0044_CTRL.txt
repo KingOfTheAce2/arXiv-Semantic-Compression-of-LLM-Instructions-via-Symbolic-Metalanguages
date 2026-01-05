@@ -1,0 +1,9 @@
+```json
+[
+  {
+    "risk_name": "Invoice Due Date Precedes Issue Date",
+    "affected_component": "Invoice processing, financial records",
+    "severity": "High"
+  }
+]
+```

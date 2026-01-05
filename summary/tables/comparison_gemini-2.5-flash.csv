@@ -1,0 +1,5 @@
+Family,Model,NL Accuracy,MG Accuracy,CTRL Accuracy,MG-NL Diff,MG-CTRL Diff,Significant
+1_selection_classification,gemini-2.5-flash,0.779,0.784,0.709,+0.005,+0.075,No
+2_structured_extraction,gemini-2.5-flash,0.000,0.000,0.000,+0.000,+0.000,No
+3_constraint_composition,gemini-2.5-flash,0.005,0.005,0.005,+0.000,+0.000,No
+4_conditional_transformation,gemini-2.5-flash,0.265,0.234,0.221,-0.031,+0.013,Yes

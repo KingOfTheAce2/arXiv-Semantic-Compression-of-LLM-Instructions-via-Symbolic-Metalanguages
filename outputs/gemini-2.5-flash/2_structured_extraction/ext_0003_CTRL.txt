@@ -1,0 +1,9 @@
+```json
+[
+  {
+    "risk_name": "Invoice processing error",
+    "affected_component": "Invoice data extraction",
+    "severity": "low"
+  }
+]
+```
