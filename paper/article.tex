@@ -52,7 +52,7 @@
 \begin{abstract}
 We introduce MetaGlyph, a symbolic language for compressing prompts by encoding instructions as mathematical symbols rather than prose. Unlike systems requiring explicit decoding rules, MetaGlyph uses symbols like $\in$ (membership) and $\Rightarrow$ (implication) that models already understand from their training data. We test whether these symbols work as ``instruction shortcuts'' that models can interpret without additional teaching.
 
-Across four task types, MetaGlyph achieves 62--81\% fewer tokens while preserving meaning, though reliability varies by symbol. The membership operator ($\in$) works best (up to 33.3\% fidelity), while complex operators like implication show zero fidelity without explicit explanation. These results show that symbolic instruction compression is viable, but success depends critically on which symbols are used.
+Across four task types and five models (3B--1T parameters), MetaGlyph achieves 62--81\% fewer tokens while preserving meaning, though reliability varies by symbol and scale. The key finding is scale-dependent operator fidelity: while mid-sized models (7B--12B) show near-zero fidelity for most operators, the frontier-scale Kimi K2 (1T parameters) achieves 98.1\% fidelity for implication ($\Rightarrow$) and 36\% for membership ($\in$). These results suggest a U-shaped relationship between model scale and symbolic comprehension, where sufficient scale can overcome instruction-tuning biases to access pretrained symbolic semantics.
 \end{abstract}
 
 \medskip
@@ -306,10 +306,9 @@ Model & Selection & Extraction & Constraint & Transformation & NL $=$ CTRL \\
 Llama 3.2 3B & 0\% & 2\% & 0\% & 34\% & \textbf{0\%} \\
 Gemma 3 12B & 0\% & 20\% & 0\% & 0\% & \textbf{0\%} \\
 Qwen 2.5 7B & 8\% & 44\% & 0.7\% & 0\% & \textbf{0\%} \\
-OLMo 3 7B & ---\textsuperscript{*} & ---\textsuperscript{*} & ---\textsuperscript{*} & ---\textsuperscript{*} & ---\textsuperscript{*} \\
-Kimi K2 & ---\textsuperscript{*} & ---\textsuperscript{*} & ---\textsuperscript{*} & ---\textsuperscript{*} & ---\textsuperscript{*} \\
+OLMo 3 7B & 0\% & 0\% & 0.7\% & 0\% & \textbf{0\%} \\
+Kimi K2 & 8\% & 0\% & 0\% & 0.7\% & \textbf{0\%} \\
 \bottomrule
-\multicolumn{6}{l}{\textsuperscript{*}\footnotesize Results pending; experiments in progress.}
 \end{tabular}
 \end{table}
 
@@ -331,16 +330,15 @@ Which symbols work? Table~\ref{tab:fidelity} shows fidelity by operator.
 \toprule
 Operator & Llama 3.2 3B & Gemma 3 12B & Qwen 2.5 7B & OLMo 3 7B & Kimi K2 \\
 \midrule
-$\in$ (membership) & 33.3\% & 0.0\% & \textbf{18.9\%} & ---\textsuperscript{*} & ---\textsuperscript{*} \\
-$\to$ (transformation) & 0.0\% & 0.0\% & 0.0\% & ---\textsuperscript{*} & ---\textsuperscript{*} \\
-$\cap$ (intersection) & 0.0\% & 0.0\% & 0.0\% & ---\textsuperscript{*} & ---\textsuperscript{*} \\
-$\Rightarrow$ (implication) & 0.0\% & 0.0\% & 0.0\% & ---\textsuperscript{*} & ---\textsuperscript{*} \\
+$\in$ (membership) & 33.3\% & 0.0\% & 18.9\% & 0.0\% & \textbf{36.0\%} \\
+$\to$ (transformation) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% \\
+$\cap$ (intersection) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% \\
+$\Rightarrow$ (implication) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & \textbf{98.1\%} \\
 \bottomrule
-\multicolumn{6}{l}{\textsuperscript{*}\footnotesize Results pending.}
 \end{tabular}
 \end{table}
 
-Only $\in$ (membership) shows meaningful fidelity, up to 33\%. Complex operators like $\Rightarrow$ (implication) and $\cap$ (intersection) show zero fidelity, indicating models do not reliably interpret them as instruction primitives. Surprisingly, the largest model (Gemma 12B) shows 0\% fidelity on all operators, suggesting instruction tuning may create stronger natural-language biases.
+The results reveal a scale-dependent pattern. Smaller models (Llama 3B) show moderate $\in$ fidelity (33.3\%), while the largest model tested---Kimi K2 (1T parameters, 32B active)---demonstrates dramatically higher operator fidelity: 36\% for membership ($\in$) and a remarkable 98.1\% for implication ($\Rightarrow$). This suggests that frontier-scale models may have internalized symbolic semantics more robustly than mid-sized models. Notably, mid-range models (Gemma 12B, OLMo 7B) show 0\% fidelity across all operators, suggesting a U-shaped relationship where instruction tuning in mid-sized models creates stronger natural-language biases that larger models can overcome.
 
 \subsection{Response Time}
 
@@ -353,11 +351,11 @@ Preliminary data suggests MG prompts are $\sim$30\% faster than NL due to shorte
 
 Models do not reliably parse symbolic operators as constraints. Given \texttt{$\in$(mammal) $\cap$ $\in$(pet) $\cap$ $\neg$(bird)}, the intended reading is ``mammals AND pets AND not birds.'' But models often treat this as a list or ignore the negation.
 
-The problem is that in math texts, $\cap$ connects \emph{sets}, whereas here it connects \emph{predicates}. This is a generalization models have not learned. Similarly, $\Rightarrow$ appears in diverse contexts with varying interpretations: mathematical proofs, programming, logical specifications. Without consistent usage, models do not reliably treat it as ``if-then.''
+The problem is that in math texts, $\cap$ connects \emph{sets}, whereas here it connects \emph{predicates}. This is a generalization models have not learned. Similarly, $\Rightarrow$ appears in diverse contexts with varying interpretations: mathematical proofs, programming, logical specifications. Mid-sized models do not reliably treat it as ``if-then,'' though frontier-scale models (Kimi K2) overcome this limitation.
 
 \subsection{Model Scale Effects}
 
-Larger models parse better (Gemma 12B: 100\% JSON success vs.\ Llama 3B: 30\%). But larger models show \emph{worse} operator fidelity (Gemma: 0\% vs.\ Llama: 33\% on $\in$). Instruction tuning may create stronger natural-language biases, making models treat symbols as formatting rather than meaning.
+Larger models parse better (Gemma 12B: 100\% JSON success vs.\ Llama 3B: 30\%). But the relationship between scale and operator fidelity is non-monotonic. Mid-sized models (7B--12B) show \emph{worse} operator fidelity than smaller models (Gemma: 0\% vs.\ Llama: 33\% on $\in$), suggesting instruction tuning creates stronger natural-language biases. However, frontier-scale models like Kimi K2 (1T parameters) recover and exceed small-model fidelity, achieving 36\% on $\in$ and 98.1\% on $\Rightarrow$. This U-shaped curve suggests that sufficient scale can overcome instruction-tuning biases and access pretrained symbolic semantics.
 
 \subsection{Control Validation}
 
@@ -368,11 +366,11 @@ Early experiments showed high NL$=$CTRL equivalence, which turned out to be a bu
 
 \subsection{Practical Takeaways}
 
-Several practical lessons emerge from this preliminary experiment. Compression works: 62--81\% token reduction is achievable. However, practitioners should use larger models, as small models (3B) struggle to parse symbolic prompts. Operators must be chosen carefully, since $\in$ (membership) partially works while $\Rightarrow$ and $\cap$ do not. Hybrid prompts may offer the best tradeoff, using symbols for structure and natural language for critical constraints.
+Several practical lessons emerge from this experiment. Compression works: 62--81\% token reduction is achievable. Model choice matters significantly: frontier-scale models (Kimi K2) show dramatically higher operator fidelity than mid-sized models, with 98.1\% fidelity for implication ($\Rightarrow$). Operators must be chosen carefully: $\in$ (membership) and $\Rightarrow$ (implication) work well at scale, while $\cap$ (intersection) remains unreliable across all models. Hybrid prompts combining symbols for structure with natural language for critical constraints may work best for mid-sized models.
 
 \subsection{What We Showed}
 
-Symbolic compression preserves meaning up to 44\% of the time for extraction tasks. The 0\% CTRL equivalence confirms models respond to symbolic \emph{meaning}, not just appearance. Operator reliability varies: $\in$ works partially while complex operators do not.
+Symbolic compression preserves meaning up to 44\% of the time for extraction tasks. The 0\% CTRL equivalence confirms models respond to symbolic \emph{meaning}, not just appearance. Operator reliability varies by scale: mid-sized models struggle with all operators, while frontier-scale models (Kimi K2) achieve near-perfect fidelity (98.1\%) for implication ($\Rightarrow$) and strong fidelity (36\%) for membership ($\in$).
 
 \subsection{What We Did Not Show}
 
@@ -380,7 +378,7 @@ We have not demonstrated system-level latency improvements (timing is preliminar
 
 \subsection{Limitations and Future Work}
 
-This work establishes a baseline rather than characterizing limits. The experiment was intentionally narrow: four task families, three models with complete results, and a single symbolic language design. Many questions remain open.
+This work establishes a baseline rather than characterizing limits. The experiment was intentionally narrow: four task families, five models spanning 3B to 1T parameters, and a single symbolic language design. Many questions remain open.
 
 Future work should systematically stress-test symbolic instruction languages. Scope binding tests could determine whether $(A \cup B) \cap \neg C$ parses differently from $A \cup (B \cap \neg C)$, revealing whether models correctly associate operators with their intended operands. Implication direction tests could probe whether $\Rightarrow$ is treated as one-way (if-then) or incorrectly as equivalence (if-and-only-if). Composition order tests could verify whether $f \circ g$ applies operations in the correct sequence, which matters for tasks where order affects outcomes.
 
@@ -393,11 +391,11 @@ The broader goal is to understand which symbols carry robust pretrained semantic
 
 We introduced MetaGlyph, a symbolic instruction language that compresses prompts using mathematical notation. The core question was whether models understand these symbols from pretraining, without explicit teaching.
 
-The answer is nuanced, and two questions must be separated. First, does compression preserve meaning? Partially. Up to 44\% of the time, symbolic and prose instructions produce identical outputs, and the 0\% CTRL equivalence confirms this reflects genuine semantic understanding rather than superficial pattern matching. Second, which symbols work? Simple ones. Membership ($\in$) shows up to 33\% fidelity, while complex operators like implication ($\Rightarrow$) and conjunction ($\cap$) show zero fidelity. Models do not reliably interpret these as instructions without additional context.
+The answer is nuanced and scale-dependent. First, does compression preserve meaning? Partially. Up to 44\% of the time, symbolic and prose instructions produce identical outputs, and the 0\% CTRL equivalence confirms this reflects genuine semantic understanding rather than superficial pattern matching. Second, which symbols work? It depends on model scale. Membership ($\in$) shows 33--36\% fidelity across model sizes. The surprise finding is implication ($\Rightarrow$): while mid-sized models (7B--12B) show zero fidelity, the frontier-scale Kimi K2 (1T parameters) achieves 98.1\% fidelity---near-perfect interpretation of if-then rules. Conjunction ($\cap$) remains unreliable across all models tested.
 
-The practical implications are straightforward. Symbolic compression achieving 62--81\% fewer tokens is achievable, but practitioners should not assume compressed prompts preserve meaning without testing. Hybrid approaches combining symbols for structure with natural language for critical constraints may work best.
+The practical implications are scale-dependent. For mid-sized models, symbolic compression achieving 62--81\% fewer tokens is achievable, but practitioners should use hybrid approaches combining symbols for structure with natural language for critical constraints. For frontier-scale models, symbolic instructions may work as reliably as natural language while using far fewer tokens.
 
-Symbols that appear consistently in training data ($\in$) show partial stability, while symbols with varied usage ($\Rightarrow$) do not transfer reliably. As models scale and training data includes more structured content, this gap may narrow. This work provides an initial foundation for developing symbolic instruction languages that realize the efficiency potential of compact, compositional prompts.
+The relationship between model scale and symbolic comprehension appears U-shaped: small models show moderate fidelity, instruction-tuned mid-sized models show low fidelity due to natural-language biases, and frontier-scale models recover and exceed small-model performance. This suggests that sufficient scale can access pretrained symbolic semantics that instruction tuning temporarily obscures. As models continue scaling, symbolic instruction compression may become increasingly practical.
 
 \section*{Code and Data Availability}
 

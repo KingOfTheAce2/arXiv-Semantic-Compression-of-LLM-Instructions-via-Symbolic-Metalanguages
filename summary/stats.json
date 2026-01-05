@@ -1,14 +1,14 @@
 {
-  "qwen-2.5-7b_metrics": {
+  "olmo-3-7b_metrics": {
     "1_selection_classification": {
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
         "count": 150,
-        "accuracy_mean": 0.23605432743534033,
-        "accuracy_std": 0.060496630129746876,
-        "f1_mean": 0.3791814404992488,
-        "f1_std": 0.057915008934734974,
+        "accuracy_mean": 0.1702127659574468,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.29090909090909095,
+        "f1_std": 0.0,
         "exact_match_rate": 0.0,
         "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
@@ -18,27 +18,299 @@
         "group_key": "condition",
         "group_value": "MG",
         "count": 150,
-        "accuracy_mean": 0.8302886762360447,
-        "accuracy_std": 0.1353338053880403,
-        "f1_mean": 0.899570555147958,
-        "f1_std": 0.10664315480535606,
-        "exact_match_rate": 0.18666666666666668,
+        "accuracy_mean": 0.4,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.5714285714285714,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
         "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.18666666666666668,
-        "semantic_equivalence_rate": 0.09333333333333334
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
         "count": 150,
-        "accuracy_mean": 0.8821666666666668,
-        "accuracy_std": 0.12065733923928643,
-        "f1_mean": 0.9325465178096757,
-        "f1_std": 0.07708730614562521,
-        "exact_match_rate": 0.4266666666666667,
+        "accuracy_mean": 0.9,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.9473684210526316,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
         "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.4266666666666667,
-        "semantic_equivalence_rate": 0.09333333333333334
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      }
+    },
+    "2_structured_extraction": {
+      "CTRL": {
+        "group_key": "condition",
+        "group_value": "CTRL",
+        "count": 150,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.94,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "MG": {
+        "group_key": "condition",
+        "group_value": "MG",
+        "count": 150,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.96,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "NL": {
+        "group_key": "condition",
+        "group_value": "NL",
+        "count": 150,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.9666666666666667,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      }
+    },
+    "3_constraint_composition": {
+      "CTRL": {
+        "group_key": "condition",
+        "group_value": "CTRL",
+        "count": 150,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.72,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "MG": {
+        "group_key": "condition",
+        "group_value": "MG",
+        "count": 150,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.7266666666666667,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.006666666666666667
+      },
+      "NL": {
+        "group_key": "condition",
+        "group_value": "NL",
+        "count": 150,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 0.64,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.006666666666666667
+      }
+    },
+    "4_conditional_transformation": {
+      "CTRL": {
+        "group_key": "condition",
+        "group_value": "CTRL",
+        "count": 150,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "MG": {
+        "group_key": "condition",
+        "group_value": "MG",
+        "count": 150,
+        "accuracy_mean": 0.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "NL": {
+        "group_key": "condition",
+        "group_value": "NL",
+        "count": 150,
+        "accuracy_mean": 0.3,
+        "accuracy_std": 0.0,
+        "f1_mean": 0.3,
+        "f1_std": 0.0,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      }
+    }
+  },
+  "olmo-3-7b_fidelity": [
+    {
+      "operator": "∈",
+      "check_count": 450,
+      "pass_count": 0,
+      "pass_rate": 0.0
+    },
+    {
+      "operator": "→",
+      "check_count": 430,
+      "pass_count": 0,
+      "pass_rate": 0.0
+    },
+    {
+      "operator": "∩",
+      "check_count": 313,
+      "pass_count": 0,
+      "pass_rate": 0.0
+    },
+    {
+      "operator": "⇒",
+      "check_count": 450,
+      "pass_count": 0,
+      "pass_rate": 0.0
+    }
+  ],
+  "olmo-3-7b_comparisons": [
+    {
+      "family": "1_selection_classification",
+      "model": "olmo-3-7b",
+      "nl_accuracy": 0.9,
+      "mg_accuracy": 0.4,
+      "ctrl_accuracy": 0.1702127659574468,
+      "mg_vs_nl_diff": -0.5,
+      "mg_vs_ctrl_diff": 0.22978723404255322,
+      "statistical_significant": true
+    },
+    {
+      "family": "2_structured_extraction",
+      "model": "olmo-3-7b",
+      "nl_accuracy": 0.0,
+      "mg_accuracy": 0.0,
+      "ctrl_accuracy": 0.0,
+      "mg_vs_nl_diff": 0.0,
+      "mg_vs_ctrl_diff": 0.0,
+      "statistical_significant": false
+    },
+    {
+      "family": "3_constraint_composition",
+      "model": "olmo-3-7b",
+      "nl_accuracy": 0.0,
+      "mg_accuracy": 0.0,
+      "ctrl_accuracy": 0.0,
+      "mg_vs_nl_diff": 0.0,
+      "mg_vs_ctrl_diff": 0.0,
+      "statistical_significant": false
+    },
+    {
+      "family": "4_conditional_transformation",
+      "model": "olmo-3-7b",
+      "nl_accuracy": 0.3,
+      "mg_accuracy": 0.0,
+      "ctrl_accuracy": 0.0,
+      "mg_vs_nl_diff": -0.3,
+      "mg_vs_ctrl_diff": 0.0,
+      "statistical_significant": true
+    }
+  ],
+  "olmo-3-7b_tokens": [
+    {
+      "family": "1_selection_classification",
+      "model": "olmo-3-7b",
+      "nl_tokens": 215,
+      "mg_tokens": 41,
+      "ctrl_tokens": 41,
+      "mg_reduction_vs_nl": 0.8093023255813954,
+      "mg_reduction_vs_ctrl": 0.0
+    },
+    {
+      "family": "2_structured_extraction",
+      "model": "olmo-3-7b",
+      "nl_tokens": 176,
+      "mg_tokens": 52,
+      "ctrl_tokens": 52,
+      "mg_reduction_vs_nl": 0.7045454545454546,
+      "mg_reduction_vs_ctrl": 0.0
+    },
+    {
+      "family": "3_constraint_composition",
+      "model": "olmo-3-7b",
+      "nl_tokens": 134,
+      "mg_tokens": 48,
+      "ctrl_tokens": 48,
+      "mg_reduction_vs_nl": 0.6417910447761194,
+      "mg_reduction_vs_ctrl": 0.0
+    },
+    {
+      "family": "4_conditional_transformation",
+      "model": "olmo-3-7b",
+      "nl_tokens": 164,
+      "mg_tokens": 62,
+      "ctrl_tokens": 62,
+      "mg_reduction_vs_nl": 0.6219512195121951,
+      "mg_reduction_vs_ctrl": 0.0
+    }
+  ],
+  "kimi-k2_metrics": {
+    "1_selection_classification": {
+      "CTRL": {
+        "group_key": "condition",
+        "group_value": "CTRL",
+        "count": 150,
+        "accuracy_mean": 0.8986153846153847,
+        "accuracy_std": 0.01695800591157585,
+        "f1_mean": 0.9465071770334929,
+        "f1_std": 0.01054804195456872,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.0,
+        "semantic_equivalence_rate": 0.0
+      },
+      "MG": {
+        "group_key": "condition",
+        "group_value": "MG",
+        "count": 150,
+        "accuracy_mean": 1.0,
+        "accuracy_std": 0.0,
+        "f1_mean": 1.0,
+        "f1_std": 0.0,
+        "exact_match_rate": 1.0,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 1.0,
+        "semantic_equivalence_rate": 0.08
+      },
+      "NL": {
+        "group_key": "condition",
+        "group_value": "NL",
+        "count": 150,
+        "accuracy_mean": 0.9080000000000001,
+        "accuracy_std": 0.027220205680990657,
+        "f1_mean": 0.9515789473684212,
+        "f1_std": 0.014326424042626648,
+        "exact_match_rate": 0.08,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.08,
+        "semantic_equivalence_rate": 0.08
       }
     },
     "2_structured_extraction": {
@@ -64,9 +336,9 @@
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.9933333333333333,
+        "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.62
+        "semantic_equivalence_rate": 0.0
       },
       "NL": {
         "group_key": "condition",
@@ -79,7 +351,7 @@
         "exact_match_rate": 0.0,
         "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.62
+        "semantic_equivalence_rate": 0.0
       }
     },
     "3_constraint_composition": {
@@ -105,9 +377,9 @@
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.9466666666666667,
+        "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.006666666666666667
+        "semantic_equivalence_rate": 0.0
       },
       "NL": {
         "group_key": "condition",
@@ -118,9 +390,9 @@
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.6866666666666666,
+        "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.006666666666666667
+        "semantic_equivalence_rate": 0.0
       }
     },
     "4_conditional_transformation": {
@@ -128,83 +400,83 @@
         "group_key": "condition",
         "group_value": "CTRL",
         "count": 150,
-        "accuracy_mean": 0.6821111111111111,
-        "accuracy_std": 0.08548882703371999,
-        "f1_mean": 0.6821111111111111,
-        "f1_std": 0.08548882703371999,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.0,
+        "accuracy_mean": 0.3458888888888889,
+        "accuracy_std": 0.4765255210477123,
+        "f1_mean": 0.3458888888888889,
+        "f1_std": 0.4765255210477123,
+        "exact_match_rate": 0.34,
+        "parse_success_rate": 0.3466666666666667,
+        "overall_pass_rate": 0.34,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
         "count": 150,
-        "accuracy_mean": 0.5727777777777778,
-        "accuracy_std": 0.09674833907409892,
-        "f1_mean": 0.5727777777777778,
-        "f1_std": 0.09674833907409892,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
+        "accuracy_mean": 0.34644444444444444,
+        "accuracy_std": 0.47720049059875325,
+        "f1_mean": 0.34644444444444444,
+        "f1_std": 0.47720049059875325,
+        "exact_match_rate": 0.3333333333333333,
+        "parse_success_rate": 0.3466666666666667,
+        "overall_pass_rate": 0.3333333333333333,
+        "semantic_equivalence_rate": 0.006666666666666667
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
         "count": 150,
-        "accuracy_mean": 0.6722222222222222,
-        "accuracy_std": 0.14143014426629033,
-        "f1_mean": 0.6722222222222222,
-        "f1_std": 0.14143014426629033,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
+        "accuracy_mean": 0.35333333333333333,
+        "accuracy_std": 0.47960647552410435,
+        "f1_mean": 0.35333333333333333,
+        "f1_std": 0.47960647552410435,
+        "exact_match_rate": 0.35333333333333333,
+        "parse_success_rate": 0.35333333333333333,
+        "overall_pass_rate": 0.35333333333333333,
+        "semantic_equivalence_rate": 0.006666666666666667
       }
     }
   },
-  "qwen-2.5-7b_fidelity": [
+  "kimi-k2_fidelity": [
     {
       "operator": "∈",
       "check_count": 450,
-      "pass_count": 92,
-      "pass_rate": 0.20444444444444446
+      "pass_count": 162,
+      "pass_rate": 0.36
     },
     {
       "operator": "→",
-      "check_count": 449,
+      "check_count": 450,
       "pass_count": 0,
       "pass_rate": 0.0
     },
     {
       "operator": "∩",
-      "check_count": 395,
+      "check_count": 450,
       "pass_count": 0,
       "pass_rate": 0.0
     },
     {
       "operator": "⇒",
-      "check_count": 450,
-      "pass_count": 0,
-      "pass_rate": 0.0
+      "check_count": 157,
+      "pass_count": 154,
+      "pass_rate": 0.9808917197452229
     }
   ],
-  "qwen-2.5-7b_comparisons": [
+  "kimi-k2_comparisons": [
     {
       "family": "1_selection_classification",
-      "model": "qwen-2.5-7b",
-      "nl_accuracy": 0.8821666666666668,
-      "mg_accuracy": 0.8302886762360447,
-      "ctrl_accuracy": 0.23605432743534033,
-      "mg_vs_nl_diff": -0.05187799043062202,
-      "mg_vs_ctrl_diff": 0.5942343488007045,
+      "model": "kimi-k2",
+      "nl_accuracy": 0.9080000000000001,
+      "mg_accuracy": 1.0,
+      "ctrl_accuracy": 0.8986153846153847,
+      "mg_vs_nl_diff": 0.09199999999999986,
+      "mg_vs_ctrl_diff": 0.1013846153846153,
       "statistical_significant": true
     },
     {
       "family": "2_structured_extraction",
-      "model": "qwen-2.5-7b",
+      "model": "kimi-k2",
       "nl_accuracy": 0.0,
       "mg_accuracy": 0.0,
       "ctrl_accuracy": 0.0,
@@ -214,7 +486,7 @@
     },
     {
       "family": "3_constraint_composition",
-      "model": "qwen-2.5-7b",
+      "model": "kimi-k2",
       "nl_accuracy": 0.0,
       "mg_accuracy": 0.0,
       "ctrl_accuracy": 0.0,
@@ -224,19 +496,19 @@
     },
     {
       "family": "4_conditional_transformation",
-      "model": "qwen-2.5-7b",
-      "nl_accuracy": 0.6722222222222222,
-      "mg_accuracy": 0.5727777777777778,
-      "ctrl_accuracy": 0.6821111111111111,
-      "mg_vs_nl_diff": -0.09944444444444434,
-      "mg_vs_ctrl_diff": -0.10933333333333328,
-      "statistical_significant": true
+      "model": "kimi-k2",
+      "nl_accuracy": 0.35333333333333333,
+      "mg_accuracy": 0.34644444444444444,
+      "ctrl_accuracy": 0.3458888888888889,
+      "mg_vs_nl_diff": -0.006888888888888889,
+      "mg_vs_ctrl_diff": 0.0005555555555555314,
+      "statistical_significant": false
     }
   ],
-  "qwen-2.5-7b_tokens": [
+  "kimi-k2_tokens": [
     {
       "family": "1_selection_classification",
-      "model": "qwen-2.5-7b",
+      "model": "kimi-k2",
       "nl_tokens": 215,
       "mg_tokens": 41,
       "ctrl_tokens": 41,
@@ -245,7 +517,7 @@
     },
     {
       "family": "2_structured_extraction",
-      "model": "qwen-2.5-7b",
+      "model": "kimi-k2",
       "nl_tokens": 176,
       "mg_tokens": 52,
       "ctrl_tokens": 52,
@@ -254,7 +526,7 @@
     },
     {
       "family": "3_constraint_composition",
-      "model": "qwen-2.5-7b",
+      "model": "kimi-k2",
       "nl_tokens": 134,
       "mg_tokens": 48,
       "ctrl_tokens": 48,
@@ -263,7 +535,7 @@
     },
     {
       "family": "4_conditional_transformation",
-      "model": "qwen-2.5-7b",
+      "model": "kimi-k2",
       "nl_tokens": 164,
       "mg_tokens": 62,
       "ctrl_tokens": 62,

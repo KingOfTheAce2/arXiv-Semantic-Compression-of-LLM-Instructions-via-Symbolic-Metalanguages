@@ -1,0 +1,45 @@
+{
+  "prompt_id": "instance_139_NL",
+  "model": "olmo-3-7b",
+  "family": "1_selection_classification",
+  "condition": "NL",
+  "parse_success": true,
+  "parsed_output": [
+    "Dog",
+    "Cat",
+    "Hamster",
+    "Guinea pig",
+    "Rabbit",
+    "Ferret",
+    "Mouse",
+    "Rat",
+    "Chinchilla",
+    "Hedgehog"
+  ],
+  "gold_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Guinea pig",
+    "Hamster",
+    "Hedgehog",
+    "Mouse",
+    "Rat"
+  ],
+  "exact_match": false,
+  "accuracy": 0.9,
+  "f1_score": 0.9473684210526316,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Extra items: 1"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "extra",
+  "error_details": "Accuracy: 0.90",
+  "semantic_equivalence_pass": false
+}

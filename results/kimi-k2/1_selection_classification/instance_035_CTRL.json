@@ -1,0 +1,48 @@
+{
+  "prompt_id": "instance_035_CTRL",
+  "model": "kimi-k2",
+  "family": "1_selection_classification",
+  "condition": "CTRL",
+  "parse_success": true,
+  "parsed_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Goldfish",
+    "Guinea pig",
+    "Hamster",
+    "Hedgehog",
+    "Mouse",
+    "Parrot",
+    "Rabbit",
+    "Rat",
+    "Turtle"
+  ],
+  "gold_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Guinea pig",
+    "Hamster",
+    "Hedgehog",
+    "Mouse",
+    "Rat"
+  ],
+  "exact_match": false,
+  "accuracy": 0.6923076923076923,
+  "f1_score": 0.8181818181818181,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Extra items: 4"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "extra",
+  "error_details": "Accuracy: 0.69",
+  "semantic_equivalence_pass": false
+}

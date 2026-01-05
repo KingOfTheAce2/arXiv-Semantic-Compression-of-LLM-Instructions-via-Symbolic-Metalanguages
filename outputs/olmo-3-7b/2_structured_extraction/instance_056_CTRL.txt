@@ -31,12 +31,12 @@
     "severity": "medium"
   },
   {
-    "risk_name": "Potential future scaling challenges from increased adoption",
+    "risk_name": "Speculative: Rapid adoption scaling challenges",
     "affected_component": "speculative",
     "severity": "speculative"
   },
   {
-    "risk_name": "Improper token expiration handling in authentication subsystem",
+    "risk_name": "Improper token expiration handling in authentication",
     "affected_component": "authentication service",
     "severity": "high"
   }

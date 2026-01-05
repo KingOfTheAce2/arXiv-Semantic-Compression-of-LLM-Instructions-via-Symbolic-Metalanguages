@@ -1,0 +1,66 @@
+{
+  "prompt_id": "instance_004_MG",
+  "model": "kimi-k2",
+  "family": "2_structured_extraction",
+  "condition": "MG",
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "risk_name": "memory leaks in the ingestion service",
+      "affected_component": "ingestion pipeline",
+      "severity": "high"
+    },
+    {
+      "risk_name": "intermittent network latency between compute nodes",
+      "affected_component": "orchestration layer",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "stale configuration values in configuration management system",
+      "affected_component": "configuration service",
+      "severity": "low"
+    },
+    {
+      "risk_name": "improper token expiration handling in authentication subsystem",
+      "affected_component": "authentication service",
+      "severity": "high"
+    }
+  ],
+  "gold_output": [
+    {
+      "risk_name": "Memory leaks in the ingestion service",
+      "affected_component": "ingestion pipeline",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Intermittent network latency between compute nodes",
+      "affected_component": "orchestration layer",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Stale configuration values after redeployment",
+      "affected_component": "configuration service",
+      "severity": "low"
+    },
+    {
+      "risk_name": "Improper token expiration handling",
+      "affected_component": "authentication service",
+      "severity": "high"
+    }
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "logic",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

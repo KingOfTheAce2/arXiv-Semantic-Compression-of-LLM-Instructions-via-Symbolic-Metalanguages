@@ -1,0 +1,40 @@
+{
+  "prompt_id": "instance_143_MG",
+  "model": "olmo-3-7b",
+  "family": "1_selection_classification",
+  "condition": "MG",
+  "parse_success": true,
+  "parsed_output": [
+    "Dog",
+    "Cat",
+    "Hamster",
+    "Guinea pig",
+    "Rabbit"
+  ],
+  "gold_output": [
+    "Cat",
+    "Chinchilla",
+    "Dog",
+    "Ferret",
+    "Guinea pig",
+    "Hamster",
+    "Hedgehog",
+    "Mouse",
+    "Rat"
+  ],
+  "exact_match": false,
+  "accuracy": 0.4,
+  "f1_score": 0.5714285714285714,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Extra items: 1"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "incomplete",
+  "error_details": "Accuracy: 0.40",
+  "semantic_equivalence_pass": false
+}

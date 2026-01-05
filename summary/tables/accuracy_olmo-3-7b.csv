@@ -1,13 +1,13 @@
 Family,Condition,N,Accuracy (Mean),Accuracy (Std),F1 (Mean),Exact Match Rate,Parse Rate,Pass Rate,Semantic Equiv Rate
-1_selection_classification,CTRL,50,0.000,0.000,0.000,0.000,1.000,0.000,0.000
-1_selection_classification,MG,50,0.000,0.000,0.000,0.000,0.960,0.000,0.000
-1_selection_classification,NL,50,0.000,0.000,0.000,0.000,1.000,0.000,0.000
-2_structured_extraction,CTRL,50,0.000,0.000,0.000,0.000,0.940,0.000,0.000
-2_structured_extraction,MG,50,0.000,0.000,0.000,0.000,0.960,0.000,0.000
-2_structured_extraction,NL,50,0.000,0.000,0.000,0.000,1.000,0.000,0.000
-3_constraint_composition,CTRL,50,0.000,0.000,0.000,0.000,1.000,0.000,0.000
-3_constraint_composition,MG,50,0.000,0.000,0.000,0.000,0.980,0.000,0.000
-3_constraint_composition,NL,50,0.000,0.000,0.000,0.000,0.980,0.000,0.000
+1_selection_classification,CTRL,150,0.170,0.000,0.291,0.000,1.000,0.000,0.000
+1_selection_classification,MG,150,0.400,0.000,0.571,0.000,1.000,0.000,0.000
+1_selection_classification,NL,150,0.900,0.000,0.947,0.000,1.000,0.000,0.000
+2_structured_extraction,CTRL,150,0.000,0.000,0.000,0.000,0.940,0.000,0.000
+2_structured_extraction,MG,150,0.000,0.000,0.000,0.000,0.960,0.000,0.000
+2_structured_extraction,NL,150,0.000,0.000,0.000,0.000,0.967,0.000,0.000
+3_constraint_composition,CTRL,150,0.000,0.000,0.000,0.000,0.720,0.000,0.000
+3_constraint_composition,MG,150,0.000,0.000,0.000,0.000,0.727,0.000,0.007
+3_constraint_composition,NL,150,0.000,0.000,0.000,0.000,0.640,0.000,0.007
 4_conditional_transformation,CTRL,150,0.000,0.000,0.000,0.000,1.000,0.000,0.000
 4_conditional_transformation,MG,150,0.000,0.000,0.000,0.000,1.000,0.000,0.000
-4_conditional_transformation,NL,150,0.000,0.000,0.000,0.000,1.000,0.000,0.000
+4_conditional_transformation,NL,150,0.300,0.000,0.300,0.000,1.000,0.000,0.000

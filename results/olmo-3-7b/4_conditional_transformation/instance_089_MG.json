@@ -1,0 +1,604 @@
+{
+  "prompt_id": "instance_089_MG",
+  "model": "olmo-3-7b",
+  "family": "4_conditional_transformation",
+  "condition": "MG",
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "name": "Alice",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "Bob",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "Carol",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Dave",
+      "label": "external",
+      "access_level": "full"
+    },
+    {
+      "name": "Eve",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "Frank",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "Grace",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "Heidi",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "ivane"
+    },
+    {
+      "name": "Judy",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "Karl",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "Laura",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "Mallory",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "Neil",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Olivia",
+      "label": "external",
+      "access_level": "full"
+    },
+    {
+      "name": "Peggy",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "quentin"
+    },
+    {
+      "name": "Ruth",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Sybil",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "Trent",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "Uma",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Victor",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "Wendy",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "xavier"
+    },
+    {
+      "name": "Yvonne",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "Zach",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "Aaron",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Bianca",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "Colin",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Diana",
+      "label": "external",
+      "access_level": "full"
+    },
+    {
+      "name": "Ethan",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "Hannah",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "isaac"
+    },
+    {
+      "name": "Julia",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Kevin",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "Linda",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "Michael",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "Nina",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "Oscar",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "Paula",
+      "label": "external",
+      "access_level": "full"
+    },
+    {
+      "name": "Quinn",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Rachel",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "Steve",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "Tina",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Ulysses",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "Valerie",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "Walter",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "xena"
+    },
+    {
+      "name": "Yannick",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "Zoe",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Adrian",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "Bella",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "Chris",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "Denise",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "edward"
+    },
+    {
+      "name": "Felicity",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "Gavin",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "Holly",
+      "label": "internal",
+      "access_level": "full"
+    }
+  ],
+  "gold_output": [
+    {
+      "name": "alice",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "bob",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "carol",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "dave",
+      "label": "external",
+      "access_level": "full"
+    },
+    {
+      "name": "eve",
+      "label": "none",
+      "access_level": "full"
+    },
+    {
+      "name": "frank",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "grace",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "heidi",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "ivan",
+      "label": "none",
+      "access_level": "standard"
+    },
+    {
+      "name": "judy",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "karl",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "laura",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "mallory",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "neil",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "olivia",
+      "label": "external",
+      "access_level": "full"
+    },
+    {
+      "name": "peggy",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "quentin",
+      "label": "none",
+      "access_level": "standard"
+    },
+    {
+      "name": "ruth",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "sybil",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "trent",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "uma",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "victor",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "wendy",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "xavier",
+      "label": "none",
+      "access_level": "standard"
+    },
+    {
+      "name": "yvonne",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "zach",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "aaron",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "bianca",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "colin",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "diana",
+      "label": "external",
+      "access_level": "full"
+    },
+    {
+      "name": "ethan",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "fiona",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "george",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "hannah",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "isaac",
+      "label": "none",
+      "access_level": "standard"
+    },
+    {
+      "name": "julia",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "kevin",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "linda",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "michael",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "nina",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "oscar",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "paula",
+      "label": "external",
+      "access_level": "full"
+    },
+    {
+      "name": "quinn",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "rachel",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "steve",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "tina",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "ulysses",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "valerie",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "walter",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "xena",
+      "label": "none",
+      "access_level": "standard"
+    },
+    {
+      "name": "yannick",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "zoe",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "adrian",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "bella",
+      "label": "external",
+      "access_level": "limited"
+    },
+    {
+      "name": "chris",
+      "label": "internal",
+      "access_level": "standard"
+    },
+    {
+      "name": "denise",
+      "label": "internal",
+      "access_level": "full"
+    },
+    {
+      "name": "edward",
+      "label": "none",
+      "access_level": "standard"
+    },
+    {
+      "name": "felicity",
+      "label": "external",
+      "access_level": "standard"
+    },
+    {
+      "name": "gavin",
+      "label": "internal",
+      "access_level": "limited"
+    },
+    {
+      "name": "holly",
+      "label": "internal",
+      "access_level": "full"
+    }
+  ],
+  "exact_match": false,
+  "accuracy": 0.0,
+  "f1_score": 0.0,
+  "operator_fidelity": [
+    {
+      "operator": "⇒",
+      "checked": true,
+      "passed": false,
+      "details": "Wrong number of records"
+    }
+  ],
+  "overall_pass": false,
+  "error_type": "logic",
+  "error_details": "Accuracy: 0.00",
+  "semantic_equivalence_pass": false
+}

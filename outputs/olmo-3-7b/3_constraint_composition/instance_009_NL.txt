@@ -1,0 +1,288 @@
+
+["Auth Hardening", "Encryption Upgrade", "Intrusion Detection", "Load Balancer Tuning", "Session Timeout Enforcement", "TLS Certificate Automation", "Threat Modeling", "Certificate Revocation Handling", "Feature Flag Cleanup", "Encryption Key Rotation", "Garbage Collection Tuning", "API Gateway Optimization", "Authentication Rate Limits", "Access Control Review", "Speculative Scaling Prototype", "Thread Safety Audit", "Latency Budget Enforcement", "Vulnerability Scanner Update", "Queue Backpressure Handling", "Disk IO Optimization", "Network Stack Profiling", "Secure Defaults Review", "Speculative Scaling Prototype", "Thread Safety Audit", "Rate Limiting", "Rate Limiting", "Cache Layer Rewrite", "Metrics Aggregation", "Backup Verification", "Secrets Management", "Response Caching", "CPU Affinity Tuning", "Encryption Library Cleanup", "Network Stack Profiling", "Speculative Scaling Prototype"] 
+
+Wait, no, I need to actually follow the rules and only include the correct ones. Let me re-do this properly.
+
+First, collect all projects that are either:
+
+- High priority AND security-related, OR
+- Any performance-related (regardless of priority), AND
+- Not deprecated OR experimental.
+
+Let me go through each project:
+
+1. Auth Hardening: security, high_priority → include
+2. Token Rotation: security, medium → include
+3. Encryption Upgrade: security, high → include
+4. Intrusion Detection: security, high, but experimental → exclude (experimental)
+5. Rate Limiting: security, low → include
+6. Query Optimizer: performance → include
+7. Cache Layer Rewrite: performance, high → include
+8. Memory Pooling: performance, experimental → exclude
+9. API Latency Reduction: performance → include
+10. Legacy Crypto Support: security, deprecated → exclude
+11. Logging Framework: not security/performance → exclude
+12. Monitoring Dashboard: performance, but not core system → depends, but not security/perf main? The tag is performance, so include if it's about system perf. Let's assume yes → include
+13. Build System Cleanup: deprecated → exclude
+14. Data Compression: performance → include
+15. Firewall Rules Update: security, high → include
+16. Load Balancer Tuning: performance, high → include
+17. Threat Modeling: security → include
+18. Sandbox Environment: experimental → exclude
+19. TLS Certificate Automation: security, high → include
+20. Legacy API Removal: deprecated → exclude
+21. Index Rebalancing: performance → include
+22. Password Policy Update: security, medium → include
+23. Session Timeout Enforcement: security, high → include
+24. Cold Start Reduction: performance → include
+25. Kernel Patch Testing: security, experimental → exclude
+26. Metrics Aggregation: performance → include
+27. Backup Verification: not security/perf → exclude (unless reliability is considered performance? Maybe not)
+28. Secrets Management: security, high → include
+29. Thread Pool Optimization: performance → include
+30. Legacy Auth Removal: security, deprecated → exclude
+31. CDN Configuration: performance → include
+32. Certificate Revocation Handling: security, high → include
+33. Compression Benchmarking: performance, experimental → exclude
+34. Request Batching: performance → include
+35. Access Control Review: security → include
+36. Memory Leak Analysis: performance → include
+37. Privilege Escalation Audit: security, high → include
+38. Obsolete Service Shutdown: deprecated → exclude
+39. CPU Affinity Tuning: performance → include
+40. Secure Boot Enforcement: security, high → include
+41. Feature Flag Cleanup: not security/perf → exclude
+42. Encryption Key Rotation: security, high → include
+43. Response Caching: performance → include
+44. Experimental Load Testing: performance, experimental → exclude
+45. Vulnerability Scanner Update: security, medium → include
+46. Queue Backpressure Handling: performance → include
+47. Deprecated Config Removal: deprecated → exclude
+48. Secure Logging: security, high → include
+49. Garbage Collection Tuning: performance → include
+50. API Gateway Optimization: performance, high → include
+51. Authentication Rate Limits: security, high → include
+52. Legacy Scheduler Removal: deprecated → exclude
+53. Disk IO Optimization: performance → include
+54. Encryption Library Cleanup: security, deprecated → exclude
+55. Network Stack Profiling: performance → include
+56. Secure Defaults Review: security → include
+57. Speculative Scaling Prototype: experimental → exclude
+58. Thread Safety Audit: security, high → include
+59. Latency Budget Enforcement: performance → include
+60. Deprecated Monitoring Agent: deprecated → exclude
+
+Now, collect all the names that are included, then sort them alphabetically.
+
+Let me list them (without duplicates):
+
+Auth Hardening  
+Token Rotation  
+Encryption Upgrade  
+Rate Limiting  
+Query Optimizer  
+Cache Layer Rewrite  
+API Latency Reduction  
+Monitoring Dashboard  
+Data Compression  
+Firewall Rules Update  
+Load Balancer Tuning  
+Threat Modeling  
+TLS Certificate Automation  
+Index Rebalancing  
+Password Policy Update  
+Session Timeout Enforcement  
+Cold Start Reduction  
+Metrics Aggregation  
+Backup Verification? (if reliability is not considered, exclude)  
+Secrets Management  
+Thread Pool Optimization  
+CDN Configuration  
+Certificate Revocation Handling  
+Vulnerability Scanner Update  
+Queue Backpressure Handling  
+Response Caching  
+Garbage Collection Tuning  
+API Gateway Optimization  
+Authentication Rate Limits  
+Access Control Review  
+Privilege Escalation Audit  
+CPU Affinity Tuning  
+Secure Boot Enforcement  
+Encryption Key Rotation  
+Network Stack Profiling  
+Secure Defaults Review  
+Thread Safety Audit  
+Latency Budget Enforcement  
+
+Now sort these alphabetically:
+
+Access Control Review  
+Authentication Rate Limits  
+Backup Verification  
+Cache Layer Rewrite  
+CDN Configuration  
+Certificate Revocation Handling  
+Certificate Upgrade  
+Cold Start Reduction  
+Cache Layer Rewrite (already listed)  
+Data Compression  
+Data Compression  
+Deletion (no, not here)  
+Encryption Upgrade  
+Encryption Key Rotation  
+Encryption Library Cleanup (excluded)  
+Experimental (none)  
+Firewall Rules Update  
+Garbage Collection Tuning  
+Index Rebalancing  
+Intrusion Detection (excluded)  
+Load Balancer Tuning  
+Monitoring Dashboard  
+Metrics Aggregation  
+Memory Leak Analysis  
+Memory Pooling (excluded)  
+Network Stack Profiling  
+Password Policy Update  
+Privilege Escalation Audit  
+Rate Limiting  
+Rate Limiting (duplicate)  
+Session Timeout Enforcement  
+Secure Boot Enforcement  
+Secure Defaults Review  
+Secure Logging  
+Secure Logging (no, only once)  
+Secure Defaults Review  
+Speculative Scaling Prototype (excluded)  
+Threat Modeling  
+Thread Safety Audit  
+Thread Pool Optimization  
+Token Rotation  
+Vulnerability Scanner Update  
+Latency Budget Enforcement  
+Latency Budget Enforcement (already)  
+Legacy (none)  
+Legacy Auth Removal (excluded)  
+Legacy Scheduler Removal (excluded)  
+Legacy Crypto Support (excluded)  
+Legacy (none)  
+Load Balancer Tuning (already)  
+Performance (no)  
+Performance-related all covered.
+
+Wait let me re-compile the unique names in order:
+
+Alphabetical order:
+
+Access Control Review  
+Authentication Rate Limits  
+Backup Verification (if included)  
+CDN Configuration  
+Certificate Revocation Handling  
+Cache Layer Rewrite  
+Cold Start Reduction  
+Data Compression  
+Firewall Rules Update  
+Garbage Collection Tuning  
+Index Rebalancing  
+Load Balancer Tuning  
+Monitoring Dashboard  
+Metrics Aggregation  
+Password Policy Update  
+Privilege Escalation Audit  
+Rate Limiting  
+Session Timeout Enforcement  
+Secure Boot Enforcement  
+Secure Defaults Review  
+Secure Logging  
+Secure Key Rotation (no, Encryption Key Rotation)  
+Threat Modeling  
+Thread Safety Audit  
+Thread Pool Optimization  
+Token Rotation  
+Vulnerability Scanner Update  
+Latency Budget Enforcement  
+
+Wait let me re-do the sorted list properly:
+
+1. Access Control Review  
+2. Authentication Rate Limits  
+3. Backup Verification *(if included)*  
+4. CDN Configuration  
+5. Certificate Revocation Handling  
+6. Cache Layer Rewrite  
+7. Cold Start Reduction  
+8. Data Compression  
+9. Firewall Rules Update  
+10. Garbage Collection Tuning  
+11. Index Rebalancing  
+12. Load Balancer Tuning  
+13. Monitoring Dashboard  
+14. Metrics Aggregation  
+15. Password Policy Update  
+16. Privilege Escalation Audit  
+17. Rate Limiting  
+18. Session Timeout Enforcement  
+19. Secure Boot Enforcement  
+20. Secure Defaults Review  
+21. Secure Logging  
+22. Secure Key Rotation (no, Encryption Key Rotation)  
+Wait, Encryption Key Rotation is a separate entry.  
+23. Threat Modeling  
+24. Thread Safety Audit  
+25. Thread Pool Optimization  
+26. Token Rotation  
+27. Vulnerability Scanner Update  
+28. Latency Budget Enforcement  
+
+Wait, need to ensure all are included properly. Let me list all the included names again, then sort:
+
+Included project names:
+
+Auth Hardening  
+Token Rotation  
+Encryption Upgrade  
+Rate Limiting  
+Query Optimizer  
+Cache Layer Rewrite  
+API Latency Reduction  
+Monitoring Dashboard  
+Data Compression  
+Firewall Rules Update  
+Load Balancer Tuning  
+Threat Modeling  
+TLS Certificate Automation  
+Index Rebalancing  
+Password Policy Update  
+Session Timeout Enforcement  
+Cold Start Reduction  
+Metrics Aggregation  
+Secrets Management  
+Thread Pool Optimization  
+CDN Configuration  
+Certificate Revocation Handling  
+Vulnerability Scanner Update  
+Queue Backpressure Handling  
+Response Caching  
+Garbage Collection Tuning  
+API Gateway Optimization  
+Authentication Rate Limits  
+Access Control Review  
+Privilege Escalation Audit  
+CPU Affinity Tuning  
+Secure Boot Enforcement  
+Encryption Key Rotation  
+Network Stack Profiling  
+Secure Defaults Review  
+Thread Safety Audit  
+Latency Budget Enforcement  
+
+Now sort these alphabetically (case-sensitive, as per usual string sort):
+
+Access Control Review  
+Authentication Rate Limits  
+CDN Configuration  
+Cache Layer Rewrite  
+Certificate Revocation Handling  
+Certificate Upgrade (no, Encryption Upgrade)  
+Wait, "
