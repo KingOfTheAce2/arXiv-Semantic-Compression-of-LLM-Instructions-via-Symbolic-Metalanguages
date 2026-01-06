@@ -1,0 +1,8 @@
+```json
+{
+  "selected_ids": [],
+  "count": 0
+}
+```
+
+**Explanation:** The instructions reference criteria for "security" and "performance" categories, but the dataset uses categories A, B, and C with no mapping provided to these criteria. Additionally, the instructions mention excluding "deprecated" or "experimental" status, but the dataset only contains statuses: inactive, pending, and active. Without clear definitions of how the dataset categories/statuses map to the selection criteria, no items can be definitively selected.

@@ -1,0 +1,11 @@
+```json
+[]
+```
+
+The query requests items that are simultaneously:
+- ∈(mammal) - members of the mammal category
+- ∈(pet) - members of the pet category
+- ¬(bird) - not birds
+- ¬(farm_animal) - not farm animals
+
+None of the items in the provided inventory (Laptop, Headphones, Tablet, Chair, Pen, Bookshelf, Stapler, Desk, Notebook, Refrigerator) are mammals or pets. The inventory contains only electronics, furniture, stationery, and appliances. Therefore, no items match the selection criteria.

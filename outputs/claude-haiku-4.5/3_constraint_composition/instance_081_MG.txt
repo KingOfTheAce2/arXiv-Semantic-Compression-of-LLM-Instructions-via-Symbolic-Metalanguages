@@ -1,0 +1,20 @@
+```json
+{
+  "selected_projects": [
+    "API Gateway Optimization",
+    "Auth Hardening",
+    "Authentication Rate Limits",
+    "Cache Layer Rewrite",
+    "Certificate Revocation Handling",
+    "Encryption Key Rotation",
+    "Encryption Upgrade",
+    "Firewall Rules Update",
+    "Privilege Escalation Audit",
+    "Secure Boot Enforcement",
+    "Secure Logging",
+    "Secrets Management",
+    "Session Timeout Enforcement",
+    "Thread Safety Audit",
+    "TLS Certificate Automation"
+  ],
+  "count": 15

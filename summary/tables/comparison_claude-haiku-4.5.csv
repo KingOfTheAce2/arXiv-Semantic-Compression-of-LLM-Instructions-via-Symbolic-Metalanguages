@@ -1,5 +1,5 @@
 Family,Model,NL Accuracy,MG Accuracy,CTRL Accuracy,MG-NL Diff,MG-CTRL Diff,Significant
-1_selection_classification,claude-haiku-4.5,0.000,0.000,0.000,+0.000,+0.000,No
+1_selection_classification,claude-haiku-4.5,0.784,0.709,0.411,-0.075,+0.298,Yes
 2_structured_extraction,claude-haiku-4.5,0.000,0.000,0.000,+0.000,+0.000,No
-3_constraint_composition,claude-haiku-4.5,0.000,0.000,0.000,+0.000,+0.000,No
-4_conditional_transformation,claude-haiku-4.5,0.000,0.000,0.000,+0.000,+0.000,No
+3_constraint_composition,claude-haiku-4.5,0.029,0.014,0.026,-0.015,-0.012,Yes
+4_conditional_transformation,claude-haiku-4.5,0.662,0.662,0.050,+0.000,+0.613,No

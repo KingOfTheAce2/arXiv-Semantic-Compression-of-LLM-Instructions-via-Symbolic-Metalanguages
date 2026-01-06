@@ -1,0 +1,19 @@
+```json
+[
+  {
+    "risk_name": "Inconsistent invoice dates",
+    "affected_component": "Billing data validation",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Subtotal calculation mismatch",
+    "affected_component": "Invoice calculation engine",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Payment terms conflict with due date",
+    "affected_component": "Accounts receivable logic",
+    "severity": "Medium"
+  }
+]
+```

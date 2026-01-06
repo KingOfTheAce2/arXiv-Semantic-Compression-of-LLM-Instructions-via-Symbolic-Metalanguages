@@ -1,0 +1,5 @@
+```json
+[]
+```
+
+The provided list contains only electronics, furniture, stationery, and appliances. None of these items are mammals or commonly kept as pets. Therefore, no items satisfy all the required conditions.

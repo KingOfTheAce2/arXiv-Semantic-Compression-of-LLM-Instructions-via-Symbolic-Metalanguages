@@ -1,0 +1,12 @@
+[
+  {
+    "risk_name": "Invoice date inconsistency",
+    "affected_component": "Billing date validation logic",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "Line-item and subtotal calculation mismatch",
+    "affected_component": "Invoice calculation engine",
+    "severity": "high"
+  }
+]

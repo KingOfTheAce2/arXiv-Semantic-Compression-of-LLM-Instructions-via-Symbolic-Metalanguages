@@ -1,0 +1,14 @@
+```json
+[
+  {
+    "risk_name": "Date Inconsistency",
+    "affected_component": "Billing date validation logic",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Invoice Calculation Error",
+    "affected_component": "Invoice subtotal and total calculation module",
+    "severity": "High"
+  }
+]
+```

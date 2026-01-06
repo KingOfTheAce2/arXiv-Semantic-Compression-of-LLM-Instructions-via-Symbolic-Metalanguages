@@ -3,8 +3,84 @@
   "model": "claude-haiku-4.5",
   "family": "4_conditional_transformation",
   "condition": "NL",
-  "parse_success": false,
-  "parsed_output": null,
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "name": "rec_000",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_001",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_002",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_003",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_004",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_005",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_006",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_007",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_008",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_009",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_010",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_011",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_012",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_013",
+      "label": null,
+      "access_level": null
+    },
+    {
+      "name": "rec_014",
+      "label": null,
+      "access_level": null
+    }
+  ],
   "gold_output": [
     {
       "id": "rec_000",
@@ -123,9 +199,22 @@
   "exact_match": false,
   "accuracy": 0.0,
   "f1_score": 0.0,
-  "operator_fidelity": [],
+  "operator_fidelity": [
+    {
+      "operator": "⇒",
+      "checked": true,
+      "passed": false,
+      "details": "15 records with wrong transformations"
+    },
+    {
+      "operator": "∘",
+      "checked": true,
+      "passed": false,
+      "details": "Composition order may be incorrect"
+    }
+  ],
   "overall_pass": false,
-  "error_type": "parse",
-  "error_details": "Could not extract key-value pairs",
+  "error_type": "logic",
+  "error_details": "Accuracy: 0.00",
   "semantic_equivalence_pass": false
 }

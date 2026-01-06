@@ -1,0 +1,13 @@
+```json
+{
+  "selected_ids": [],
+  "count": 0
+}
+```
+
+The query requires items that match:
+- `(security ∩ high_priority) ∪ performance` - None of the items have "security", "high_priority", or "performance" attributes
+- `¬deprecated` - Not applicable
+- `¬experimental` - Not applicable
+
+The dataset only contains Category, Status, Priority, and Value attributes. There are no items with the required "security", "high_priority", or "performance" attributes to satisfy the filter conditions.

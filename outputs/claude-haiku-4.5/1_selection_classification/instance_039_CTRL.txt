@@ -1,0 +1,3 @@
+```json
+["Cat", "Dog", "Ferret", "Guinea pig", "Hamster", "Rabbit"]
+```

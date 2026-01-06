@@ -1,0 +1,8 @@
+```json
+{
+  "selected_ids": [],
+  "count": 0
+}
+```
+
+The dataset provided contains only generic items with categories (A, B, C) and statuses (inactive, pending), but no information about whether they are related to "security" or "performance," nor any indication of "deprecated" or "experimental" status. Without explicit attributes matching the criteria (security/performance categories and deprecated/experimental statuses), no items can be selected based on the given instructions.

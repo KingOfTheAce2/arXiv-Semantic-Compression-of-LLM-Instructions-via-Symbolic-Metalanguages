@@ -1,0 +1,5 @@
+```json
+[]
+```
+
+The query uses symbols that appear to reference biological classifications (mammal, pet, bird, farm_animal), but the input data contains only department store items with categories like furniture, electronics, stationery, and appliances. There are no items matching the biological criteria specified in the instruction, so the result is an empty array.

@@ -1,14 +1,14 @@
 {
-  "gemini-2.5-flash_metrics": {
+  "claude-haiku-4.5_metrics": {
     "1_selection_classification": {
       "CTRL": {
         "group_key": "condition",
         "group_value": "CTRL",
         "count": 200,
-        "accuracy_mean": 0.7091309523809524,
-        "accuracy_std": 0.358171031566063,
-        "f1_mean": 0.7379191729323309,
-        "f1_std": 0.3798993365101387,
+        "accuracy_mean": 0.411422619047619,
+        "accuracy_std": 0.20785572702598468,
+        "f1_mean": 0.5300039682539683,
+        "f1_std": 0.2645227821697374,
         "exact_match_rate": 0.015,
         "parse_success_rate": 1.0,
         "overall_pass_rate": 0.015,
@@ -18,6 +18,19 @@
         "group_key": "condition",
         "group_value": "MG",
         "count": 200,
+        "accuracy_mean": 0.7091309523809524,
+        "accuracy_std": 0.358171031566063,
+        "f1_mean": 0.7379191729323309,
+        "f1_std": 0.3798993365101387,
+        "exact_match_rate": 0.015,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.015,
+        "semantic_equivalence_rate": 0.03
+      },
+      "NL": {
+        "group_key": "condition",
+        "group_value": "NL",
+        "count": 200,
         "accuracy_mean": 0.7841309523809524,
         "accuracy_std": 0.3986792423088127,
         "f1_mean": 0.7773928571428571,
@@ -25,20 +38,7 @@
         "exact_match_rate": 0.765,
         "parse_success_rate": 1.0,
         "overall_pass_rate": 0.765,
-        "semantic_equivalence_rate": 0.75
-      },
-      "NL": {
-        "group_key": "condition",
-        "group_value": "NL",
-        "count": 200,
-        "accuracy_mean": 0.7791309523809524,
-        "accuracy_std": 0.4022133763077794,
-        "f1_mean": 0.7773928571428571,
-        "f1_std": 0.40182591531797485,
-        "exact_match_rate": 0.76,
-        "parse_success_rate": 1.0,
-        "overall_pass_rate": 0.76,
-        "semantic_equivalence_rate": 0.75
+        "semantic_equivalence_rate": 0.03
       }
     },
     "2_structured_extraction": {
@@ -66,7 +66,7 @@
         "exact_match_rate": 0.0,
         "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.125
+        "semantic_equivalence_rate": 0.06
       },
       "NL": {
         "group_key": "condition",
@@ -77,9 +77,9 @@
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.995,
+        "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.125
+        "semantic_equivalence_rate": 0.06
       }
     },
     "3_constraint_composition": {
@@ -87,10 +87,10 @@
         "group_key": "condition",
         "group_value": "CTRL",
         "count": 200,
-        "accuracy_mean": 0.005,
-        "accuracy_std": 0.07071067811865475,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
+        "accuracy_mean": 0.025967394533571,
+        "accuracy_std": 0.10173825541401363,
+        "f1_mean": 0.03299162027231081,
+        "f1_std": 0.11202010507150864,
         "exact_match_rate": 0.005,
         "parse_success_rate": 1.0,
         "overall_pass_rate": 0.005,
@@ -100,27 +100,27 @@
         "group_key": "condition",
         "group_value": "MG",
         "count": 200,
-        "accuracy_mean": 0.005,
-        "accuracy_std": 0.07071067811865475,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
+        "accuracy_mean": 0.01443265639589169,
+        "accuracy_std": 0.0933976610667146,
+        "f1_mean": 0.013556060606060604,
+        "f1_std": 0.08473641646123885,
         "exact_match_rate": 0.005,
         "parse_success_rate": 1.0,
         "overall_pass_rate": 0.005,
-        "semantic_equivalence_rate": 0.04
+        "semantic_equivalence_rate": 0.025
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
         "count": 200,
-        "accuracy_mean": 0.005,
-        "accuracy_std": 0.07071067811865475,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
+        "accuracy_mean": 0.02906500933706816,
+        "accuracy_std": 0.10837642539138014,
+        "f1_mean": 0.03713623696564873,
+        "f1_std": 0.12226878547072599,
         "exact_match_rate": 0.005,
-        "parse_success_rate": 0.995,
+        "parse_success_rate": 1.0,
         "overall_pass_rate": 0.005,
-        "semantic_equivalence_rate": 0.04
+        "semantic_equivalence_rate": 0.025
       }
     },
     "4_conditional_transformation": {
@@ -128,12 +128,12 @@
         "group_key": "condition",
         "group_value": "CTRL",
         "count": 200,
-        "accuracy_mean": 0.22083333333333333,
-        "accuracy_std": 0.38345439061476666,
-        "f1_mean": 0.22083333333333333,
-        "f1_std": 0.38345439061476666,
+        "accuracy_mean": 0.049666666666666665,
+        "accuracy_std": 0.029130331518974515,
+        "f1_mean": 0.049666666666666665,
+        "f1_std": 0.029130331518974515,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.26,
+        "parse_success_rate": 0.995,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
@@ -141,12 +141,12 @@
         "group_key": "condition",
         "group_value": "MG",
         "count": 200,
-        "accuracy_mean": 0.2340833333333333,
-        "accuracy_std": 0.3908226141683636,
-        "f1_mean": 0.2340833333333333,
-        "f1_std": 0.3908226141683636,
+        "accuracy_mean": 0.6625,
+        "accuracy_std": 0.38345439061476666,
+        "f1_mean": 0.6625,
+        "f1_std": 0.38345439061476666,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.265,
+        "parse_success_rate": 1.0,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
@@ -154,23 +154,23 @@
         "group_key": "condition",
         "group_value": "NL",
         "count": 200,
-        "accuracy_mean": 0.265,
-        "accuracy_std": 0.44244069528493996,
-        "f1_mean": 0.265,
-        "f1_std": 0.44244069528493996,
-        "exact_match_rate": 0.265,
-        "parse_success_rate": 0.265,
-        "overall_pass_rate": 0.265,
+        "accuracy_mean": 0.6625,
+        "accuracy_std": 0.38345439061476666,
+        "f1_mean": 0.6625,
+        "f1_std": 0.38345439061476666,
+        "exact_match_rate": 0.0,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       }
     }
   },
-  "gemini-2.5-flash_fidelity": [
+  "claude-haiku-4.5_fidelity": [
     {
       "operator": "∈",
       "check_count": 669,
-      "pass_count": 334,
-      "pass_rate": 0.4992526158445441
+      "pass_count": 174,
+      "pass_rate": 0.2600896860986547
     },
     {
       "operator": "∉",
@@ -180,13 +180,19 @@
     },
     {
       "operator": "∩",
-      "check_count": 590,
-      "pass_count": 16,
-      "pass_rate": 0.02711864406779661
+      "check_count": 591,
+      "pass_count": 9,
+      "pass_rate": 0.015228426395939087
     },
     {
       "operator": "→",
-      "check_count": 599,
+      "check_count": 600,
+      "pass_count": 0,
+      "pass_rate": 0.0
+    },
+    {
+      "operator": "∪",
+      "check_count": 51,
       "pass_count": 0,
       "pass_rate": 0.0
     },
@@ -197,275 +203,28 @@
       "pass_rate": 1.0
     },
     {
-      "operator": "∪",
-      "check_count": 51,
-      "pass_count": 4,
-      "pass_rate": 0.0784313725490196
-    },
-    {
       "operator": "⇒",
-      "check_count": 158,
-      "pass_count": 53,
-      "pass_rate": 0.33544303797468356
+      "check_count": 599,
+      "pass_count": 0,
+      "pass_rate": 0.0
+    },
+    {
+      "operator": "∘",
+      "check_count": 150,
+      "pass_count": 0,
+      "pass_rate": 0.0
     }
   ],
-  "gemini-2.5-flash_comparisons": [
-    {
-      "family": "1_selection_classification",
-      "model": "gemini-2.5-flash",
-      "nl_accuracy": 0.7791309523809524,
-      "mg_accuracy": 0.7841309523809524,
-      "ctrl_accuracy": 0.7091309523809524,
-      "mg_vs_nl_diff": 0.0050000000000000044,
-      "mg_vs_ctrl_diff": 0.07500000000000007,
-      "statistical_significant": false
-    },
-    {
-      "family": "2_structured_extraction",
-      "model": "gemini-2.5-flash",
-      "nl_accuracy": 0.0,
-      "mg_accuracy": 0.0,
-      "ctrl_accuracy": 0.0,
-      "mg_vs_nl_diff": 0.0,
-      "mg_vs_ctrl_diff": 0.0,
-      "statistical_significant": false
-    },
-    {
-      "family": "3_constraint_composition",
-      "model": "gemini-2.5-flash",
-      "nl_accuracy": 0.005,
-      "mg_accuracy": 0.005,
-      "ctrl_accuracy": 0.005,
-      "mg_vs_nl_diff": 0.0,
-      "mg_vs_ctrl_diff": 0.0,
-      "statistical_significant": false
-    },
-    {
-      "family": "4_conditional_transformation",
-      "model": "gemini-2.5-flash",
-      "nl_accuracy": 0.265,
-      "mg_accuracy": 0.2340833333333333,
-      "ctrl_accuracy": 0.22083333333333333,
-      "mg_vs_nl_diff": -0.030916666666666703,
-      "mg_vs_ctrl_diff": 0.013249999999999984,
-      "statistical_significant": true
-    }
-  ],
-  "gemini-2.5-flash_tokens": [
-    {
-      "family": "1_selection_classification",
-      "model": "gemini-2.5-flash",
-      "nl_tokens": 215,
-      "mg_tokens": 41,
-      "ctrl_tokens": 41,
-      "mg_reduction_vs_nl": 0.8093023255813954,
-      "mg_reduction_vs_ctrl": 0.0
-    },
-    {
-      "family": "2_structured_extraction",
-      "model": "gemini-2.5-flash",
-      "nl_tokens": 176,
-      "mg_tokens": 52,
-      "ctrl_tokens": 52,
-      "mg_reduction_vs_nl": 0.7045454545454546,
-      "mg_reduction_vs_ctrl": 0.0
-    },
-    {
-      "family": "3_constraint_composition",
-      "model": "gemini-2.5-flash",
-      "nl_tokens": 134,
-      "mg_tokens": 48,
-      "ctrl_tokens": 48,
-      "mg_reduction_vs_nl": 0.6417910447761194,
-      "mg_reduction_vs_ctrl": 0.0
-    },
-    {
-      "family": "4_conditional_transformation",
-      "model": "gemini-2.5-flash",
-      "nl_tokens": 164,
-      "mg_tokens": 62,
-      "ctrl_tokens": 62,
-      "mg_reduction_vs_nl": 0.6219512195121951,
-      "mg_reduction_vs_ctrl": 0.0
-    }
-  ],
-  "claude-haiku-4.5_metrics": {
-    "1_selection_classification": {
-      "CTRL": {
-        "group_key": "condition",
-        "group_value": "CTRL",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      },
-      "MG": {
-        "group_key": "condition",
-        "group_value": "MG",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      },
-      "NL": {
-        "group_key": "condition",
-        "group_value": "NL",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      }
-    },
-    "2_structured_extraction": {
-      "CTRL": {
-        "group_key": "condition",
-        "group_value": "CTRL",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      },
-      "MG": {
-        "group_key": "condition",
-        "group_value": "MG",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      },
-      "NL": {
-        "group_key": "condition",
-        "group_value": "NL",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      }
-    },
-    "3_constraint_composition": {
-      "CTRL": {
-        "group_key": "condition",
-        "group_value": "CTRL",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      },
-      "MG": {
-        "group_key": "condition",
-        "group_value": "MG",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      },
-      "NL": {
-        "group_key": "condition",
-        "group_value": "NL",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      }
-    },
-    "4_conditional_transformation": {
-      "CTRL": {
-        "group_key": "condition",
-        "group_value": "CTRL",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      },
-      "MG": {
-        "group_key": "condition",
-        "group_value": "MG",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      },
-      "NL": {
-        "group_key": "condition",
-        "group_value": "NL",
-        "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
-      }
-    }
-  },
-  "claude-haiku-4.5_fidelity": [],
   "claude-haiku-4.5_comparisons": [
     {
       "family": "1_selection_classification",
       "model": "claude-haiku-4.5",
-      "nl_accuracy": 0.0,
-      "mg_accuracy": 0.0,
-      "ctrl_accuracy": 0.0,
-      "mg_vs_nl_diff": 0.0,
-      "mg_vs_ctrl_diff": 0.0,
-      "statistical_significant": false
+      "nl_accuracy": 0.7841309523809524,
+      "mg_accuracy": 0.7091309523809524,
+      "ctrl_accuracy": 0.411422619047619,
+      "mg_vs_nl_diff": -0.07500000000000007,
+      "mg_vs_ctrl_diff": 0.29770833333333335,
+      "statistical_significant": true
     },
     {
       "family": "2_structured_extraction",
@@ -480,21 +239,21 @@
     {
       "family": "3_constraint_composition",
       "model": "claude-haiku-4.5",
-      "nl_accuracy": 0.0,
-      "mg_accuracy": 0.0,
-      "ctrl_accuracy": 0.0,
-      "mg_vs_nl_diff": 0.0,
-      "mg_vs_ctrl_diff": 0.0,
-      "statistical_significant": false
+      "nl_accuracy": 0.02906500933706816,
+      "mg_accuracy": 0.01443265639589169,
+      "ctrl_accuracy": 0.025967394533571,
+      "mg_vs_nl_diff": -0.014632352941176471,
+      "mg_vs_ctrl_diff": -0.011534738137679312,
+      "statistical_significant": true
     },
     {
       "family": "4_conditional_transformation",
       "model": "claude-haiku-4.5",
-      "nl_accuracy": 0.0,
-      "mg_accuracy": 0.0,
-      "ctrl_accuracy": 0.0,
+      "nl_accuracy": 0.6625,
+      "mg_accuracy": 0.6625,
+      "ctrl_accuracy": 0.049666666666666665,
       "mg_vs_nl_diff": 0.0,
-      "mg_vs_ctrl_diff": 0.0,
+      "mg_vs_ctrl_diff": 0.6128333333333333,
       "statistical_significant": false
     }
   ],
@@ -542,39 +301,39 @@
         "group_key": "condition",
         "group_value": "CTRL",
         "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
+        "accuracy_mean": 0.7841309523809524,
+        "accuracy_std": 0.3986792423088127,
+        "f1_mean": 0.7773928571428571,
+        "f1_std": 0.40182591531797485,
+        "exact_match_rate": 0.765,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.765,
         "semantic_equivalence_rate": 0.0
       },
       "MG": {
         "group_key": "condition",
         "group_value": "MG",
         "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
+        "accuracy_mean": 0.7791309523809524,
+        "accuracy_std": 0.4022133763077794,
+        "f1_mean": 0.7723928571428571,
+        "f1_std": 0.4052490697138873,
+        "exact_match_rate": 0.76,
+        "parse_success_rate": 0.99,
+        "overall_pass_rate": 0.76,
         "semantic_equivalence_rate": 0.0
       },
       "NL": {
         "group_key": "condition",
         "group_value": "NL",
         "count": 200,
-        "accuracy_mean": 0.0,
-        "accuracy_std": 0.0,
-        "f1_mean": 0.0,
-        "f1_std": 0.0,
-        "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
-        "overall_pass_rate": 0.0,
+        "accuracy_mean": 0.7841309523809524,
+        "accuracy_std": 0.3986792423088127,
+        "f1_mean": 0.7773928571428571,
+        "f1_std": 0.40182591531797485,
+        "exact_match_rate": 0.765,
+        "parse_success_rate": 1.0,
+        "overall_pass_rate": 0.765,
         "semantic_equivalence_rate": 0.0
       }
     },
@@ -588,7 +347,7 @@
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
+        "parse_success_rate": 0.175,
         "overall_pass_rate": 0.0,
         "semantic_equivalence_rate": 0.0
       },
@@ -601,9 +360,9 @@
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
+        "parse_success_rate": 0.18,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
+        "semantic_equivalence_rate": 0.055
       },
       "NL": {
         "group_key": "condition",
@@ -614,9 +373,9 @@
         "f1_mean": 0.0,
         "f1_std": 0.0,
         "exact_match_rate": 0.0,
-        "parse_success_rate": 0.0,
+        "parse_success_rate": 0.18,
         "overall_pass_rate": 0.0,
-        "semantic_equivalence_rate": 0.0
+        "semantic_equivalence_rate": 0.055
       }
     },
     "3_constraint_composition": {
@@ -702,16 +461,41 @@
       }
     }
   },
-  "gpt-5.2-chat_fidelity": [],
+  "gpt-5.2-chat_fidelity": [
+    {
+      "operator": "∈",
+      "check_count": 518,
+      "pass_count": 473,
+      "pass_rate": 0.9131274131274131
+    },
+    {
+      "operator": "∉",
+      "check_count": 38,
+      "pass_count": 38,
+      "pass_rate": 1.0
+    },
+    {
+      "operator": "∩",
+      "check_count": 42,
+      "pass_count": 9,
+      "pass_rate": 0.21428571428571427
+    },
+    {
+      "operator": "→",
+      "check_count": 107,
+      "pass_count": 0,
+      "pass_rate": 0.0
+    }
+  ],
   "gpt-5.2-chat_comparisons": [
     {
       "family": "1_selection_classification",
       "model": "gpt-5.2-chat",
-      "nl_accuracy": 0.0,
-      "mg_accuracy": 0.0,
-      "ctrl_accuracy": 0.0,
-      "mg_vs_nl_diff": 0.0,
-      "mg_vs_ctrl_diff": 0.0,
+      "nl_accuracy": 0.7841309523809524,
+      "mg_accuracy": 0.7791309523809524,
+      "ctrl_accuracy": 0.7841309523809524,
+      "mg_vs_nl_diff": -0.0050000000000000044,
+      "mg_vs_ctrl_diff": -0.0050000000000000044,
       "statistical_significant": false
     },
     {

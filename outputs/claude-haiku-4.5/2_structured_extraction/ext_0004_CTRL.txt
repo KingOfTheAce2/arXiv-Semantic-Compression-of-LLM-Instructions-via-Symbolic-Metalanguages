@@ -1,0 +1,19 @@
+```json
+[
+  {
+    "risk_name": "Invoice Date Inconsistency",
+    "affected_component": "financial",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Due Date Before Invoice Date",
+    "affected_component": "financial",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Arithmetic Discrepancy",
+    "affected_component": "financial",
+    "severity": "medium"
+  }
+]
+```

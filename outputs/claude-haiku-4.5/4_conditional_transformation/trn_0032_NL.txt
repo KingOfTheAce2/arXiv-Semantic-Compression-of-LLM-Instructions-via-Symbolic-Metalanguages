@@ -1,0 +1,19 @@
+```json
+[
+  {"name": "rec_000", "label": null, "access_level": null},
+  {"name": "rec_001", "label": null, "access_level": null},
+  {"name": "rec_002", "label": null, "access_level": null},
+  {"name": "rec_003", "label": null, "access_level": null},
+  {"name": "rec_004", "label": null, "access_level": null},
+  {"name": "rec_005", "label": null, "access_level": null},
+  {"name": "rec_006", "label": null, "access_level": null},
+  {"name": "rec_007", "label": null, "access_level": null},
+  {"name": "rec_008", "label": null, "access_level": null},
+  {"name": "rec_009", "label": null, "access_level": null},
+  {"name": "rec_010", "label": null, "access_level": null},
+  {"name": "rec_011", "label": null, "access_level": null},
+  {"name": "rec_012", "label": null, "access_level": null},
+  {"name": "rec_013", "label": null, "access_level": null},
+  {"name": "rec_014", "label": null, "access_level": null}
+]
+```

@@ -1,0 +1,7 @@
+```json
+[]
+```
+
+The input document is an invoice containing financial information (amounts, payment terms, tax calculations). According to the instruction filter, the report must be in the `technical_risk` category AND explicitly exclude `financial`, `legal`, `organizational`, and `speculative` categories.
+
+Since this document is financial in nature, it does not meet the required criteria (∈(technical_risk) ∩ ¬(financial)). Therefore, no risks matching the specified conditions were found.

@@ -3,8 +3,24 @@
   "model": "claude-haiku-4.5",
   "family": "2_structured_extraction",
   "condition": "CTRL",
-  "parse_success": false,
-  "parsed_output": null,
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "risk_name": "Invoice Date Discrepancy",
+      "affected_component": "financial",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Due Date in Past",
+      "affected_component": "financial",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Calculation Error",
+      "affected_component": "financial",
+      "severity": "medium"
+    }
+  ],
   "gold_output": {
     "due_date": "2024-02-03",
     "invoice_num": "8508",
@@ -14,9 +30,16 @@
   "exact_match": false,
   "accuracy": 0.0,
   "f1_score": 0.0,
-  "operator_fidelity": [],
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
   "overall_pass": false,
-  "error_type": "parse",
-  "error_details": "Could not extract key-value pairs",
+  "error_type": "format",
+  "error_details": "Accuracy: 0.00",
   "semantic_equivalence_pass": false
 }

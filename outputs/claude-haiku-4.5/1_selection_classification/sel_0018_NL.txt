@@ -1,0 +1,5 @@
+```json
+[]
+```
+
+The provided list contains only furniture, appliances, electronics, and stationery items. None of these items are mammals, and therefore none satisfy the first condition requiring the item to belong to the category of mammals. No items qualify for selection.

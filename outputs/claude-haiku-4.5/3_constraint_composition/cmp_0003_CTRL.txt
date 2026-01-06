@@ -1,0 +1,15 @@
+```json
+{
+  "selected_ids": [],
+  "count": 0
+}
+```
+
+The query requires items that have ALL of the following attributes:
+- security (not present in dataset)
+- high_priority (not present in dataset)
+- performance (not present in dataset)
+- NOT deprecated (not present in dataset)
+- NOT experimental (not present in dataset)
+
+Since the dataset contains only Category, Status, Priority, and Value attributes, and none of the required attributes (security, high_priority, performance, deprecated, experimental) exist in the data, no items match the filter criteria.

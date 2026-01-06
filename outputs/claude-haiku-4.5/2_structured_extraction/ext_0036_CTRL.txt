@@ -1,0 +1,19 @@
+```json
+[
+  {
+    "risk_name": "Invoice Date Discrepancy",
+    "affected_component": "financial",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Overdue Payment Terms",
+    "affected_component": "financial",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Calculation Verification",
+    "affected_component": "financial",
+    "severity": "medium"
+  }
+]
+```

@@ -1,0 +1,5 @@
+```json
+[]
+```
+
+The query requests items that are members of both "mammal" and "pet" categories, while excluding birds and farm animals. The provided inventory contains only inanimate objects (stationery, electronics, appliances, and furniture) with no biological or animal attributes. Therefore, no items match the specified criteria.

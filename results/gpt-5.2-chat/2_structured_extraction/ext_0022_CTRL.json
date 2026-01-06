@@ -3,8 +3,24 @@
   "model": "gpt-5.2-chat",
   "family": "2_structured_extraction",
   "condition": "CTRL",
-  "parse_success": false,
-  "parsed_output": null,
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "risk_name": "Inconsistent invoice dates",
+      "affected_component": "Billing data validation",
+      "severity": "High"
+    },
+    {
+      "risk_name": "Subtotal calculation mismatch",
+      "affected_component": "Invoice calculation engine",
+      "severity": "High"
+    },
+    {
+      "risk_name": "Payment terms conflict with due date",
+      "affected_component": "Accounts receivable logic",
+      "severity": "Medium"
+    }
+  ],
   "gold_output": {
     "payment_terms": "Net 60",
     "invoice_num": "9900",
@@ -14,9 +30,16 @@
   "exact_match": false,
   "accuracy": 0.0,
   "f1_score": 0.0,
-  "operator_fidelity": [],
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
   "overall_pass": false,
-  "error_type": "parse",
-  "error_details": "Could not extract key-value pairs",
+  "error_type": "format",
+  "error_details": "Accuracy: 0.00",
   "semantic_equivalence_pass": false
 }

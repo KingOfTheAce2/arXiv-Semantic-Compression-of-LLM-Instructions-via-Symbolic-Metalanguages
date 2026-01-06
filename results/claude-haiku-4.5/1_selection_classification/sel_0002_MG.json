@@ -3,8 +3,12 @@
   "model": "claude-haiku-4.5",
   "family": "1_selection_classification",
   "condition": "MG",
-  "parse_success": false,
-  "parsed_output": null,
+  "parse_success": true,
+  "parsed_output": [
+    "Cat",
+    "Dog",
+    "Hamster"
+  ],
   "gold_output": [
     "cat",
     "dog",
@@ -17,11 +21,18 @@
     "whale"
   ],
   "exact_match": false,
-  "accuracy": 0.0,
-  "f1_score": 0.0,
-  "operator_fidelity": [],
+  "accuracy": 0.3333333333333333,
+  "f1_score": 0.5,
+  "operator_fidelity": [
+    {
+      "operator": "∉",
+      "checked": true,
+      "passed": true,
+      "details": "Exclusion constraint satisfied"
+    }
+  ],
   "overall_pass": false,
-  "error_type": "parse",
-  "error_details": "Could not parse comma-separated values",
+  "error_type": "incomplete",
+  "error_details": "Accuracy: 0.33",
   "semantic_equivalence_pass": false
 }

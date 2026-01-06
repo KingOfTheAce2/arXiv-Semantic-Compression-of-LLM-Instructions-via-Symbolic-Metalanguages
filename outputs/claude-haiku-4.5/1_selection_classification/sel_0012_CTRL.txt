@@ -1,0 +1,11 @@
+```json
+[]
+```
+
+The query filters for items that are:
+- ⊙(mammal) - must have mammal attribute
+- ⊗ ⊙(pet) - must NOT have pet attribute
+- ⊗ ⊖(bird) - must NOT lack bird attribute (i.e., must have bird)
+- ⊗ ⊖(farm_animal) - must NOT lack farm_animal attribute (i.e., must have farm_animal)
+
+None of the items in the inventory have any of these biological attributes (mammal, pet, bird, farm_animal). The inventory contains only furniture, electronics, stationery, and appliances.

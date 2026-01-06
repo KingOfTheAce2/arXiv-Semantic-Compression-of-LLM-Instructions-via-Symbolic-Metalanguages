@@ -1,0 +1,14 @@
+```json
+[
+  {
+    "risk_name": "Line Item and Subtotal Mismatch",
+    "affected_component": "Invoice Calculation Logic",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Invalid Due Date Relative to Invoice Date",
+    "affected_component": "Date Validation and Payment Term Logic",
+    "severity": "medium"
+  }
+]
+```

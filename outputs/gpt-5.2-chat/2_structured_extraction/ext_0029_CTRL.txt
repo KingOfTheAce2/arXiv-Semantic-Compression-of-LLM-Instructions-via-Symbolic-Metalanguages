@@ -1,0 +1,29 @@
+```json
+[
+  {
+    "risk_name": "Invoice calculation inconsistency",
+    "affected_component": "Line item to subtotal computation",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Incorrect billing amount",
+    "affected_component": "Customer financial charges",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Payment terms mismatch",
+    "affected_component": "Accounts receivable scheduling",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Potential billing dispute exposure",
+    "affected_component": "Customer contract and invoicing compliance",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Weak invoicing control process",
+    "affected_component": "Billing and review workflow",
+    "severity": "Medium"
+  }
+]
+```

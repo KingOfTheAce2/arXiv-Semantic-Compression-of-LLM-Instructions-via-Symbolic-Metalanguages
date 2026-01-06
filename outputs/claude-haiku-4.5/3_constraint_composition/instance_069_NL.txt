@@ -1,0 +1,39 @@
+```json
+{
+  "selected_projects": [
+    "API Gateway Optimization",
+    "API Latency Reduction",
+    "Auth Hardening",
+    "Authentication Rate Limits",
+    "Cache Layer Rewrite",
+    "Certificate Revocation Handling",
+    "Cold Start Reduction",
+    "CPU Affinity Tuning",
+    "Data Compression",
+    "Disk IO Optimization",
+    "Encryption Key Rotation",
+    "Encryption Upgrade",
+    "Firewall Rules Update",
+    "Garbage Collection Tuning",
+    "Index Rebalancing",
+    "Load Balancer Tuning",
+    "Latency Budget Enforcement",
+    "Memory Leak Analysis",
+    "Metrics Aggregation",
+    "Network Stack Profiling",
+    "Privilege Escalation Audit",
+    "Query Optimizer",
+    "Queue Backpressure Handling",
+    "Request Batching",
+    "Response Caching",
+    "Secure Boot Enforcement",
+    "Secure Logging",
+    "Secrets Management",
+    "Session Timeout Enforcement",
+    "Thread Pool Optimization",
+    "Thread Safety Audit",
+    "TLS Certificate Automation"
+  ],
+  "count": 32
+}
+```

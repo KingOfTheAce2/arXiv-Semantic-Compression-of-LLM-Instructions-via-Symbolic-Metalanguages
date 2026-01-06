@@ -1,0 +1,8 @@
+```json
+{
+  "selected_ids": [],
+  "count": 0
+}
+```
+
+The dataset provided uses Categories (A, B, C) and Status values (pending, inactive, active), but does not include the "security," "performance," "deprecated," or "experimental" attributes specified in the selection criteria. Therefore, no items can be matched against the inclusion and exclusion rules, resulting in an empty selection.

@@ -1,0 +1,14 @@
+```json
+[
+  {
+    "risk_name": "Date inconsistency",
+    "affected_component": "Invoice metadata",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Calculation inconsistency",
+    "affected_component": "Billing totals and line items",
+    "severity": "High"
+  }
+]
+```
