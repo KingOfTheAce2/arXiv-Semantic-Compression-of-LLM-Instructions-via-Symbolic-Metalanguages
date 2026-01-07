@@ -6,14 +6,9 @@
   "parse_success": true,
   "parsed_output": [
     {
-      "risk_name": "Itemized totals do not reconcile with subtotal",
-      "affected_component": "Invoice calculation logic",
-      "severity": "High"
-    },
-    {
-      "risk_name": "Due date inconsistent with stated payment terms",
-      "affected_component": "Invoice date and terms data consistency",
-      "severity": "Medium"
+      "risk_name": "Inconsistent subtotal calculation",
+      "affected_component": "Invoice line item aggregation",
+      "severity": "high"
     }
   ],
   "gold_output": {

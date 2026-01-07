@@ -1,1 +1,13 @@
-[]
+```json
+[
+  {
+    "risk_name": "Invoice date inconsistency",
+    "affected_component": "Invoice date fields",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Line items and subtotal mismatch",
+    "affected_component": "Invoice calculation logic",
+    "severity": "high"
+  }
+]

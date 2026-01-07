@@ -1,14 +1,14 @@
 ```json
 [
   {
-    "risk_name": "Invoice subtotal calculation inconsistency",
-    "affected_component": "Billing data integrity",
-    "severity": "high"
+    "risk_name": "Invoice line items do not match subtotal",
+    "affected_component": "Billing calculation and data integrity",
+    "severity": "High"
   },
   {
-    "risk_name": "Payment terms and due date mismatch",
-    "affected_component": "Accounts receivable scheduling logic",
-    "severity": "medium"
+    "risk_name": "Payment terms inconsistent with due date",
+    "affected_component": "Invoice date and payment terms validation",
+    "severity": "Medium"
   }
 ]
 ```

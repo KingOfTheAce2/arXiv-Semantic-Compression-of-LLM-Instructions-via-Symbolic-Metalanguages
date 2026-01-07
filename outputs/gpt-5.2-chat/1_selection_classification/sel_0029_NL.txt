@@ -1,3 +1,1 @@
-```json
-["Cat", "Dog", "Hamster"]
-```
+["Cat","Dog","Hamster"]

@@ -1,14 +1,34 @@
 ```json
 [
   {
-    "risk_name": "Date inconsistency",
-    "affected_component": "Invoice metadata",
+    "risk_name": "Inconsistent Invoice Dates",
+    "affected_component": "Billing Schedule",
     "severity": "High"
   },
   {
-    "risk_name": "Calculation inconsistency",
-    "affected_component": "Billing totals and line items",
+    "risk_name": "Subtotal Does Not Match Line Items",
+    "affected_component": "Financial Calculations",
     "severity": "High"
+  },
+  {
+    "risk_name": "Tax Calculated on Potentially Incorrect Subtotal",
+    "affected_component": "Tax Computation",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Payment Terms Conflict With Due Date",
+    "affected_component": "Accounts Receivable Process",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Potential Invoice Data Integrity Issue",
+    "affected_component": "Accounting Records",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Potential Billing or Fraud Exposure",
+    "affected_component": "Financial Controls",
+    "severity": "Low"
   }
 ]
 ```

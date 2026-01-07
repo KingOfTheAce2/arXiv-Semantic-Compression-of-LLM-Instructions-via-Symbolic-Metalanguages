@@ -1,0 +1,24 @@
+```json
+[
+  {
+    "risk_name": "Invoice Amount Mismatch",
+    "affected_component": "Billing Calculations",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Inconsistent Payment Terms",
+    "affected_component": "Accounts Receivable",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Potential Billing Dispute",
+    "affected_component": "Legal Compliance",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Delayed Cash Flow",
+    "affected_component": "Financial Operations",
+    "severity": "Low"
+  }
+]
+```

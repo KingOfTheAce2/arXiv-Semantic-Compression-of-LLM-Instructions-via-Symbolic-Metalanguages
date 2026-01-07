@@ -1,14 +1,34 @@
 ```json
 [
   {
-    "risk_name": "Invoice date and due date inconsistency",
-    "affected_component": "Billing system date validation",
+    "risk_name": "Invoice date later than due date",
+    "affected_component": "Billing and Accounts Receivable",
     "severity": "High"
   },
   {
     "risk_name": "Incorrect subtotal calculation",
-    "affected_component": "Invoice calculation and data integrity",
+    "affected_component": "Financial Reporting and Invoicing",
     "severity": "High"
+  },
+  {
+    "risk_name": "Tax and total based on incorrect subtotal",
+    "affected_component": "Tax Calculation and Compliance",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Payment terms conflict with stated due date",
+    "affected_component": "Contractual and Payment Management",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Lack of automated invoice validation controls",
+    "affected_component": "Billing System Technology",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Potential payment delay due to invoice discrepancies",
+    "affected_component": "Cash Flow Forecasting",
+    "severity": "Medium"
   }
 ]
 ```

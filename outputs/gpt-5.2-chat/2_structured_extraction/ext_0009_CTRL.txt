@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "risk_name": "Invoice data inconsistency",
+    "affected_component": "Billing and calculation system",
+    "severity": "High"
+  }
+]

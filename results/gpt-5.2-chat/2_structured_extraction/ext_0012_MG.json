@@ -4,18 +4,7 @@
   "family": "2_structured_extraction",
   "condition": "MG",
   "parse_success": true,
-  "parsed_output": [
-    {
-      "risk_name": "Date Inconsistency",
-      "affected_component": "Invoice date validation logic",
-      "severity": "high"
-    },
-    {
-      "risk_name": "Subtotal Calculation Mismatch",
-      "affected_component": "Billing calculation module",
-      "severity": "high"
-    }
-  ],
+  "parsed_output": [],
   "gold_output": {
     "total": 7300.7,
     "payment_terms": "Net 30",
@@ -36,5 +25,5 @@
   "overall_pass": false,
   "error_type": "format",
   "error_details": "Accuracy: 0.00",
-  "semantic_equivalence_pass": false
+  "semantic_equivalence_pass": true
 }

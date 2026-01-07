@@ -1,7 +1,1 @@
-[
-  {
-    "risk_name": "Project timeline uncertainty",
-    "affected_component": "Project schedule",
-    "severity": "Low"
-  }
-]
+[]

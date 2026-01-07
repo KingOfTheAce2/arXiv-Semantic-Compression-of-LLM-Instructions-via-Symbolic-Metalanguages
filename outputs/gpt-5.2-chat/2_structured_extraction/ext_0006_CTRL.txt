@@ -1,14 +1,7 @@
-```json
 [
   {
-    "risk_name": "Inconsistent payment terms and due date",
-    "affected_component": "Invoice billing metadata",
-    "severity": "medium"
-  },
-  {
-    "risk_name": "Item totals do not reconcile with subtotal",
-    "affected_component": "Invoice line item calculations",
+    "risk_name": "Invoice calculation inconsistency",
+    "affected_component": "Billing and invoicing system",
     "severity": "high"
   }
 ]
-```

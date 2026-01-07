@@ -1,12 +1,14 @@
+```json
 [
   {
     "risk_name": "Invoice date inconsistency",
-    "affected_component": "Billing date validation logic",
+    "affected_component": "Invoicing date validation logic",
     "severity": "medium"
   },
   {
-    "risk_name": "Line-item and subtotal calculation mismatch",
-    "affected_component": "Invoice calculation engine",
+    "risk_name": "Incorrect subtotal calculation",
+    "affected_component": "Billing calculation module",
     "severity": "high"
   }
 ]
+```

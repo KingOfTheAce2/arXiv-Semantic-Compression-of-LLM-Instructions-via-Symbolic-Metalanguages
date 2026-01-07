@@ -1,12 +1,1 @@
-[
-  {
-    "risk_name": "Invoice date later than due date",
-    "affected_component": "Invoice date and due date fields",
-    "severity": "high"
-  },
-  {
-    "risk_name": "Line items total does not match subtotal",
-    "affected_component": "Invoice calculation and data integrity",
-    "severity": "high"
-  }
-]
+[]

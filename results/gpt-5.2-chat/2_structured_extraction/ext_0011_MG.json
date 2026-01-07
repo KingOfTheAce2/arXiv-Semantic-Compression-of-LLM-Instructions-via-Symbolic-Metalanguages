@@ -4,18 +4,7 @@
   "family": "2_structured_extraction",
   "condition": "MG",
   "parse_success": true,
-  "parsed_output": [
-    {
-      "risk_name": "Invoice date later than due date",
-      "affected_component": "Invoice date and due date fields",
-      "severity": "high"
-    },
-    {
-      "risk_name": "Line items total does not match subtotal",
-      "affected_component": "Invoice calculation and data integrity",
-      "severity": "high"
-    }
-  ],
+  "parsed_output": [],
   "gold_output": {
     "date": "2024-11-16",
     "total": 1319.31,
@@ -36,5 +25,5 @@
   "overall_pass": false,
   "error_type": "format",
   "error_details": "Accuracy: 0.00",
-  "semantic_equivalence_pass": false
+  "semantic_equivalence_pass": true
 }

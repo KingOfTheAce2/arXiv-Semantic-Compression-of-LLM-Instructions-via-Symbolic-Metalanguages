@@ -1,0 +1,24 @@
+```json
+[
+  {
+    "risk_name": "Memory leaks causing performance degradation under sustained load",
+    "affected_component": "ingestion pipeline",
+    "severity": "high"
+  },
+  {
+    "risk_name": "Intermittent network latency causing delayed scheduling and timeouts",
+    "affected_component": "orchestration layer",
+    "severity": "medium"
+  },
+  {
+    "risk_name": "Stale configuration values persisting after redeployment",
+    "affected_component": "configuration service",
+    "severity": "low"
+  },
+  {
+    "risk_name": "Improper token expiration allowing stale sessions to persist",
+    "affected_component": "authentication service",
+    "severity": "high"
+  }
+]
+```

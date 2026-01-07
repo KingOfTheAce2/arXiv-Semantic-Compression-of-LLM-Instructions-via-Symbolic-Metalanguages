@@ -1,14 +1,12 @@
-```json
 [
   {
     "risk_name": "Date Inconsistency",
-    "affected_component": "Billing date validation logic",
+    "affected_component": "Invoice Metadata",
     "severity": "High"
   },
   {
-    "risk_name": "Invoice Calculation Error",
-    "affected_component": "Invoice subtotal and total calculation module",
+    "risk_name": "Line Item Calculation Mismatch",
+    "affected_component": "Invoice Totals Computation",
     "severity": "High"
   }
 ]
-```

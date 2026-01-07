@@ -1,0 +1,12 @@
+[
+  {
+    "risk_name": "Invoice calculation inconsistency",
+    "affected_component": "Billing and accounting system",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Conflicting payment terms and due date",
+    "affected_component": "Invoice business rules configuration",
+    "severity": "Medium"
+  }
+]

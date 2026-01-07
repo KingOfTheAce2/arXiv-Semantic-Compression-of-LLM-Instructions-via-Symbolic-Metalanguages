@@ -3,8 +3,22 @@
   "model": "gpt-5.2-chat",
   "family": "3_constraint_composition",
   "condition": "NL",
-  "parse_success": false,
-  "parsed_output": null,
+  "parse_success": true,
+  "parsed_output": {
+    "selected_ids": [
+      "item_001",
+      "item_002",
+      "item_003",
+      "item_005",
+      "item_006",
+      "item_009",
+      "item_010",
+      "item_012",
+      "item_014",
+      "item_015"
+    ],
+    "count": 10
+  },
   "gold_output": {
     "selected_ids": [
       "item_000"
@@ -13,10 +27,23 @@
   },
   "exact_match": false,
   "accuracy": 0.0,
-  "f1_score": 0.0,
-  "operator_fidelity": [],
+  "f1_score": 0,
+  "operator_fidelity": [
+    {
+      "operator": "∈",
+      "checked": true,
+      "passed": false,
+      "details": "Output is not a list"
+    },
+    {
+      "operator": "∩",
+      "checked": true,
+      "passed": false,
+      "details": "Output is not a list"
+    }
+  ],
   "overall_pass": false,
-  "error_type": "parse",
-  "error_details": "Could not extract key-value pairs",
+  "error_type": "scope",
+  "error_details": "Accuracy: 0.00",
   "semantic_equivalence_pass": false
 }

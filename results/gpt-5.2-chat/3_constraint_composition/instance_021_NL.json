@@ -3,8 +3,45 @@
   "model": "gpt-5.2-chat",
   "family": "3_constraint_composition",
   "condition": "NL",
-  "parse_success": false,
-  "parsed_output": null,
+  "parse_success": true,
+  "parsed_output": {
+    "selected_ids": [
+      "Auth Hardening",
+      "API Gateway Optimization",
+      "API Latency Reduction",
+      "Authentication Rate Limits",
+      "Cache Layer Rewrite",
+      "CDN Configuration",
+      "CPU Affinity Tuning",
+      "Certificate Revocation Handling",
+      "Cold Start Reduction",
+      "Data Compression",
+      "Disk IO Optimization",
+      "Encryption Key Rotation",
+      "Firewall Rules Update",
+      "Garbage Collection Tuning",
+      "Index Rebalancing",
+      "Latency Budget Enforcement",
+      "Load Balancer Tuning",
+      "Memory Leak Analysis",
+      "Metrics Aggregation",
+      "Monitoring Dashboard",
+      "Network Stack Profiling",
+      "Privilege Escalation Audit",
+      "Query Optimizer",
+      "Queue Backpressure Handling",
+      "Request Batching",
+      "Response Caching",
+      "Secure Boot Enforcement",
+      "Secure Logging",
+      "Secrets Management",
+      "Session Timeout Enforcement",
+      "Thread Pool Optimization",
+      "Thread Safety Audit",
+      "TLS Certificate Automation"
+    ],
+    "count": 33
+  },
   "gold_output": [
     "API Gateway Optimization",
     "API Latency Reduction",
@@ -41,9 +78,16 @@
   "exact_match": false,
   "accuracy": 0.0,
   "f1_score": 0.0,
-  "operator_fidelity": [],
+  "operator_fidelity": [
+    {
+      "operator": "∩",
+      "checked": true,
+      "passed": false,
+      "details": "Output is not a list"
+    }
+  ],
   "overall_pass": false,
-  "error_type": "parse",
-  "error_details": "Could not extract key-value pairs",
+  "error_type": "scope",
+  "error_details": "Accuracy: 0.00",
   "semantic_equivalence_pass": false
 }

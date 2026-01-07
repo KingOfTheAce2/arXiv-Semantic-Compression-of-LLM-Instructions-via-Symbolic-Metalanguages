@@ -4,7 +4,11 @@
   "family": "2_structured_extraction",
   "condition": "CTRL",
   "parse_success": true,
-  "parsed_output": [],
+  "parsed_output": {
+    "risk_name": "Invoice calculation inconsistency",
+    "affected_component": "Invoicing and billing calculation logic",
+    "severity": "High"
+  },
   "gold_output": {
     "invoice_num": "6925",
     "date": "2024-10-07",
@@ -19,11 +23,11 @@
       "operator": "→",
       "checked": true,
       "passed": false,
-      "details": "Transformation check"
+      "details": "Missing fields: {'total', 'payment_terms', 'invoice_num', 'date'}"
     }
   ],
   "overall_pass": false,
-  "error_type": "format",
+  "error_type": "logic",
   "error_details": "Accuracy: 0.00",
   "semantic_equivalence_pass": false
 }

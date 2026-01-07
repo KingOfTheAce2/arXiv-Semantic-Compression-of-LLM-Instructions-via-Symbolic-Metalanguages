@@ -321,13 +321,13 @@ Gemini 2.5 Flash & Prop. & \textbf{75\%} & 12.5\% & 4\% & 0\% & \textbf{0\%} \\
 Claude Haiku 4.5 & Prop. & 3\% & 6\% & 2.5\% & 0\% & \textbf{0\%} \\
 GPT-5.2 Chat & Prop. & 0\%\textsuperscript{$\dagger$} & 5.5\%\textsuperscript{$\dagger$} & 0\%\textsuperscript{*} & 0\%\textsuperscript{*} & \textbf{0\%} \\
 \bottomrule
-\multicolumn{7}{l}{\textsuperscript{*}\footnotesize 0\% parse success on this task. \textsuperscript{$\dagger$}\footnotesize 18\% parse success.}
+\multicolumn{7}{l}{\textsuperscript{*}\footnotesize Incomplete data (API credit exhaustion). \textsuperscript{$\dagger$}\footnotesize Markdown-wrapped output; 18\% parse success.}
 \end{tabular}
 \end{table}
 
 The results reveal several patterns. The controls work as intended: NL$=$CTRL is 0\% across all working models, confirming that meaningless symbols produce different outputs than meaningful ones. Gemini 2.5 Flash achieves remarkable 75\% equivalence on selection tasks---the highest observed---meaning symbolic and prose instructions produce identical outputs three-quarters of the time. Among open-source models, Qwen achieves 62\% equivalence on extraction tasks. Notably, Kimi K2 achieves \textbf{100\% accuracy} on selection tasks with MetaGlyph prompts (vs.\ 90.8\% with natural language), suggesting symbolic instructions can \emph{outperform} prose for certain model-task combinations. Constraint composition fails across all models: near-zero equivalence indicates models do not reliably interpret $\cap$ as ``apply both constraints.''
 
-GPT-5.2 Chat shows variable parse success: 99\% on selection but 0\% on constraint and transformation tasks. This task-specific format sensitivity is discussed in Section~\ref{sec:analysis}.
+GPT-5.2 Chat shows high parse success on selection (99\%) but wraps responses in markdown code fences on extraction and constraint tasks, causing parse failures. Transformation task data was incomplete due to API credit exhaustion during evaluation. GPT's fidelity metrics derive from selection tasks where parsing succeeded.
 
 \subsection{Parse Success}
 
@@ -341,12 +341,14 @@ Which symbols work? Table~\ref{tab:fidelity} shows fidelity by operator across m
 \centering
 \caption{Operator Fidelity by Model (Open-Source and Proprietary)}
 \label{tab:fidelity}
+\small
 \begin{tabular}{@{}lcccccccc@{}}
 \toprule
-Operator & Llama 3B & Qwen 7B & OLMo 7B & Gemma 12B & Kimi K2 & Gemini 2.5 & Claude 4.5 & GPT-5.2 \\
+Operator & Llama & Qwen & OLMo & Gemma & Kimi & Gemini & Claude & GPT \\
+         & 3B & 7B & 7B & 12B & K2 & 2.5 & 4.5 & 5.2 \\
 \midrule
 $\in$ (membership) & 33.3\% & 20.4\% & 0.0\% & 0.0\% & 36.0\% & 49.9\% & 26.0\% & \textbf{91.3\%} \\
-$\to$ (transformation) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% \\
+$\to$ (transform.) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% \\
 $\cap$ (intersection) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 0.0\% & 2.7\% & 1.5\% & 21.4\% \\
 $\Rightarrow$ (implication) & 0.0\% & 0.0\% & 0.0\% & 0.0\% & \textbf{98.1\%} & 33.5\% & 0.0\% & --- \\
 \bottomrule
@@ -376,11 +378,11 @@ Larger models parse better (Gemma 12B: 100\% JSON success vs.\ Llama 3B: 30\%). 
 
 \subsection{Task-Specific Format Sensitivity}
 
-GPT-5.2 Chat shows striking task-dependent parse success: 99\% on selection tasks but 0\% on constraint composition and conditional transformation. This pattern suggests the model handles simpler symbolic structures well but fails to produce valid JSON when processing complex multi-operator expressions.
+GPT-5.2 Chat shows task-dependent output formatting: 99\% parse success on selection tasks, but wraps responses in markdown code fences (\texttt{```json}) on extraction and constraint tasks, causing our JSON parser to fail. Transformation task data was incomplete due to API credit exhaustion. This suggests GPT-5.2 varies its output formatting based on task complexity or prompt structure.
 
-Claude Haiku 4.5, by contrast, achieves 100\% parse success across all task types, demonstrating robust format compliance. However, Claude shows lower operator fidelity (26\% for $\in$) compared to GPT's exceptional 91.3\% membership fidelity on tasks where GPT produces valid output.
+Claude Haiku 4.5, by contrast, achieves 100\% parse success across all task types, demonstrating robust format compliance. However, Claude shows lower operator fidelity (26\% for $\in$) compared to GPT's exceptional 91.3\% membership fidelity on selection tasks.
 
-This creates an interesting trade-off: GPT-5.2 excels at operator interpretation when it works but fails on complex tasks, while Claude reliably produces structured output with moderate operator understanding. Practitioners should consider this when selecting models for symbolic compression:
+This creates an interesting trade-off: GPT-5.2 excels at operator interpretation but inconsistently formats complex task outputs, while Claude reliably produces structured output with moderate operator understanding. Practitioners should consider this when selecting models for symbolic compression:
 
 \begin{itemize}
     \item \textbf{For simple selection/filtering tasks}: GPT-5.2's 91.3\% membership fidelity makes it highly effective
@@ -421,7 +423,7 @@ We have not demonstrated system-level latency improvements (timing is preliminar
 
 \subsection{Limitations and Future Work}
 
-This work establishes a baseline rather than characterizing limits. The experiment was intentionally narrow: four task families, five models spanning 3B to 1T parameters, and a single symbolic language design. Many questions remain open.
+This work establishes a baseline rather than characterizing limits. The experiment was intentionally narrow: four task families, eight models spanning 3B to 1T parameters, and a single symbolic language design. Many questions remain open.
 
 Future work should systematically stress-test symbolic instruction languages. Scope binding tests could determine whether $(A \cup B) \cap \neg C$ parses differently from $A \cup (B \cap \neg C)$, revealing whether models correctly associate operators with their intended operands. Implication direction tests could probe whether $\Rightarrow$ is treated as one-way (if-then) or incorrectly as equivalence (if-and-only-if). Composition order tests could verify whether $f \circ g$ applies operations in the correct sequence, which matters for tasks where order affects outcomes.
 
@@ -446,7 +448,10 @@ The relationship between model scale and symbolic comprehension appears U-shaped
 
 \section*{Code and Data Availability}
 
-The complete experimental pipeline, prompt templates, raw model outputs, and evaluation scripts are publicly available at: \url{https://github.com/BEAR-LLM-AI/arXiv-Semantic-Compression-of-LLM-Instructions-via-Symbolic-Metalanguages}
+The complete experimental pipeline, prompt templates, raw model outputs, and evaluation scripts are publicly available at:
+
+\smallskip
+\noindent\url{https://github.com/BEAR-LLM-AI/arXiv-Semantic-Compression-of-LLM-Instructions-via-Symbolic-Metalanguages}
 
 \bibliography{references}
 

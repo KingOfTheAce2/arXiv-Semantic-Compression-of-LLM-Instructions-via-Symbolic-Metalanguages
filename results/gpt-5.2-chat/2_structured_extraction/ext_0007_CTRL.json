@@ -6,14 +6,29 @@
   "parse_success": true,
   "parsed_output": [
     {
-      "risk_name": "Invoice subtotal calculation inconsistency",
-      "affected_component": "Billing calculation module",
-      "severity": "High"
+      "risk_name": "Invoice calculation inconsistency",
+      "affected_component": "Billing system arithmetic",
+      "severity": "high"
     },
     {
-      "risk_name": "Payment terms and due date mismatch",
-      "affected_component": "Invoice date and terms validation logic",
-      "severity": "Medium"
+      "risk_name": "Potential overbilling",
+      "affected_component": "Financial charges to customer",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Invoice dispute exposure",
+      "affected_component": "Contractual and invoicing compliance",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Billing process data quality issue",
+      "affected_component": "Internal billing and review process",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Conflicting payment terms",
+      "affected_component": "Payment due date and terms interpretation",
+      "severity": "medium"
     }
   ],
   "gold_output": {

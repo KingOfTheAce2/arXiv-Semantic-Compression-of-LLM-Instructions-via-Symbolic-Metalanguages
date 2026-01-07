@@ -4,7 +4,18 @@
   "family": "2_structured_extraction",
   "condition": "MG",
   "parse_success": true,
-  "parsed_output": [],
+  "parsed_output": [
+    {
+      "risk_name": "Invoice date inconsistency",
+      "affected_component": "Invoice date fields",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Line items and subtotal mismatch",
+      "affected_component": "Invoice calculation logic",
+      "severity": "high"
+    }
+  ],
   "gold_output": {
     "total": 2883.3,
     "invoice_num": "6310",
@@ -25,5 +36,5 @@
   "overall_pass": false,
   "error_type": "format",
   "error_details": "Accuracy: 0.00",
-  "semantic_equivalence_pass": true
+  "semantic_equivalence_pass": false
 }

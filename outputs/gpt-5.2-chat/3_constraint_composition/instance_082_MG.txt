@@ -1,0 +1,20 @@
+{
+  "selected_ids": [
+    "API Gateway Optimization",
+    "API Latency Reduction",
+    "Auth Hardening",
+    "Authentication Rate Limits",
+    "CPU Affinity Tuning",
+    "CDN Configuration",
+    "Cache Layer Rewrite",
+    "Certificate Revocation Handling",
+    "Cold Start Reduction",
+    "Data Compression",
+    "Disk IO Optimization",
+    "Encryption Key Rotation",
+    "Encryption Upgrade",
+    "Firewall Rules Update",
+    "Garbage Collection Tuning",
+    "Index Rebalancing",
+    "Latency Budget Enforcement",
+    "Load

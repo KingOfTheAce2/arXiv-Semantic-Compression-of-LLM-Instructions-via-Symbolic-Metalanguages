@@ -1,0 +1,24 @@
+```json
+[
+  {
+    "risk_name": "Memory leaks under sustained ingestion load",
+    "affected_component": "Ingestion service / ingestion pipeline",
+    "severity": "High"
+  },
+  {
+    "risk_name": "Intermittent network latency causing scheduling delays",
+    "affected_component": "Orchestration layer",
+    "severity": "Medium"
+  },
+  {
+    "risk_name": "Stale configuration values after redeployment",
+    "affected_component": "Configuration management service",
+    "severity": "Low"
+  },
+  {
+    "risk_name": "Improper token expiration handling",
+    "affected_component": "Authentication service",
+    "severity": "High"
+  }
+]
+```

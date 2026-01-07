@@ -2,13 +2,13 @@
 [
   {
     "risk_name": "Invoice date inconsistency",
-    "affected_component": "Billing data validation",
-    "severity": "medium"
+    "affected_component": "Invoice data validation",
+    "severity": "Medium"
   },
   {
-    "risk_name": "Incorrect subtotal calculation",
-    "affected_component": "Invoice calculation engine",
-    "severity": "high"
+    "risk_name": "Subtotal calculation mismatch",
+    "affected_component": "Billing calculation engine",
+    "severity": "High"
   }
 ]
 ```

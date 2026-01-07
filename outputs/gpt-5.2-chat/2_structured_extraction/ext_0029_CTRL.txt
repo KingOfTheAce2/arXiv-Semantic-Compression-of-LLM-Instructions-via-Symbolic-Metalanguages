@@ -2,28 +2,28 @@
 [
   {
     "risk_name": "Invoice calculation inconsistency",
-    "affected_component": "Line item to subtotal computation",
-    "severity": "High"
+    "affected_component": "Billing calculation logic",
+    "severity": "high"
   },
   {
-    "risk_name": "Incorrect billing amount",
-    "affected_component": "Customer financial charges",
-    "severity": "High"
+    "risk_name": "Revenue loss or over/undercharging",
+    "affected_component": "Financial accounting",
+    "severity": "high"
   },
   {
-    "risk_name": "Payment terms mismatch",
-    "affected_component": "Accounts receivable scheduling",
-    "severity": "Medium"
+    "risk_name": "Customer dispute due to incorrect invoice",
+    "affected_component": "Legal and compliance",
+    "severity": "medium"
   },
   {
-    "risk_name": "Potential billing dispute exposure",
-    "affected_component": "Customer contract and invoicing compliance",
-    "severity": "Medium"
+    "risk_name": "Weak billing process controls",
+    "affected_component": "Organizational billing operations",
+    "severity": "medium"
   },
   {
-    "risk_name": "Weak invoicing control process",
-    "affected_component": "Billing and review workflow",
-    "severity": "Medium"
+    "risk_name": "Delayed payment or non-payment",
+    "affected_component": "Cash flow forecasting",
+    "severity": "medium"
   }
 ]
 ```

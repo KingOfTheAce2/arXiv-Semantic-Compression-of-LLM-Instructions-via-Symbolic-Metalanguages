@@ -4,18 +4,11 @@
   "family": "2_structured_extraction",
   "condition": "CTRL",
   "parse_success": true,
-  "parsed_output": [
-    {
-      "risk_name": "Inconsistent payment terms and due date",
-      "affected_component": "Invoice billing metadata",
-      "severity": "medium"
-    },
-    {
-      "risk_name": "Item totals do not reconcile with subtotal",
-      "affected_component": "Invoice line item calculations",
-      "severity": "high"
-    }
-  ],
+  "parsed_output": {
+    "risk_name": "Invoice calculation inconsistency",
+    "affected_component": "Billing and invoicing system",
+    "severity": "high"
+  },
   "gold_output": {
     "date": "2024-04-21",
     "total": 1266.88,
@@ -30,11 +23,11 @@
       "operator": "→",
       "checked": true,
       "passed": false,
-      "details": "Transformation check"
+      "details": "Missing fields: {'total', 'due_date', 'date', 'customer_name'}"
     }
   ],
   "overall_pass": false,
-  "error_type": "format",
+  "error_type": "logic",
   "error_details": "Accuracy: 0.00",
   "semantic_equivalence_pass": false
 }

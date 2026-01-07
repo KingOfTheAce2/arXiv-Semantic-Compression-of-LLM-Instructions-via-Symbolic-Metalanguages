@@ -3,8 +3,29 @@
   "model": "gpt-5.2-chat",
   "family": "2_structured_extraction",
   "condition": "MG",
-  "parse_success": false,
-  "parsed_output": null,
+  "parse_success": true,
+  "parsed_output": [
+    {
+      "risk_name": "Memory leaks under sustained load",
+      "affected_component": "Ingestion pipeline",
+      "severity": "high"
+    },
+    {
+      "risk_name": "Intermittent network latency",
+      "affected_component": "Orchestration layer",
+      "severity": "medium"
+    },
+    {
+      "risk_name": "Stale configuration persistence",
+      "affected_component": "Configuration service",
+      "severity": "low"
+    },
+    {
+      "risk_name": "Improper token expiration handling",
+      "affected_component": "Authentication service",
+      "severity": "high"
+    }
+  ],
   "gold_output": [
     {
       "risk_name": "Memory leaks in the ingestion service",
@@ -30,9 +51,16 @@
   "exact_match": false,
   "accuracy": 0.0,
   "f1_score": 0.0,
-  "operator_fidelity": [],
+  "operator_fidelity": [
+    {
+      "operator": "→",
+      "checked": true,
+      "passed": false,
+      "details": "Transformation check"
+    }
+  ],
   "overall_pass": false,
-  "error_type": "parse",
-  "error_details": "Could not extract key-value pairs",
+  "error_type": "logic",
+  "error_details": "Accuracy: 0.00",
   "semantic_equivalence_pass": false
 }
