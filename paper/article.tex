@@ -33,6 +33,7 @@
 
 % Hyperlinks (load last)
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{xurl} % Allow URL line breaks at any character
 
 % Bibliography
 \usepackage{natbib}
@@ -54,7 +55,7 @@ We introduce MetaGlyph, a symbolic language for compressing prompts by encoding 
 
 We evaluate eight models across two dimensions relevant to practitioners: scale (3B--1T parameters) and accessibility (open-source for local deployment vs.\ proprietary APIs). MetaGlyph achieves 62--81\% token reduction across all task types. For API-based deployments, this translates directly to cost savings; for local deployments, it reduces latency and memory pressure.
 
-Results vary dramatically by model. Gemini 2.5 Flash achieves 75\% semantic equivalence between symbolic and prose instructions on selection tasks, with 49.9\% membership operator fidelity. Kimi K2 reaches 98.1\% fidelity for implication ($\Rightarrow$) and achieves perfect (100\%) accuracy on selection tasks with symbolic prompts. GPT-5.2 Chat shows the highest membership fidelity observed (\textbf{91.3\%}), though with variable parse success across task types. Claude Haiku 4.5 achieves 100\% parse success with 26\% membership fidelity. Among mid-sized models, Qwen 2.5 7B shows 62\% equivalence on extraction tasks. Mid-sized open-source models (7B--12B) show near-zero operator fidelity, suggesting a U-shaped relationship where sufficient scale overcomes instruction-tuning biases.
+Results vary by model. Gemini 2.5 Flash achieves 75\% semantic equivalence between symbolic and prose instructions on selection tasks, with 49.9\% membership operator fidelity. Kimi K2 reaches 98.1\% fidelity for implication ($\Rightarrow$) and achieves perfect (100\%) accuracy on selection tasks with symbolic prompts. GPT-5.2 Chat shows the highest membership fidelity observed (\textbf{91.3\%}), though with variable parse success across task types. Claude Haiku 4.5 achieves 100\% parse success with 26\% membership fidelity. Among mid-sized models, Qwen 2.5 7B shows 62\% equivalence on extraction tasks. Mid-sized open-source models (7B--12B) show near-zero operator fidelity, suggesting a U-shaped relationship where sufficient scale overcomes instruction-tuning biases.
 \end{abstract}
 
 \medskip
@@ -415,7 +416,7 @@ Several practical lessons emerge, differentiated by deployment scenario:
 
 \subsection{What We Showed}
 
-Symbolic compression preserves meaning up to 75\% of the time for selection tasks (Gemini 2.5 Flash) and 62\% for extraction tasks (Qwen 2.5 7B). The 0\% CTRL equivalence confirms models respond to symbolic \emph{meaning}, not just appearance. Operator reliability varies dramatically by model: GPT-5.2 achieves the highest membership fidelity (91.3\%), Kimi K2 achieves near-perfect implication fidelity (98.1\%), and Claude Haiku 4.5 shows reliable parse success (100\%) with moderate fidelity (26\%). Task complexity affects format compliance---GPT-5.2 excels on simple tasks but fails on complex multi-constraint operations.
+Symbolic compression preserves meaning up to 75\% of the time for selection tasks (Gemini 2.5 Flash) and 62\% for extraction tasks (Qwen 2.5 7B). The 0\% CTRL equivalence confirms models respond to symbolic \emph{meaning}, not just appearance. Operator reliability varies by model: GPT-5.2 achieves the highest membership fidelity (91.3\%), Kimi K2 achieves near-perfect implication fidelity (98.1\%), and Claude Haiku 4.5 shows reliable parse success (100\%) with moderate fidelity (26\%). Task complexity affects format compliance---GPT-5.2 excels on simple tasks but fails on complex multi-constraint operations.
 
 \subsection{What We Did Not Show}
 
@@ -438,7 +439,7 @@ We introduced MetaGlyph, a symbolic instruction language that compresses prompts
 
 The answer is nuanced and model-dependent. First, does compression preserve meaning? Yes, substantially for certain models. Gemini 2.5 Flash achieves 75\% semantic equivalence on selection tasks---symbolic and prose instructions produce identical outputs three-quarters of the time. The 0\% CTRL equivalence confirms this reflects genuine semantic understanding rather than superficial pattern matching.
 
-Second, which symbols work? It depends on the model. Membership ($\in$) works best overall, with GPT-5.2 achieving 91.3\% fidelity---the highest observed---followed by Gemini 2.5 Flash at 49.9\%. Implication ($\Rightarrow$) shows the widest variance: 98.1\% fidelity on Kimi K2, 33.5\% on Gemini, and 0\% on most other models. Conjunction ($\cap$) shows promise with GPT-5.2 (21.4\%) but remains unreliable elsewhere. Remarkably, Kimi K2 achieves 100\% accuracy on selection tasks with symbolic prompts versus 90.8\% with prose, demonstrating that symbolic instructions can outperform natural language for specific model-task pairs.
+Second, which symbols work? It depends on the model. Membership ($\in$) works best overall, with GPT-5.2 achieving 91.3\% fidelity---the highest observed---followed by Gemini 2.5 Flash at 49.9\%. Implication ($\Rightarrow$) shows the widest variance: 98.1\% fidelity on Kimi K2, 33.5\% on Gemini, and 0\% on most other models. Conjunction ($\cap$) shows promise with GPT-5.2 (21.4\%) but remains unreliable elsewhere. Kimi K2 achieves 100\% accuracy on selection tasks with symbolic prompts versus 90.8\% with prose, demonstrating that symbolic instructions can outperform natural language for specific model-task pairs.
 
 Third, do all models handle symbolic prompts equally? No. GPT-5.2 excels on simple tasks (91.3\% membership fidelity) but fails on complex multi-constraint operations (0\% parse success). Claude Haiku 4.5 shows the opposite pattern: reliable format compliance (100\% parse success) with moderate fidelity (26\%). This trade-off between operator understanding and format robustness has practical implications for deployment.
 
@@ -449,9 +450,7 @@ The relationship between model scale and symbolic comprehension appears U-shaped
 \section*{Code and Data Availability}
 
 The complete experimental pipeline, prompt templates, raw model outputs, and evaluation scripts are publicly available at:
-
-\smallskip
-\noindent\url{https://github.com/BEAR-LLM-AI/arXiv-Semantic-Compression-of-LLM-Instructions-via-Symbolic-Metalanguages}
+\url{https://github.com/BEAR-LLM-AI/arXiv-Semantic-Compression-of-LLM-Instructions-via-Symbolic-Metalanguages}
 
 \bibliography{references}
 
