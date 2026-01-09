@@ -12,8 +12,8 @@ The work is designed to be **fully automatic, reproducible, and long-context awa
 
 ```bash
 # Clone and install dependencies
-git clone https://github.com/your-repo/metaglyph.git
-cd metaglyph
+git clone https://github.com/KingOfTheAce2/arXiv-Semantic-Compression-of-LLM-Instructions-via-Symbolic-Metalanguages.git
+cd arXiv-Semantic-Compression-of-LLM-Instructions-via-Symbolic-Metalanguages
 pip install -r requirements.txt
 ```
 
@@ -51,17 +51,22 @@ python run_pipeline.py --stage 5,6
 
 ## Models
 
-All experiments use models via OpenRouter API:
+Experiments use models via OpenRouter API:
 
 | Model | OpenRouter ID | Size | Purpose |
 |-------|---------------|------|---------|
 | Llama 3.2 3B Instruct | `meta-llama/llama-3.2-3b-instruct` | 3B | Small dense baseline |
 | Gemma 3 12B | `google/gemma-3-12b-it` | 12B | Mid-size instruction follower |
 | Qwen 2.5 7B Instruct | `qwen/qwen-2.5-7b-instruct` | 7B | Multi-lingual instruction model |
+| Qwen3 4B | `qwen/qwen3-4b` | 4B | Compact instruction model |
 | OLMo 3 7B Instruct | `allenai/olmo-3-7b-instruct` | 7B | Fully open-weight baseline (AI2) |
+| OLMo 3 32B Instruct | `allenai/olmo-3-32b-instruct` | 32B | Large open-weight model |
 | Kimi K2 | `moonshotai/kimi-k2` | 1T (32B active) | MoE wildcard with agentic tuning |
+| Gemini 2.5 Flash | `google/gemini-2.5-flash-preview` | - | Fast multimodal model |
+| Claude Haiku 4.5 | `anthropic/claude-haiku-4.5` | - | Fast instruction follower |
+| GPT-5.2 Chat | `openai/gpt-5.2-chat` | - | OpenAI frontier model |
 
-**Note:** Requires OpenRouter API key. Models are accessed via paid API (not free tier).
+**Note:** Requires OpenRouter API key.
 
 ### Execution parameters
 
@@ -223,7 +228,7 @@ python run_pipeline.py --config my_config.json
 
 ## Reproducibility
 
-- All experiments use **free-tier open-weight models** via OpenRouter
+- All experiments use models via OpenRouter API
 - Model IDs, decoding parameters, and seeds are fixed
 - Results can be regenerated end-to-end
 - No manual inspection required for scoring
